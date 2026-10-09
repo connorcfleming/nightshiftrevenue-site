@@ -1,0 +1,26 @@
+[build]
+  publish = "dist"
+  # --allow-verify: [VERIFY] placeholders only warn until Privacy/Terms are filled in. Remove it then.
+  command = "node scripts/build.mjs && node check.mjs --allow-verify"
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

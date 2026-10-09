@@ -1,0 +1,10 @@
+# Local Netlify folder
+.netlify
+
+# Build output (Netlify builds it)
+dist/
+
+# Review screenshots
+.impeccable/review/
+
+node_modules/

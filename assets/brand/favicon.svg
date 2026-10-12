@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Night Shift Revenue"><title>Night Shift Revenue</title><rect width="64" height="64" rx="12" fill="#0A1630"/><g><path d="M15.71 3.5A10.5 10.5 0 1 0 24.94 19.5A9.24 9.24 0 0 1 15.71 3.5Z" fill="#FFD25A"/>
-      <path d="M14 26H34A8 8 0 0 1 42 34V50A8 8 0 0 1 34 58H14A8 8 0 0 1 6 50V34A8 8 0 0 1 14 26Z" fill="#11214A" stroke="#4DFFA6" stroke-width="4"/>
-      <path d="M13 32H35A5 5 0 0 1 40 37V43A5 5 0 0 1 35 48H13A5 5 0 0 1 8 43V37A5 5 0 0 1 13 32Z" fill="#050B1A"/>
-      <rect x="12" y="36" width="8" height="8" rx="2" fill="#4DFFA6"/><rect x="28" y="36" width="8" height="8" rx="2" fill="#4DFFA6"/>
-      <rect x="50" y="6" width="4" height="32" rx="2" fill="#4DFFA6"/>
-      <path d="M47 36H57L60 56H44Z" fill="#4DFFA6" stroke="#4DFFA6" stroke-width="2" stroke-linejoin="round"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Night Shift Revenue"><title>Night Shift Revenue</title><rect width="64" height="64" rx="12" fill="#0A1630"/><g><path d="M17 30H47A7 7 0 0 1 54 37V51A7 7 0 0 1 47 58H17A7 7 0 0 1 10 51V37A7 7 0 0 1 17 30Z" fill="#11214A" stroke="#4DFFA6" stroke-width="4"/>
+      <path d="M21 36H43A5 5 0 0 1 48 41V47A5 5 0 0 1 43 52H21A5 5 0 0 1 16 47V41A5 5 0 0 1 21 36Z" fill="#050B1A"/>
+      <rect x="20" y="40" width="8" height="8" rx="2" fill="#4DFFA6"/><rect x="36" y="40" width="8" height="8" rx="2" fill="#4DFFA6"/>
+      <path d="M12 30C12 15 20 6 31 6S50 15 50 30Z" fill="#4DFFA6"/>
+      <path d="M38 24.5Q52 21.5 61 25.5Q62.5 30 58.5 31Q48 29 38 30.5Z" fill="#4DFFA6"/>
+      <path d="M29.01 10.92A6.6 6.6 0 1 0 35.52 20.21A5.68 5.68 0 0 1 29.01 10.92Z" fill="#FFD25A"/></g></svg>

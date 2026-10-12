@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <!-- PLACEHOLDER: replace with ../brand/logo-v2/final/favicon.svg -->
-  <rect width="32" height="32" rx="7" fill="#0A1630"/>
-  <rect x="6" y="6" width="20" height="20" rx="5" fill="#4DFFA6"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Night Shift Revenue"><title>Night Shift Revenue</title><rect width="64" height="64" rx="12" fill="#0A1630"/><g><path d="M15.71 3.5A10.5 10.5 0 1 0 24.94 19.5A9.24 9.24 0 0 1 15.71 3.5Z" fill="#FFD25A"/>
+      <path d="M14 26H34A8 8 0 0 1 42 34V50A8 8 0 0 1 34 58H14A8 8 0 0 1 6 50V34A8 8 0 0 1 14 26Z" fill="#11214A" stroke="#4DFFA6" stroke-width="4"/>
+      <path d="M13 32H35A5 5 0 0 1 40 37V43A5 5 0 0 1 35 48H13A5 5 0 0 1 8 43V37A5 5 0 0 1 13 32Z" fill="#050B1A"/>
+      <rect x="12" y="36" width="8" height="8" rx="2" fill="#4DFFA6"/><rect x="28" y="36" width="8" height="8" rx="2" fill="#4DFFA6"/>
+      <rect x="50" y="6" width="4" height="32" rx="2" fill="#4DFFA6"/>
+      <path d="M47 36H57L60 56H44Z" fill="#4DFFA6" stroke="#4DFFA6" stroke-width="2" stroke-linejoin="round"/></g></svg>

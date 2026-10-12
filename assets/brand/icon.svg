@@ -1,6 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <!-- PLACEHOLDER: replace with ../brand/logo-v2/final/icon.svg when the robot-janitor logo is done -->
-  <defs><filter id="g" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5"/></filter></defs>
-  <rect x="10" y="10" width="44" height="44" rx="11" fill="#4DFFA6" opacity=".55" filter="url(#g)"/>
-  <rect x="10" y="10" width="44" height="44" rx="11" fill="#4DFFA6"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Night Shift Revenue"><title>Night Shift Revenue</title><rect width="64" height="64" fill="#0A1630"/><g transform="translate(6.4 6.4) scale(0.8)"><defs><filter id="nsr-c-broom-moon-icon-dark-mglow-3" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+  <feGaussianBlur in="SourceGraphic" stdDeviation="1.6" result="b"/>
+  <feComponentTransfer in="b" result="g"><feFuncA type="linear" slope="0.55"/></feComponentTransfer>
+  <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g filter="url(#nsr-c-broom-moon-icon-dark-mglow-3)"><path d="M12.23 2.9A9.6 9.6 0 1 0 20.68 17.53A8.45 8.45 0 0 1 12.23 2.9Z" fill="#FFD25A"/></g>
+    <path d="M15 27H33A8 8 0 0 1 41 35V48A8 8 0 0 1 33 56H15A8 8 0 0 1 7 48V35A8 8 0 0 1 15 27Z" fill="#11214A"/><path d="M17.75 32.5H30.25A6.25 6.25 0 0 1 36.5 38.75V38.75A6.25 6.25 0 0 1 30.25 45H17.75A6.25 6.25 0 0 1 11.5 38.75V38.75A6.25 6.25 0 0 1 17.75 32.5Z" fill="#050B1A"/>
+    <defs><filter id="nsr-c-broom-moon-icon-dark-glow-4" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+  <feGaussianBlur in="SourceGraphic" stdDeviation="1.8" result="b"/>
+  <feComponentTransfer in="b" result="g"><feFuncA type="linear" slope="0.7"/></feComponentTransfer>
+  <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g filter="url(#nsr-c-broom-moon-icon-dark-glow-4)"><path d="M15 27H33A8 8 0 0 1 41 35V48A8 8 0 0 1 33 56H15A8 8 0 0 1 7 48V35A8 8 0 0 1 15 27Z" fill="none" stroke="#4DFFA6" stroke-width="3.2"/><path d="M24 27V22.5" stroke="#4DFFA6" stroke-width="2.6" stroke-linecap="round"/><circle cx="24" cy="21" r="2.6" fill="#4DFFA6"/><rect x="16" y="35.8" width="5.6" height="6.2" rx="2.6" fill="#4DFFA6"/><rect x="26.4" y="35.8" width="5.6" height="6.2" rx="2.6" fill="#4DFFA6"/><path d="M20 50.4q4 2.4 8 0" fill="none" stroke="#4DFFA6" stroke-width="2.2" stroke-linecap="round"/><path d="M51.5 6V37" stroke="#4DFFA6" stroke-width="3.2" stroke-linecap="round"/>
+       <path d="M47.9 34.5H55.1A1.6 1.6 0 0 1 56.7 36.1V37.5A1.6 1.6 0 0 1 55.1 39.1H47.9A1.6 1.6 0 0 1 46.3 37.5V36.1A1.6 1.6 0 0 1 47.9 34.5Z" fill="#4DFFA6"/>
+       <path d="M45.9 40.6H57.1L60.9 58.2Q51.5 59.6 42.1 58.2Z" fill="#4DFFA6" stroke="#4DFFA6" stroke-width="1.4" stroke-linejoin="round"/>
+       <path d="M48.9 44V56.6M54.1 44V56.6M51.5 44V57" stroke="#0A1630" stroke-width="1" opacity=".75"/></g></g></svg>

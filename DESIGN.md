@@ -1,311 +1,164 @@
 ---
 name: Night Shift Revenue
-description: A sales-floor whiteboard in a brushed aluminum frame, where dead leads are rewritten in fresh marker as booked appointments.
+description: A robot crew works the night shift on your old leads while you sleep. Midnight blue, glowing green, and a yellow moon for accents.
 colors:
-  wall: "#26292e"
-  wall-hi: "#33373d"
-  board: "#f7f6f1"
-  paper: "#ffffff"
-  ink: "#1b1d22"
-  ink-2: "#4a4f57"
-  ink-3: "#686d75"
-  ghost: "#b4b8be"
-  tape: "#2f3237"
-  rule-line: "rgba(47, 50, 55, 0.82)"
-  strip: "#2a2c31"
-  strip-quiet: "#5b6068"
-  marker-blue: "#1f4fb5"
-  marker-red: "#c8321f"
-  marker-red-dk: "#9e2516"
-  alu-1: "#eceef1"
-  alu-2: "#cfd3d8"
-  alu-3: "#b3b8bf"
-  alu-edge: "#8e949b"
+  midnight-950: "#050B1A"
+  midnight-900: "#0A1630"
+  midnight-800: "#11214A"
+  midnight-700: "#1B2F63"
+  glow-green: "#4DFFA6"
+  mint: "#C9F5DE"
+  moon-yellow: "#FFD25A"
+  mint-dim: "#8FB3A4"
+  asleep: "#2B4579"
 typography:
   display:
-    fontFamily: "Schibsted Grotesk, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(2.75rem, 6.6vw, 5.25rem)"
-    fontWeight: 880
-    lineHeight: 0.94
-    letterSpacing: "-0.035em"
-  headline:
-    fontFamily: "Schibsted Grotesk, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(2.1rem, 4.6vw, 3.75rem)"
-    fontWeight: 850
+    fontFamily: "Oxanium, Schibsted Grotesk, system-ui, sans-serif"
+    fontSize: "clamp(2.6rem, 5.2vw, 4.6rem)"
+    fontWeight: 760
     lineHeight: 1
-    letterSpacing: "-0.03em"
-  title:
-    fontFamily: "Schibsted Grotesk, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(1.4rem, 2.2vw, 1.85rem)"
-    fontWeight: 820
-    lineHeight: 1.05
+    letterSpacing: "-0.025em"
+  headline:
+    fontFamily: "Oxanium, Schibsted Grotesk, system-ui, sans-serif"
+    fontSize: "clamp(2.1rem, 4.4vw, 3.5rem)"
+    fontWeight: 750
+    lineHeight: 1.04
     letterSpacing: "-0.02em"
-  title-sm:
-    fontFamily: "Schibsted Grotesk, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "1.3rem"
-    fontWeight: 780
-    lineHeight: 1.15
-    letterSpacing: "-0.01em"
-  body-lg:
-    fontFamily: "Schibsted Grotesk, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "1.125rem"
-    fontWeight: 400
-    lineHeight: 1.55
+  title:
+    fontFamily: "Oxanium, Schibsted Grotesk, system-ui, sans-serif"
+    fontSize: "clamp(1.4rem, 2.4vw, 2rem)"
+    fontWeight: 720
+    lineHeight: 1.05
   body:
     fontFamily: "Schibsted Grotesk, system-ui, -apple-system, Segoe UI, sans-serif"
     fontSize: "1.0625rem"
     fontWeight: 400
-    lineHeight: 1.55
+    lineHeight: 1.6
   label:
-    fontFamily: "Schibsted Grotesk, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontFamily: "Schibsted Grotesk, system-ui, sans-serif"
     fontSize: "0.8125rem"
     fontWeight: 650
-    lineHeight: 1.4
-    letterSpacing: "0.01em"
-  strip:
-    fontFamily: "Schibsted Grotesk, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "0.72rem"
-    fontWeight: 700
-    lineHeight: 1
-    letterSpacing: "0.1em"
-  marker:
-    fontFamily: "Permanent Marker, Schibsted Grotesk, cursive"
-    fontSize: "clamp(0.9rem, 1.15vw, 1.05rem)"
+  log:
+    fontFamily: "ui-monospace, Cascadia Mono, SF Mono, Menlo, Consolas, monospace"
+    fontSize: "clamp(0.78rem, 0.9vw, 0.86rem)"
     fontWeight: 400
-    lineHeight: 1.3
-    letterSpacing: "0.01em"
 rounded:
-  strip: "3px"
-  panel: "4px"
-  field: "6px"
-  magnet: "7px"
-  frame: "8px"
+  tag: "6px"
+  field: "10px"
+  button: "10px"
+  card: "14px"
   bubble: "16px"
-  puck: "50%"
 spacing:
-  xs: "6px"
-  sm: "12px"
-  md: "18px"
   gutter: "clamp(18px, 4.2vw, 64px)"
   section: "clamp(48px, 6.2vw, 88px)"
-components:
-  button-primary:
-    backgroundColor: "{colors.marker-red}"
-    textColor: "{colors.paper}"
-    typography: "{typography.body}"
-    rounded: "{rounded.magnet}"
-    padding: "0 22px"
-    height: "48px"
-  button-primary-sm:
-    backgroundColor: "{colors.marker-red}"
-    textColor: "{colors.paper}"
-    rounded: "{rounded.magnet}"
-    padding: "0 16px"
-    height: "40px"
-  button-primary-lg:
-    backgroundColor: "{colors.marker-red}"
-    textColor: "{colors.paper}"
-    rounded: "{rounded.magnet}"
-    padding: "0 28px"
-    height: "56px"
-  button-ghost:
-    backgroundColor: "transparent"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.magnet}"
-    padding: "0 16px"
-    height: "44px"
-  strip-label:
-    backgroundColor: "{colors.strip}"
-    textColor: "{colors.paper}"
-    typography: "{typography.strip}"
-    rounded: "{rounded.strip}"
-    padding: "7px 10px 6px"
-  strip-label-quiet:
-    backgroundColor: "{colors.strip-quiet}"
-    textColor: "{colors.paper}"
-    typography: "{typography.strip}"
-    rounded: "{rounded.strip}"
-    padding: "7px 10px 6px"
-  input-field:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.field}"
-    padding: "0 14px"
-    height: "48px"
-  nav-link:
-    textColor: "{colors.ink}"
-    padding: "10px 2px"
-  deal-panel:
-    backgroundColor: "transparent"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.panel}"
-    padding: "clamp(22px, 3vw, 34px)"
-  message-out:
-    backgroundColor: "{colors.strip}"
-    textColor: "{colors.paper}"
-    rounded: "{rounded.bubble}"
-    padding: "11px 15px"
-  message-in:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.bubble}"
-    padding: "11px 15px"
-  contact-card:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.strip}"
-    padding: "26px 24px 22px"
+  scale: "4 / 8 / 12 / 16 / 24 / 32 / 48px"
 ---
 
 # Design System: Night Shift Revenue
 
 ## Overview
 
-**Creative North Star: "The Sales Board"**
+**Creative North Star: "The Night Shift"**
 
-Every page is one physical object: an enamel-white whiteboard held in a brushed aluminum frame, hung on a dark graphite wall. The top rail carries the wordmark, navigation and the primary magnet; the board carries the content; the tray at the bottom carries the fine print, the way a marker ledge collects pens. Nothing floats off the board as an app-like card. Content is organized by ruled lines, magnet-strip headers and hand-marked entries, exactly as a sales manager would organize a real board.
+The client's office is dark and they've gone home. A small robot crew is still on shift, working through the old leads one at a time. The page is the night sky over that office: a deep midnight field with a few stars and a crescent moon. Old leads sit in an overnight log, dim and asleep. The ones the crew wakes up glow green, and the bookings get a hand-drawn yellow underline, as if someone circled them by moonlight.
 
-The type is set, not drawn: a heavy grotesk in graphite does all the talking, at very high scale contrast between the display headline and the body. A marker hand appears only where something has just been written onto the board: a lead coming back, a booking, a name. Gray ghosting carries the memory of what was erased. Red is the one loud color and it belongs to the booked appointment and the action that produces one.
+It replaces "The Sales Board" whiteboard (aluminum frame, ghost entries, blue and red marker). Its equivalents:
 
-Density is moderate and editorial: generous section padding, long ruled lists, two-column splits that collapse to one. The world rejects the dark-gradient AI-agency look: no glowing phone mockups, no rows of identical feature cards, no gradient text.
+| Whiteboard | Night shift |
+|---|---|
+| Ghost (half-erased) rows | **Asleep** rows: dim midnight-blue mono text with a small "z" |
+| Blue marker rewrite | **Lit** entries: glowing green mono text, faded up from the asleep color |
+| Red ring around BOOKED | Glowing green **Booked** with a hand-drawn **moon-yellow underline** |
+| Aluminum tray with the form | A midnight-800 **card** beside the log |
+| Magnet strips | **Tags**: mono, uppercase, green outline |
+| Station pucks | **Crew badges**: small robot heads with a yellow antenna light |
 
-**Key Characteristics:**
-- One object per page: frame, top rail, board, tray.
-- Graphite set type at extreme weight (850 to 880) for headlines; quiet 400 body.
-- Marker hand for live entries only; ghost gray for erased history.
-- Ruled lines (1.5px and 2px graphite) instead of boxes or background bands.
-- Red reserved for BOOKED and the primary action.
-- Brushed aluminum with a fine vertical grain on every metal part.
+**Key characteristics**
+- Midnight blue everywhere. Surfaces step up one shade (900 page, 800 cards, 700 borders); there are no light sections.
+- Green is the "lit" color: headings, key words, buttons, links, and anything the crew has woken up.
+- Body copy is mint, never green, so long reading stays calm and crisp.
+- Yellow is the moon: an accent you spot, never a fill you sit in.
+- The robot crew appears small and repeatedly: three heads in the log header, one at each station, and the logo.
 
 ## Colors
 
-A near-monochrome graphite-on-enamel palette lit by two marker colors, with aluminum as the only material tint.
+| Token | Hex | Role |
+|---|---|---|
+| `--midnight-950` | #050B1A | Inputs, footer, log header strip, button text on green |
+| `--midnight-900` | #0A1630 | Page background (with a soft lift toward the top and a few CSS stars) |
+| `--midnight-800` | #11214A | Cards and surfaces: hero form, log, Dana's record, deals, fit panel, timeline, demo form, contact card |
+| `--midnight-700` | #1B2F63 | Borders, rules, section dividers |
+| `--glow-green` | #4DFFA6 | Headings, key words, buttons, links, lit log entries, check marks, timeline dots, Booked chip |
+| `--mint` | #C9F5DE | Body text, ledes, list items, field labels |
+| `--moon-yellow` | #FFD25A | Accent only (see the rules below) |
+| `--mint-dim` | #8FB3A4 | Captions, hints, timestamps, the "not a fit" list, fine print |
+| `--asleep` | #2B4579 | Dormant log entries. Decoration only |
 
-### Primary
-- **Booking Red** (marker-red): the primary action button (gradient from a lighter red to a deeper one), the hand-drawn ring around every BOOKED entry, the final "Booked" stage chip, the hot dot on the overnight timeline, the strikethrough on an overruled status, and invalid-field borders.
-- **Deep Booking Red** (marker-red-dk): error text in form status, where the brighter red would fall short on contrast.
+**Contrast (WCAG):** mint is 15.0:1 on midnight-900 and 13.1:1 on midnight-800. Glow green is 13.8:1 and 12.1:1. Moon yellow is 12.5:1 and 10.9:1. Mint-dim is 7.8:1 and 6.8:1. Midnight-950 text on a glow-green button is 15.1:1. Every combination passes AA, and AAA for body sizes. The asleep color deliberately does not pass: it is only used on `aria-hidden` decorative rows.
 
-### Secondary
-- **Marker Blue** (marker-blue): fresh entries written onto the board, link color, check marks on the "good fit" list, timeline dots, focus outlines, input focus border and caret, checkbox accent. Link hover darkens to a deeper navy.
+### What green may do
+- Set headings (h1, h2, h3), the brand name, key words (`strong` in the consent rules), links, buttons, tags, check marks, the active stage chip, lit log entries and timeline dots.
+- Glow: h1 and h2 get `0 0 18px rgba(77,255,166,.32)`. Lit mono entries and link hover get a tighter `0 0 10px` glow. Buttons glow via box-shadow.
+- **Never** set body paragraphs, ledes or long lists in green, and never glow body copy. Mint is the reading color.
 
-### Neutral
-- **Enamel Board** (board): the board surface itself, warm off-white with faint wipe smudges and a diagonal sheen layered over it.
-- **Paper White** (paper): things pinned to or set on the board: inputs, incoming text bubbles, the contact card.
-- **Graphite Ink** (ink): headlines, strong text, nav links.
-- **Graphite Ink 2** (ink-2): body paragraphs, section ledes, list items.
-- **Graphite Ink 3** (ink-3): captions, notes, field hints, timestamps, inactive chips.
-- **Ghost Gray** (ghost): erased entries on the board, always blurred slightly and partially masked so they read as residue.
-- **Tape Graphite** (tape) and **Rule Line** (rule-line): 2px section dividers and panel borders use tape; 1.5px row rules in tables, lists and FAQs use the 82% rule line.
-- **Magnet Strip** (strip) and **Quiet Strip** (strip-quiet): magnetic label strips, station pucks, the outgoing message bubble.
-- **Graphite Wall** (wall, wall-hi): the wall behind the frame, a soft radial lift at the top.
-- **Aluminum** (alu-1, alu-2, alu-3, alu-edge): frame rails, hero tray, footer tray, always as linear gradients with a fine 3px grain, alu-edge for the machined edge line.
-
-### Named Rules
-**The Red Means Booked Rule.** Marker red marks an appointment won, the action that wins one, or a decision that overrules a status. It never decorates, never fills a section, and never appears as a second accent.
-
-**The Ghost Is Residue Rule.** Ghost gray carries no information. Ghost rows are hidden from assistive technology, and nothing a reader needs is ever set in ghost gray.
+### What yellow may do
+- **Moon underline** (`.moonline`): a hand-drawn SVG stroke under one key phrase per heading. It currently appears in three headings: "asleep." (hero), "when it works." (pricing) and "night shift." (after hours). Keep it to about one per screen.
+- **Booked underline:** the same stroke under every "Booked …" entry.
+- **Crescent moon:** the hero moon, the contact-card icon and the small crescent symbol (`#crescent`).
+- **Small lights:** the crew's antenna tips, the 2:20 AM booking dot and time on the overnight timeline, and one yellow star.
+- **Focus ring:** `:focus-visible` is a 3px moon-yellow outline, which reads clearly against both midnight and green.
+- **Warnings:** the left rule and border of the draft flag on the policy pages, and the strikethrough on "Dead lead".
+- **Never:** button fills, section or card backgrounds, body text, or more than a thin stroke or small shape at a time.
 
 ## Typography
 
-**Display Font:** Schibsted Grotesk (variable 400 to 900, self-hosted, with system-ui fallback)
-**Body Font:** Schibsted Grotesk
-**Label/Mono Font:** Permanent Marker for hand-written entries (self-hosted, falls back to the grotesk)
+- **Display: Oxanium** (variable 200–800, self-hosted at `assets/fonts/oxanium.woff2`, SIL OFL; copied from `../brand/logo-v2/fonts/` to match the logo). Used for h1, h2, h3, Dana's name and the contact-card name, at 700–760 with slight negative tracking.
+- **Body: Schibsted Grotesk** (variable, self-hosted). Paragraphs, labels, buttons, nav and FAQ questions.
+- **Crew mono: system monospace** (`ui-monospace, Cascadia Mono, SF Mono, Menlo, Consolas`). It needs no download. Used for the overnight log, tags, stage chips, message timestamps, timeline times and the log header. It's the crew's voice: anything a robot wrote or logged is set in mono.
+- The Permanent Marker font was removed.
 
-**Character:** A dense, heavy grotesk that sets like a printed sales report, paired with a single felt-marker hand that looks like someone just walked up to the board.
+Hierarchy: display (hero, demo heading) → headline (section h2) → title (deal and after-hours h3, 1.3rem station h3) → body 1.0625rem/1.6 (1rem under 640px) → label .8125rem → mono .7–.9rem.
 
-### Hierarchy
-- **Display** (880, clamp(2.75rem, 6.6vw, 5.25rem), 0.94): the hero headline, max 15ch. The demo heading and policy page titles use the same weight and tracking at their own clamps.
-- **Headline** (850, clamp(2.1rem, 4.6vw, 3.75rem), 1): section headings, paired with a body-lg lede in ink-2, max 58ch.
-- **Title** (820, clamp(1.4rem, 2.2vw, 1.85rem), 1.05): pricing deals and after-hours articles.
-- **Title Small** (780, 1.3rem, 1.15): station steps and policy page subheads.
-- **Body** (400, 1.0625rem, 1.55): running text, 1rem below 640px; measures held between 40ch and 68ch.
-- **Label** (650, 0.8125rem): field labels, fact terms, captions.
-- **Strip** (700, 0.72rem, 0.1em, uppercase): magnet-strip headers and stage chips only.
-- **Marker** (400, clamp(0.9rem, 1.15vw, 1.05rem), 1.3): ledger entries; scales up to 1.5rem for the booked handoff line and clamp(2.2rem, 4vw, 3.2rem) for the faded name on the old lead record.
+## Motifs
 
-### Named Rules
-**The Live Ink Rule.** The marker hand is reserved for entries written on the board: lead names, statuses, times, BOOKED. Headings, body, buttons, navigation and labels are always set in the grotesk.
-
-**The Tabular Clock Rule.** Times and timestamps use tabular figures so a column of times aligns like a schedule.
-
-## Layout
-
-The frame is centered at a max of 1360px with a clamp(0px, 2.4vw, 40px) wall margin; below 640px it goes full-bleed with square corners. Inside the board, horizontal padding is the gutter token and every top-level section gets the section token of vertical padding, separated by a 2px tape rule (the hero has none).
-
-Recurring grids: a 5fr / 7fr split for pricing, consent and demo; 4fr / 7fr for the pose-and-answer example; two equal columns divided by a 2px tape rule for fit and after-hours; four stations divided by 1.5px rules with a tape arrow running across their pucks. The hero stacks headline-and-lede, the ledger, then the aluminum tray holding the quick form; on narrow screens the tray rises above the ledger.
-
-Breakpoints: 1080px (stations drop to 2 columns, arrow removed), 900px (nav hidden, all splits to one column, vertical dividers become horizontal), 640px (full-bleed frame, single-column fields, ledger loses two columns), 380px (wordmark drops its second word). On wide but short viewports (height 1000px and 780px), ghost rows are trimmed so the first viewport still shows the board and the tray.
-
-## Elevation & Depth
-
-Depth belongs to physical objects only. The frame casts a large soft shadow onto the wall; the board is inset into it (inner rule plus a soft inner shadow at the top); magnets, strips, the hero tray, station pucks and the pinned contact card each sit slightly proud of the board. Content on the board itself is flat and divided by rules.
-
-### Shadow Vocabulary
-- **Frame on wall** (`0 40px 80px -20px rgba(0,0,0,.6), 0 8px 18px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.35)`): the outer frame only.
-- **Board inset** (`inset 0 0 0 1px #c3c7cc, inset 0 3px 8px rgba(0,0,0,.12), inset 0 -2px 6px rgba(0,0,0,.06)`): the board surface sits recessed in the frame.
-- **Magnet** (`inset 0 1px 0 rgba(255,255,255,.28), 0 2px 3px rgba(60,10,0,.3), 0 6px 14px -4px rgba(120,20,5,.45)`): primary buttons; lifts 1px on hover, presses 1px on active.
-- **Strip** (`0 1px 2px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.12)`): magnet strips and active stage chips.
-- **Pinned card** (`0 1px 2px rgba(0,0,0,.18), 0 10px 22px -10px rgba(0,0,0,.3)`): the contact card, rotated -1deg.
-- **Tray** (`inset 0 1px 0 rgba(255,255,255,.7), 0 6px 12px -4px rgba(0,0,0,.28), 0 1px 2px rgba(0,0,0,.25)`): the hero marker tray.
-
-### Named Rules
-**The Lit Object Rule.** A shadow means "this is a separate physical thing on or around the board." Text blocks, lists, deals and forms never get a shadow; they get a rule or a border.
-
-## Shapes
-
-Corners stay small and machined: 3px on strips and the pinned card, 4px on ruled panels and trays, 6px on fields, 7px on buttons, 8px on the frame. Only two things are truly round: SMS bubbles (16px with a 5px tail corner on the sender side) and the circular station pucks and timeline dots. The BOOKED ring is the one freehand shape: an irregular ellipse (`48% 52% 44% 56% / 62% 44% 56% 38%`) at -1.5deg. Checks and crosses are hand-stroked SVG masks colored by currentColor.
-
-**The Small Corner Rule.** Nothing rectangular rounds past 8px; softness comes from the marker, not from pill shapes.
+- **Night sky:** CSS radial-gradient stars and a soft top lift on `body`. No images.
+- **Crescent moon:** an inline SVG symbol (`#crescent`) with a yellow drop-shadow glow, top-right of the hero.
+- **Robot crew:** an inline SVG symbol (`#bot`) with a rounded head, antenna, two eyes and a mouth. Its antenna tip uses `--tip`, set to moon yellow. Three crew heads sit in the log header. Station numbers are CSS robot heads: a green-outlined rounded rectangle with a stem antenna and a yellow light.
+- **Overnight log (signature):** the hero card. It has a header strip ("Overnight log" plus "Night crew on shift" with a slowly pulsing green dot) and a mono table. Asleep rows are dim and `aria-hidden`; awake rows have a green left edge and a faint green wash, and their text is lit. On load, lit entries fade up from the asleep color to glowing green, staggered by row and column, and then the Booked underline draws in. Content is lit by default, without script.
+- **Text thread:** outgoing messages are the crew's, with a green-tinted bubble and green border. Incoming messages are midnight-800 with a midnight-700 border. Typing dots match each side.
+- **Overnight timeline:** 6 PM to 6 AM on a midnight card. Dots glow green, and the booking at 2:20 AM is the yellow "moon" dot.
 
 ## Components
 
-### Buttons
-- **Shape:** gently squared (7px).
-- **Primary (magnet):** booking red vertical gradient, white 700 text, 48px tall (40px small in the rail, 56px large in the demo form), magnet shadow. Hover lifts 1px with a wider shadow; active presses 1px; disabled drops to 60% with a progress cursor. Transitions 0.18s on the ease-out curve.
-- **Ghost:** transparent with a 1.5px tape border, 44px tall, 650 weight, a faint graphite wash on hover. Used for secondary in-place controls such as replaying the example.
+- **Buttons (`.btn`, `-sm`, `-lg`):** glow-green fill, midnight-950 text at 750, 10px corners and a green glow shadow. Hover brightens to #7DFFBF and lifts 1px; active presses 1px. `.btn-quiet` is a green outline for secondary controls such as "Replay".
+- **Cards (`.card`):** midnight-800, a 1px midnight-700 border and 14px corners. The lead offer (`.deal-main`) gets a green border and an outer glow.
+- **Tags (`.tag`, `.tag-dim`):** mono uppercase .72rem with a green outline and a faint green wash. The dim variant uses mint-dim on a midnight-700 border.
+- **Fields:** midnight-950 fill, a #2C4685 border and 10px corners. On focus the border turns green with a 3px green halo. Invalid fields get a soft coral border, and error text is #FFB4A8.
+- **Stage chips:** outlined at rest, green-outlined once reached. Booked fills solid green with a glow.
+- **Header:** the logo lockup at 40px (34px under 640px), mint nav links with a yellow underline on hover, and the small green button.
+- **Footer:** midnight-950, the lockup at 32px, and mint-dim text.
 
-### Chips (stage track)
-- **Style:** strip typography, 1.5px gray outline, ink-3 text at rest.
-- **State:** reached stages fill with magnet strip graphite and white text; the Booked stage fills with booking red; the current stage lifts 2px. Transitions 0.35s.
+## Logo files
 
-### Cards / Containers
-- **Deal panels:** no fill, 2px tape border (3px for the lead offer), 4px corners, clamp(22px, 3vw, 34px) padding.
-- **Demo form panel:** 3px tape border, 4px corners, a 45% white wash over the board.
-- **Contact card:** paper white, 3px corners, pinned-card shadow, rotated -1deg, max 22rem.
-- **Hero tray:** aluminum gradient with grain, 4px corners, tray shadow; holds the quick form and its note in a darker graphite for contrast on metal.
+`assets/brand/`: `icon.svg`, `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `lockup-horizontal-dark.svg`. **These are placeholders** (a glowing green rounded square, plus "NIGHT SHIFT / REVENUE" text in the lockup) until the robot-janitor logo is finalized in `../brand/logo-v2/final/`. To swap them, copy the final files over these names; nothing else needs to change.
 
-### Inputs / Fields
-- **Style:** paper white, 1.5px dark graphite border, 6px corners, 48px min height, 14px horizontal padding, blue caret. Label above in the label style; optional hints in ink-3 regular. Selects carry an inline chevron.
-- **Focus:** border turns marker blue with a 3px 22% blue halo.
-- **Error:** border turns booking red after user interaction; status text in deep booking red, success in a dark green.
+## Motion
 
-### Navigation
-- **Style:** sits on the top aluminum rail beside an uppercase two-weight wordmark (850 name, 500 tracked second word). Links are 600 ink, 0.95rem, with a 2px marker-blue underline on hover. Hidden below 900px, where the rail keeps only the wordmark and the small magnet.
-
-### Ledger (signature)
-The hero board: a fixed-layout table with magnet-strip column headers, 1.5px graphite rules between rows and columns, every cell in the marker hand. Ghost rows are blurred ghost gray with a diagonal wipe mask; live rows are marker blue with the old full name ghosted underneath, and BOOKED entries are red inside the freehand ring. On load the live entries are "written" left to right with a clip-path reveal (0.7s each, staggered by row and column); content is fully visible without script and the reveal is skipped under reduced motion.
-
-### Text thread (signature)
-SMS bubbles in a ruled column: outgoing in magnet graphite on the right, incoming in paper white with a graphite border on the left, each with a small tabular timestamp. Playback inserts typing dots, then reveals each message with a 0.5s rise-and-unblur, advancing the stage track in step. The full thread shows by default; playback starts once on scroll into view and on the replay control.
-
-### Overnight timeline (signature)
-A 2px tape baseline with 12 ticks and hour labels, entries pinned to it by marker-blue dots (red for the booking), each with a tabular time in ink. Below 900px it becomes a vertical list with the dots at the left.
+- The log waking up (color, glow and underline transitions), message playback and the pulsing "on shift" dot.
+- Under `prefers-reduced-motion: reduce`, transitions and animations collapse to an instant change, the dot stops pulsing, and the JS skips the waking sequence and conversation autoplay. Everything is fully lit and visible.
 
 ## Do's and Don'ts
 
-### Do:
-- **Do** build every page as frame, top rail, board and tray, with the primary magnet in the rail.
-- **Do** separate sections with a 2px tape rule and rows with 1.5px rule lines.
-- **Do** set headings in Schibsted Grotesk at 820 to 880 with tight negative tracking, and body at 400 in ink-2.
-- **Do** use the marker hand only for entries written onto the board, in marker blue, and red only when the entry is a booking.
-- **Do** label columns and groups with magnet strips (uppercase 0.72rem, 0.1em tracking, graphite fill).
-- **Do** keep times in tabular figures.
-- **Do** give every animation a visible-by-default fallback and honor reduced motion.
+**Do**
+- Keep every background midnight; step surfaces up by one shade.
+- Use green for things that are lit or actionable, and mint for reading.
+- Use yellow sparingly, for the moon, underlines and small lights.
+- Set anything the crew logs in mono, and keep times in mono.
+- Give every animation a visible-by-default fallback.
 
-### Don't:
-- **Don't** use booking red for decoration, section fills, icons or a second CTA color.
-- **Don't** put information in ghost gray or let ghost rows be read by assistive technology.
-- **Don't** set headings, body, buttons or navigation in the marker hand.
-- **Don't** shadow text blocks or lists; shadows are for physical objects on the board.
-- **Don't** round rectangular elements past 8px or use pill shapes.
-- **Don't** introduce dark-gradient heroes, phone mockups or rows of identical feature cards.
+**Don't**
+- Fill buttons or sections with yellow, or use it for body text.
+- Set paragraphs in green or blur body text with a glow.
+- Put information in the asleep color.
+- Add light sections, gradient text or stock phone mockups.
+- Load fonts or scripts from third-party hosts.

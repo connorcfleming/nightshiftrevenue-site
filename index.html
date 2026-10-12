@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Night Shift Revenue · Booked appointments from the leads you already paid for</title>
   <meta name="description" content="Night Shift Revenue texts the leads your team stopped chasing, qualifies who is ready, and books them onto your sales calendar. You pay per booked appointment.">
-  <meta name="theme-color" content="#2a2d32">
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0A1630">
+  <link rel="icon" href="/assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/schibsted-grotesk.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/permanent-marker.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/oxanium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/styles.css">
   <meta property="og:title" content="Night Shift Revenue">
   <meta property="og:description" content="Booked appointments from the leads you already paid for. Pay per booked appointment.">
@@ -23,72 +25,80 @@
     <input name="database_size"><textarea name="notes"></textarea><input type="checkbox" name="sms_consent">
   </form>
   <a class="skip" href="#main">Skip to content</a>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="bot" viewBox="0 0 24 24"><path d="M12 6.2V3.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="2.6" r="1.6" fill="var(--tip, currentColor)"/><rect x="3.6" y="6.4" width="16.8" height="13.6" rx="4" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="1" y="11" width="2.2" height="5" rx="1" fill="currentColor"/><rect x="20.8" y="11" width="2.2" height="5" rx="1" fill="currentColor"/><circle cx="9" cy="12.6" r="1.7" fill="currentColor"/><circle cx="15" cy="12.6" r="1.7" fill="currentColor"/><path d="M9.6 16.6h4.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="crescent" viewBox="0 0 100 100"><path d="M63 8A44 44 0 1 0 92 70 36 36 0 0 1 63 8Z" fill="currentColor"/></symbol>
+  </svg>
 
   <div class="frame">
-    <header class="rail-top">
-      <a class="wordmark" href="/" aria-label="Night Shift Revenue, home">
-        <span class="wm-a">Night Shift</span><span class="wm-b">Revenue</span>
-      </a>
+    <header class="site-head">
+      <a class="brand" href="/" aria-label="Night Shift Revenue, home"><img src="/assets/brand/lockup-horizontal-dark.svg" alt="" width="240" height="48"></a>
       <nav class="nav" aria-label="Main">
         <a href="#how">How it works</a>
         <a href="#pricing">Pricing</a>
         <a href="#fit">Who it's for</a>
         <a href="#after-hours">After hours</a>
       </nav>
-      <a class="magnet magnet-sm" href="#demo" data-book>Book a demo</a>
+      <a class="btn btn-sm" href="#demo" data-book>Book a demo</a>
     </header>
 
-    <main id="main" class="board">
+    <main id="main" class="page">
 
-      <!-- Hero: the board -->
+      <!-- Hero: the night sky, with the overnight log -->
       <section class="hero" aria-labelledby="hero-h">
         <div class="hero-top">
-          <h1 id="hero-h">Your old leads are still on the board.</h1>
+          <h1 id="hero-h">Your old leads aren't dead. They're <span class="moonline">asleep.</span></h1>
           <p class="lede">We text the leads your team stopped chasing, hold the conversation until they're ready, and book them onto your sales calendar. You pay per booked appointment.</p>
         </div>
-        <figure class="ledger" aria-labelledby="ledger-cap">
+        <svg class="moon" aria-hidden="true" focusable="false"><use href="#crescent"/></svg>
+        <figure class="log card" aria-labelledby="log-cap">
+          <div class="log-head" aria-hidden="true">
+            <span class="crew"><svg><use href="#bot"/></svg><svg><use href="#bot"/></svg><svg><use href="#bot"/></svg></span>
+            <span class="log-title">Overnight log</span>
+            <span class="log-status"><i></i>Night crew on shift</span>
+          </div>
           <table>
-            <caption id="ledger-cap" class="sr">Illustrative example of a lead board: three old leads have replied and two are booked.</caption>
+            <caption id="log-cap" class="sr">Illustrative example of an overnight lead log: three old leads have replied and two are booked.</caption>
             <thead>
               <tr>
-                <th scope="col"><span class="strip">Lead</span></th>
-                <th scope="col" class="c-in"><span class="strip">Came in</span></th>
-                <th scope="col" class="c-last"><span class="strip">Last touch</span></th>
-                <th scope="col"><span class="strip">Now</span></th>
+                <th scope="col"><span class="tag">Lead</span></th>
+                <th scope="col" class="c-in"><span class="tag">Came in</span></th>
+                <th scope="col" class="c-last"><span class="tag">Last touch</span></th>
+                <th scope="col"><span class="tag">Now</span></th>
               </tr>
             </thead>
             <tbody>
-              <tr class="ghost" aria-hidden="true"><td>M. Alvarez</td><td class="c-in">Quote, Jun '24</td><td class="c-last">6 calls, no answer</td><td>dead</td></tr>
-              <tr class="live" data-write>
-                <td><span class="ghost-under" aria-hidden="true">Dana Reyes</span><span class="ink">Dana R.</span></td>
-                <td class="c-in"><span class="ink">Quote, Mar '25</span></td>
-                <td class="c-last"><span class="ink">Replied 8:47 PM</span></td>
-                <td><span class="ink booked">Booked Thu 10:30</span></td>
+              <tr class="asleep" aria-hidden="true"><td>M. Alvarez</td><td class="c-in">Quote, Jun '24</td><td class="c-last">6 calls, no answer</td><td>dead</td></tr>
+              <tr class="awake" data-write>
+                <td><span class="lit">Dana R.</span></td>
+                <td class="c-in"><span class="lit">Quote, Mar '25</span></td>
+                <td class="c-last"><span class="lit">Replied 8:47 PM</span></td>
+                <td><span class="lit booked">Booked Thu 10:30</span></td>
               </tr>
-              <tr class="ghost" aria-hidden="true"><td>T. Brooks</td><td class="c-in">Consult, Feb '25</td><td class="c-last">went quiet</td><td>lost</td></tr>
-              <tr class="ghost" aria-hidden="true"><td>K. Patel</td><td class="c-in">Web form, Nov '23</td><td class="c-last">"not right now"</td><td>dead</td></tr>
-              <tr class="live" data-write>
-                <td><span class="ghost-under" aria-hidden="true">Marcus Tate</span><span class="ink">Marcus T.</span></td>
-                <td class="c-in"><span class="ink">Consult, Oct '24</span></td>
-                <td class="c-last"><span class="ink">Replied 7:12 PM</span></td>
-                <td><span class="ink booked">Booked Fri 2:00</span></td>
+              <tr class="asleep" aria-hidden="true"><td>T. Brooks</td><td class="c-in">Consult, Feb '25</td><td class="c-last">went quiet</td><td>lost</td></tr>
+              <tr class="asleep" aria-hidden="true"><td>K. Patel</td><td class="c-in">Web form, Nov '23</td><td class="c-last">"not right now"</td><td>dead</td></tr>
+              <tr class="awake" data-write>
+                <td><span class="lit">Marcus T.</span></td>
+                <td class="c-in"><span class="lit">Consult, Oct '24</span></td>
+                <td class="c-last"><span class="lit">Replied 7:12 PM</span></td>
+                <td><span class="lit booked">Booked Fri 2:00</span></td>
               </tr>
-              <tr class="ghost" aria-hidden="true"><td>J. Owens</td><td class="c-in">Estimate, Aug '24</td><td class="c-last">voicemail x4</td><td>dead</td></tr>
-              <tr class="ghost" aria-hidden="true"><td>R. Kim</td><td class="c-in">Quote, Jan '24</td><td class="c-last">price shopping</td><td>lost</td></tr>
-              <tr class="live" data-write>
-                <td><span class="ghost-under" aria-hidden="true">Priya Shah</span><span class="ink">Priya S.</span></td>
-                <td class="c-in"><span class="ink">Estimate, Jan '25</span></td>
-                <td class="c-last"><span class="ink">Replied 9:03 AM</span></td>
-                <td><span class="ink">Qualifying</span></td>
+              <tr class="asleep" aria-hidden="true"><td>J. Owens</td><td class="c-in">Estimate, Aug '24</td><td class="c-last">voicemail x4</td><td>dead</td></tr>
+              <tr class="asleep" aria-hidden="true"><td>R. Kim</td><td class="c-in">Quote, Jan '24</td><td class="c-last">price shopping</td><td>lost</td></tr>
+              <tr class="awake" data-write>
+                <td><span class="lit">Priya S.</span></td>
+                <td class="c-in"><span class="lit">Estimate, Jan '25</span></td>
+                <td class="c-last"><span class="lit">Replied 9:03 AM</span></td>
+                <td><span class="lit">Qualifying</span></td>
               </tr>
-              <tr class="ghost" aria-hidden="true"><td>L. Grant</td><td class="c-in">Consult, May '24</td><td class="c-last">no show</td><td>dead</td></tr>
-              <tr class="ghost" aria-hidden="true"><td>S. Nguyen</td><td class="c-in">Web form, Sep '23</td><td class="c-last">never reached</td><td>dead</td></tr>
+              <tr class="asleep" aria-hidden="true"><td>L. Grant</td><td class="c-in">Consult, May '24</td><td class="c-last">no show</td><td>dead</td></tr>
+              <tr class="asleep" aria-hidden="true"><td>S. Nguyen</td><td class="c-in">Web form, Sep '23</td><td class="c-last">never reached</td><td>dead</td></tr>
             </tbody>
           </table>
           <figcaption>Illustrative example. Names and times are fictional.</figcaption>
         </figure>
 
-        <div class="hero-tray">
+        <div class="hero-form card">
             <form class="quick" name="demo" method="POST" data-netlify="true" netlify-honeypot="company_website" data-form>
               <input type="hidden" name="form-name" value="demo">
               <input type="hidden" name="source" value="hero">
@@ -102,7 +112,7 @@
                   <span>Work email</span>
                   <input name="email" type="email" autocomplete="email" required>
                 </label>
-                <button class="magnet" type="submit">Book a demo</button>
+                <button class="btn" type="submit">Book a demo</button>
               </div>
               <p class="quick-note">Free reactivation audit first. Or call or text our main line, <a href="tel:+14042766462" data-phone>404-276-6462</a>.</p>
               <p class="form-status" role="status" aria-live="polite"></p>
@@ -118,7 +128,7 @@
         </div>
 
         <div class="pose-answer">
-          <div class="pose" aria-label="Dana's old lead record">
+          <div class="pose card" aria-label="Dana's old lead record">
             <p class="pose-name">Dana Reyes</p>
             <dl class="pose-facts">
               <div><dt>In CRM since</dt><dd>March 2025</dd></div>
@@ -145,7 +155,7 @@
               <p class="msg out" data-stage="3"><time>Tue 8:55 PM</time><span>You're booked for Thursday at 10:30. Mike from our team will text when he's on the way.</span></p>
             </div>
             <div class="thread-foot">
-              <button class="ghost-btn" type="button" data-replay hidden>
+              <button class="btn-quiet" type="button" data-replay hidden>
                 <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>
                 <span>Replay the conversation</span>
               </button>
@@ -154,7 +164,7 @@
           </div>
         </div>
 
-        <p class="handoff"><span class="ink booked">Booked Thu 10:30</span> Handed to your sales team with the whole conversation attached.</p>
+        <p class="handoff"><span class="lit booked">Booked Thu 10:30</span> Handed to your sales team with the whole conversation attached.</p>
       </section>
 
       <!-- How it works -->
@@ -190,15 +200,15 @@
       <!-- Pricing -->
       <section class="pricing" id="pricing" aria-labelledby="pricing-h">
         <div class="section-head">
-          <h2 id="pricing-h">You pay when it works.</h2>
+          <h2 id="pricing-h">You pay <span class="moonline">when it works.</span></h2>
           <p>No retainer. Terms are set per partner after the free audit, in writing, before a single text goes out.</p>
         </div>
         <div class="deals">
-          <article class="deal deal-main">
+          <article class="deal deal-main card">
             <h3>Pay per booked appointment</h3>
             <p>Before launch we agree, in writing, what counts as a booked appointment for your business. You pay for each one. If the campaign books none, you owe nothing.</p>
           </article>
-          <article class="deal">
+          <article class="deal card">
             <h3>Revenue share</h3>
             <p>For the right partner: instead of a per-appointment fee, we take an agreed share of closed sales that come from reactivated leads. It suits businesses with long sales cycles and high-value jobs.</p>
           </article>
@@ -213,7 +223,7 @@
         </div>
         <div class="fit-cols">
           <div>
-            <h3 class="strip">Good fit</h3>
+            <h3 class="tag">Good fit</h3>
             <ul class="checks">
               <li>You sell something worth thousands, not tens: solar, roofing, remodeling, insurance, legal, financial or B2B services.</li>
               <li>You have a sales team, or at least someone who runs appointments.</li>
@@ -222,7 +232,7 @@
             </ul>
           </div>
           <div>
-            <h3 class="strip strip-quiet">Not a fit</h3>
+            <h3 class="tag tag-dim">Not a fit</h3>
             <ul class="crosses">
               <li>Purchased, scraped or rented lists.</li>
               <li>Contacts who never gave your business permission to text them.</li>
@@ -236,10 +246,10 @@
       <!-- After hours -->
       <section class="after" id="after-hours" aria-labelledby="after-h">
         <div class="section-head">
-          <h2 id="after-h">Then we take the night shift.</h2>
+          <h2 id="after-h">Then we take the <span class="moonline">night shift.</span></h2>
           <p>Once your old leads are moving, we keep new ones from going cold. Both are added after a reactivation campaign is live.</p>
         </div>
-        <div class="clock">
+        <div class="clock card">
           <div class="clock-rule" aria-hidden="true">
             <span style="--at:0">6 PM</span><span style="--at:.25">9 PM</span><span style="--at:.5">12 AM</span><span style="--at:.75">3 AM</span><span style="--at:1">6 AM</span>
           </div>
@@ -364,19 +374,18 @@
             <span>Text me about my demo request. By checking this box, you agree to receive calls and text messages from Night Shift Revenue at the number above about your demo. Consent is not a condition of purchase. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. See our <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms</a>.</span>
           </label>
 
-          <button class="magnet magnet-lg" type="submit">Book my demo</button>
+          <button class="btn btn-lg" type="submit">Book my demo</button>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </section>
     </main>
 
-    <footer class="tray">
-      <div class="tray-ledge" aria-hidden="true"></div>
-      <div class="tray-body">
-        <p class="wordmark wordmark-foot"><span class="wm-a">Night Shift</span><span class="wm-b">Revenue</span></p>
+    <footer class="site-foot">
+      <div class="foot-body">
+        <img class="foot-logo" src="/assets/brand/lockup-horizontal-dark.svg" alt="Night Shift Revenue" width="240" height="48" loading="lazy">
         <p>Main line: call or text <a href="tel:+14042766462" data-phone>404-276-6462</a>.</p>
         <p>Examples on this site are illustrative and use made-up names and businesses. We don't publish client results.</p>
-        <p class="tray-links"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms</a><span>© <span data-year>2026</span> Night Shift Revenue</span></p>
+        <p class="foot-links"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms</a><span>© <span data-year>2026</span> Night Shift Revenue</span></p>
       </div>
     </footer>
   </div>

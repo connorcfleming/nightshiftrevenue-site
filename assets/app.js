@@ -34,16 +34,16 @@
   const year = $('[data-year]');
   if (year) year.textContent = String(new Date().getFullYear());
 
-  /* ---------- Hero: old leads rewritten in fresh marker ---------- */
-  const ledger = $('.ledger');
-  if (ledger && !reduceMotion) {
-    $$('.live', ledger).forEach((row, r) => {
-      $$('.ink', row).forEach((ink, c) => { ink.style.setProperty('--d', String(350 + r * 520 + c * 170)); });
+  /* ---------- Hero: dormant leads glow back to life overnight ---------- */
+  const log = $('.log');
+  if (log && !reduceMotion) {
+    $$('.awake', log).forEach((row, r) => {
+      $$('.lit', row).forEach((lit, c) => { lit.style.setProperty('--d', String(350 + r * 520 + c * 170)); });
     });
-    ledger.classList.add('is-pre');
+    log.classList.add('is-pre');
     requestAnimationFrame(() => requestAnimationFrame(() => {
-      ledger.classList.add('is-writing');
-      ledger.classList.remove('is-pre');
+      log.classList.add('is-writing');
+      log.classList.remove('is-pre');
     }));
   }
 

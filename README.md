@@ -2,15 +2,16 @@
 
 A one-page marketing site for Night Shift Revenue, plus Privacy and Terms placeholder pages. It's plain HTML, CSS and vanilla JS with no framework and no dependencies, following the pattern of the Monarca firms site in `Spanish PPL/funnel/monarca-firms-site`.
 
-**Visual direction:** "The Sales Board". The page is a sales-floor whiteboard in an aluminum frame. Old leads show as half-erased "ghost" entries, and revived ones are rewritten in blue marker. Red is used only for BOOKED and the main buttons. The direction contract is in `../.impeccable/surfaces/nightshift-site-index-html.md`.
+**Visual direction:** "The Night Shift". A small robot crew works your old leads overnight while you sleep. The page is a midnight sky with a crescent moon. Dormant leads sit dim in an overnight log, and the ones that wake up glow green. Bookings get a hand-drawn moon-yellow underline. Tokens and rules are in `DESIGN.md`. This replaced the earlier "Sales Board" whiteboard direction.
 
 ## Files
 | Path | What it is |
 |---|---|
-| `index.html` | The site: hero board, SMS example, how it works, pricing, fit, after hours, consent rules, FAQ, demo form |
+| `index.html` | The site: hero overnight log, SMS example, how it works, pricing, fit, after hours, consent rules, FAQ, demo form |
 | `privacy.html`, `terms.html` | **Placeholders.** An attorney must complete them before launch |
-| `assets/styles.css`, `assets/app.js` | Styles; marker reveal, conversation playback, config, form handling |
-| `assets/fonts/` | Self-hosted Schibsted Grotesk and Permanent Marker (Google Fonts, SIL Open Font License) |
+| `assets/styles.css`, `assets/app.js` | Styles; the log waking up, conversation playback, config, form handling |
+| `assets/fonts/` | Self-hosted Oxanium (headings, matches the logo) and Schibsted Grotesk (body), both SIL Open Font License |
+| `assets/brand/` | Logo lockup, icon and favicons. **Placeholders** until `../brand/logo-v2/final/` is ready; copy the final files over the same names |
 | `site.config.json` | Booking URL, contact email, operator legal name and address |
 | `check.mjs` | Launch gate: placeholders, banned claims, required consent copy, Netlify form wiring, broken links |
 | `scripts/` | `build.mjs` (copies to `dist/`), `serve.mjs` (local server), `shoot.mjs` (screenshots), `form-test.mjs` |

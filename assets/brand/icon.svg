@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- PLACEHOLDER: replace with ../brand/logo-v2/final/icon.svg when the robot-janitor logo is done -->
+  <defs><filter id="g" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5"/></filter></defs>
+  <rect x="10" y="10" width="44" height="44" rx="11" fill="#4DFFA6" opacity=".55" filter="url(#g)"/>
+  <rect x="10" y="10" width="44" height="44" rx="11" fill="#4DFFA6"/>
+</svg>

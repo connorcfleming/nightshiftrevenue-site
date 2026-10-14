@@ -2,6 +2,7 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+  const inView = el => { const r = el.getBoundingClientRect(); return r.top < innerHeight && r.bottom > 0; };
 
   /* ---------- Config: booking link, contact, operator ---------- */
   const isSet = v => typeof v === 'string' && v.trim() && !v.includes('[VERIFY]');
@@ -34,20 +35,38 @@
   const year = $('[data-year]');
   if (year) year.textContent = String(new Date().getFullYear());
 
-  /* ---------- Hero: dormant leads glow back to life overnight ---------- */
-  const log = $('.log');
-  if (log && !reduceMotion) {
-    $$('.awake', log).forEach((row, r) => {
-      $$('.lit', row).forEach((lit, c) => { lit.style.setProperty('--d', String(350 + r * 520 + c * 170)); });
-    });
-    log.classList.add('is-pre');
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      log.classList.add('is-writing');
-      log.classList.remove('is-pre');
-    }));
+  /* ---------- Header: border once scrolled, menu under 900px ---------- */
+  const head = $('.site-head');
+  if (head) {
+    const onScroll = () => head.classList.toggle('is-stuck', scrollY > 8);
+    addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+  const toggle = $('.nav-toggle');
+  const nav = $('#site-nav');
+  if (toggle && nav) {
+    toggle.hidden = false;
+    const setOpen = open => { toggle.setAttribute('aria-expanded', String(open)); nav.classList.toggle('is-open', open); };
+    toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+    $$('a', nav).forEach(a => a.addEventListener('click', () => setOpen(false)));
+    addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('is-open')) { setOpen(false); toggle.focus(); } });
   }
 
-  /* ---------- One lead coming back: the conversation plays ---------- */
+  /* ---------- Hero: the windows light up once, just before the street is seen ---------- */
+  const street = $('.street');
+  if (street && !reduceMotion) {
+    if (inView(street) || !('IntersectionObserver' in window)) street.classList.add('is-waking');
+    else {
+      const io = new IntersectionObserver(entries => {
+        if (entries.some(e => e.isIntersecting)) { io.disconnect(); street.classList.add('is-waking'); }
+      }, { rootMargin: '0px 0px 120px 0px' });
+      io.observe(street);
+    }
+  }
+
+  /* ---------- One lead coming back ----------
+     The thread is complete by default. It only plays if it hasn't been seen yet;
+     hidden messages keep their space, so nothing below moves. */
   const thread = $('[data-thread]');
   const track = $('.track');
   const replay = $('[data-replay]');
@@ -56,64 +75,48 @@
 
   function setStage(n) {
     if (!track) return;
-    $$('li', track).forEach(li => {
-      const s = Number(li.dataset.stage);
-      li.classList.toggle('is-on', s <= n);
-      li.classList.toggle('is-now', s === n);
-    });
+    $$('li', track).forEach(li => li.classList.toggle('is-on', Number(li.dataset.stage) <= n));
   }
 
-  function clearTimers() { timers.forEach(clearTimeout); timers = []; $$('.typing', thread).forEach(t => t.remove()); }
-
   function showAll() {
-    clearTimers();
-    msgs.forEach(m => m.classList.remove('is-hidden', 'is-new'));
+    timers.forEach(clearTimeout); timers = [];
+    thread.classList.remove('is-pending');
+    msgs.forEach(m => m.classList.remove('is-shown'));
     setStage(3);
+    if (replay) replay.disabled = false;
   }
 
   function play() {
-    clearTimers();
-    msgs.forEach(m => { m.classList.add('is-hidden'); m.classList.remove('is-new'); });
+    timers.forEach(clearTimeout); timers = [];
+    thread.classList.add('is-pending');
+    msgs.forEach(m => m.classList.remove('is-shown'));
     setStage(0);
     if (replay) replay.disabled = true;
-    let t = 300;
-    msgs.forEach((m, idx) => {
-      const out = m.classList.contains('out');
-      const typeFor = idx === 0 ? 700 : Math.min(1600, 500 + m.textContent.length * 9);
+    msgs.forEach((m, i) => {
       timers.push(setTimeout(() => {
-        const dots = document.createElement('div');
-        dots.className = `typing ${out ? 'out' : 'in'}`;
-        dots.setAttribute('aria-hidden', 'true');
-        dots.innerHTML = '<i></i><i></i><i></i>';
-        m.before(dots);
-      }, t));
-      t += typeFor;
-      timers.push(setTimeout(() => {
-        $$('.typing', thread).forEach(d => d.remove());
-        m.classList.remove('is-hidden');
-        m.classList.add('is-new');
+        m.classList.add('is-shown');
         setStage(Number(m.dataset.stage));
-        if (idx === msgs.length - 1 && replay) replay.disabled = false;
-      }, t));
-      t += 450;
+        if (i === msgs.length - 1) timers.push(setTimeout(showAll, 500));
+      }, 250 + i * 540));
     });
   }
 
   if (thread) {
-    showAll();
-    if (replay) {
-      replay.hidden = false;
-      replay.addEventListener('click', play);
-    }
+    setStage(3);
     if (!reduceMotion && 'IntersectionObserver' in window) {
-      const io = new IntersectionObserver(entries => {
-        if (entries.some(e => e.isIntersecting)) { io.disconnect(); play(); }
-      }, { threshold: 0.35 });
-      io.observe(thread);
+      if (replay) { replay.hidden = false; replay.addEventListener('click', play); }
+      if (!inView(thread)) {
+        thread.classList.add('is-pending');
+        setStage(0);
+        const io = new IntersectionObserver(entries => {
+          if (entries.some(e => e.isIntersecting)) { io.disconnect(); play(); }
+        }, { threshold: 0.3 });
+        io.observe(thread);
+      }
     }
   }
 
-  /* ---------- Demo forms (Netlify Forms) ---------- */
+  /* ---------- Audit forms (Netlify Forms) ---------- */
   const encode = data => new URLSearchParams(data).toString();
 
   $$('form[data-form]').forEach(form => {
@@ -137,7 +140,7 @@
         });
         if (!res.ok) throw new Error(String(res.status));
         status.classList.add('ok');
-        status.textContent = "Thanks. We'll reach out within one business day to set a time.";
+        status.textContent = "Thanks. We'll reach out within one business day to set up your audit.";
         $$('input:not([type=hidden]):not([type=checkbox]), textarea, select', form).forEach(el => { el.value = ''; });
         $$('input[type=checkbox]', form).forEach(el => { el.checked = false; });
         if (button) button.textContent = 'Request sent';

@@ -4,14 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Night Shift Revenue · Booked appointments from the leads you already paid for</title>
-  <meta name="description" content="Night Shift Revenue texts the leads your team stopped chasing, qualifies who is ready, and books them onto your sales calendar. You pay per booked appointment.">
-  <meta name="theme-color" content="#0A1630">
-  <link rel="icon" href="/assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <meta name="description" content="While your office is closed, Night Shift Revenue texts the leads your team stopped chasing, holds the conversation, and books the ready ones onto your calendar. You pay per booked appointment.">
+  <meta name="theme-color" content="#111210">
   <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/brand/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
-  <link rel="preload" href="/assets/fonts/schibsted-grotesk.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/oxanium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/schibsted-grotesk.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
   <meta property="og:title" content="Night Shift Revenue">
   <meta property="og:description" content="Booked appointments from the leads you already paid for. Pay per booked appointment.">
   <meta property="og:type" content="website">
@@ -25,274 +26,244 @@
     <input name="database_size"><textarea name="notes"></textarea><input type="checkbox" name="sms_consent">
   </form>
   <a class="skip" href="#main">Skip to content</a>
-  <svg class="sprite" aria-hidden="true" focusable="false">
-    <symbol id="bot" viewBox="0 0 24 24"><path d="M12 6.2V3.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="2.6" r="1.6" fill="var(--tip, currentColor)"/><rect x="3.6" y="6.4" width="16.8" height="13.6" rx="4" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="1" y="11" width="2.2" height="5" rx="1" fill="currentColor"/><rect x="20.8" y="11" width="2.2" height="5" rx="1" fill="currentColor"/><circle cx="9" cy="12.6" r="1.7" fill="currentColor"/><circle cx="15" cy="12.6" r="1.7" fill="currentColor"/><path d="M9.6 16.6h4.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
-    <symbol id="crescent" viewBox="0 0 100 100"><path d="M63 8A44 44 0 1 0 92 70 36 36 0 0 1 63 8Z" fill="currentColor"/></symbol>
-  </svg>
 
-  <div class="frame">
-    <header class="site-head">
-      <a class="brand" href="/" aria-label="Night Shift Revenue, home"><img src="/assets/brand/lockup-horizontal-dark.svg" alt="" width="240" height="48"></a>
-      <nav class="nav" aria-label="Main">
-        <a href="#how">How it works</a>
+  <header class="site-head">
+    <div class="wrap head-row">
+      <a class="brand" href="/" aria-label="Night Shift Revenue, home">
+        <img class="brand-logo" src="/assets/brand/lockup-horizontal-dark.svg" width="540" height="124" alt="Night Shift Revenue">
+      </a>
+      <a class="btn btn-sm head-cta" href="#audit">Free audit</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+        <span class="nav-toggle-bars" aria-hidden="true"></span><span class="sr">Menu</span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="#night">How it works</a>
         <a href="#pricing">Pricing</a>
         <a href="#fit">Who it's for</a>
-        <a href="#after-hours">After hours</a>
+        <a href="#faq">Questions</a>
+        <a class="btn btn-sm" href="#audit">Free lead audit</a>
       </nav>
-      <a class="btn btn-sm" href="#demo" data-book>Book a demo</a>
-    </header>
+    </div>
+  </header>
 
-    <main id="main" class="page">
+  <main id="main">
 
-      <!-- Hero: the night sky, with the overnight log -->
-      <section class="hero" aria-labelledby="hero-h">
-        <div class="hero-top">
-          <h1 id="hero-h">Your old leads aren't dead. They're <span class="moonline">asleep.</span></h1>
-          <p class="lede">We text the leads your team stopped chasing, hold the conversation until they're ready, and book them onto your sales calendar. You pay per booked appointment.</p>
+    <!-- Hero: the street of old leads, a few windows lit -->
+    <section class="hero" aria-labelledby="hero-h">
+      <img class="moon" src="/assets/brand/icon.svg" width="106" height="106" alt="" aria-hidden="true">
+      <div class="wrap hero-top">
+        <div class="hero-heading"><h1 id="hero-h">Your old leads aren't dead. <span>They're asleep.</span></h1><p class="brand-tagline">Turn missed opportunities<br>into revenue</p></div>
+        <div class="hero-side">
+          <p class="lede">While your office is closed, we text the leads your team stopped chasing, hold real conversations with them, and book the ready ones onto your calendar. You pay per booked appointment.</p>
+          <form class="quick" name="demo" method="POST" data-netlify="true" netlify-honeypot="company_website" data-form>
+            <input type="hidden" name="form-name" value="demo">
+            <input type="hidden" name="source" value="hero">
+            <p class="hp" aria-hidden="true"><label>Leave this empty <input name="company_website" tabindex="-1" autocomplete="off"></label></p>
+            <div class="quick-fields">
+              <label class="field"><span>Your name</span><input name="name" autocomplete="name" required></label>
+              <label class="field"><span>Work email</span><input name="email" type="email" autocomplete="email" required></label>
+            </div>
+            <button class="btn" type="submit">Get my free lead audit</button>
+            <p class="quick-note">15 min · we'll tell you if your list is worth working.</p>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
-        <svg class="moon" aria-hidden="true" focusable="false"><use href="#crescent"/></svg>
-        <figure class="log card" aria-labelledby="log-cap">
-          <div class="log-head" aria-hidden="true">
-            <span class="crew"><svg><use href="#bot"/></svg><svg><use href="#bot"/></svg><svg><use href="#bot"/></svg></span>
-            <span class="log-title">Overnight log</span>
-            <span class="log-status"><i></i>Night crew on shift</span>
-          </div>
-          <table>
-            <caption id="log-cap" class="sr">Illustrative example of an overnight lead log: three old leads have replied and two are booked.</caption>
-            <thead>
-              <tr>
-                <th scope="col"><span class="tag">Lead</span></th>
-                <th scope="col" class="c-in"><span class="tag">Came in</span></th>
-                <th scope="col" class="c-last"><span class="tag">Last touch</span></th>
-                <th scope="col"><span class="tag">Now</span></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="asleep" aria-hidden="true"><td>M. Alvarez</td><td class="c-in">Quote, Jun '24</td><td class="c-last">6 calls, no answer</td><td>dead</td></tr>
-              <tr class="awake" data-write>
-                <td><span class="lit">Dana R.</span></td>
-                <td class="c-in"><span class="lit">Quote, Mar '25</span></td>
-                <td class="c-last"><span class="lit">Replied 8:47 PM</span></td>
-                <td><span class="lit booked">Booked Thu 10:30</span></td>
-              </tr>
-              <tr class="asleep" aria-hidden="true"><td>T. Brooks</td><td class="c-in">Consult, Feb '25</td><td class="c-last">went quiet</td><td>lost</td></tr>
-              <tr class="asleep" aria-hidden="true"><td>K. Patel</td><td class="c-in">Web form, Nov '23</td><td class="c-last">"not right now"</td><td>dead</td></tr>
-              <tr class="awake" data-write>
-                <td><span class="lit">Marcus T.</span></td>
-                <td class="c-in"><span class="lit">Consult, Oct '24</span></td>
-                <td class="c-last"><span class="lit">Replied 7:12 PM</span></td>
-                <td><span class="lit booked">Booked Fri 2:00</span></td>
-              </tr>
-              <tr class="asleep" aria-hidden="true"><td>J. Owens</td><td class="c-in">Estimate, Aug '24</td><td class="c-last">voicemail x4</td><td>dead</td></tr>
-              <tr class="asleep" aria-hidden="true"><td>R. Kim</td><td class="c-in">Quote, Jan '24</td><td class="c-last">price shopping</td><td>lost</td></tr>
-              <tr class="awake" data-write>
-                <td><span class="lit">Priya S.</span></td>
-                <td class="c-in"><span class="lit">Estimate, Jan '25</span></td>
-                <td class="c-last"><span class="lit">Replied 9:03 AM</span></td>
-                <td><span class="lit">Qualifying</span></td>
-              </tr>
-              <tr class="asleep" aria-hidden="true"><td>L. Grant</td><td class="c-in">Consult, May '24</td><td class="c-last">no show</td><td>dead</td></tr>
-              <tr class="asleep" aria-hidden="true"><td>S. Nguyen</td><td class="c-in">Web form, Sep '23</td><td class="c-last">never reached</td><td>dead</td></tr>
-            </tbody>
-          </table>
-          <figcaption>Illustrative example. Names and times are fictional.</figcaption>
-        </figure>
+      </div>
 
-        <div class="hero-form card">
-            <form class="quick" name="demo" method="POST" data-netlify="true" netlify-honeypot="company_website" data-form>
-              <input type="hidden" name="form-name" value="demo">
-              <input type="hidden" name="source" value="hero">
-              <p class="hp" aria-hidden="true"><label>Leave this empty <input name="company_website" tabindex="-1" autocomplete="off"></label></p>
-              <div class="quick-fields">
-                <label class="field">
-                  <span>Your name</span>
-                  <input name="name" autocomplete="name" required>
-                </label>
-                <label class="field">
-                  <span>Work email</span>
-                  <input name="email" type="email" autocomplete="email" required>
-                </label>
-                <button class="btn" type="submit">Book a demo</button>
-              </div>
-              <p class="quick-note">Free reactivation audit first. Or call or text our main line, <a href="tel:+14042766462" data-phone>404-276-6462</a>.</p>
-              <p class="form-status" role="status" aria-live="polite"></p>
-            </form>
-        </div>
-      </section>
+      <figure class="street" aria-labelledby="street-cap">
+        <figcaption id="street-cap" class="sr">An illustrative street of nine old leads. Overnight, three have replied: Dana R. and Marcus T. are booked, Priya S. is still talking. The other six are asleep.</figcaption>
+        <ol class="houses">
+          <li class="house t-a">
+            <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 60,8 120,52"/><rect class="body" x="10" y="48" width="100" height="72"/><rect class="win" x="24" y="64" width="22" height="18"/><rect class="win" x="74" y="64" width="22" height="18"/><rect class="door" x="52" y="90" width="16" height="30"/></svg>
+            <p class="kerb"><b>M. Alvarez</b><span>Quote, Jun '24</span><span class="state">asleep</span></p>
+          </li>
+          <li class="house t-b is-booked keep" style="--d:0">
+            <p class="say say-booked" aria-hidden="true"><time>2:10 AM</time> “Thursday works.”</p>
+            <svg viewBox="0 0 110 150" aria-hidden="true" focusable="false"><rect class="body" x="5" y="18" width="100" height="132"/><rect class="roof" x="0" y="12" width="110" height="8"/><rect class="win" x="20" y="38" width="24" height="22"/><rect class="win on" x="66" y="38" width="24" height="22"/><rect class="win" x="20" y="80" width="24" height="22"/><rect class="win on" x="66" y="80" width="24" height="22"/><rect class="door" x="45" y="116" width="20" height="34"/><circle class="porch" cx="72" cy="124" r="4"/></svg>
+            <p class="kerb"><b>Dana R.</b><span>Quote, Mar '25</span><span class="state booked">Booked Thu 10:30</span></p>
+          </li>
+          <li class="house t-c keep">
+            <svg viewBox="0 0 170 90" aria-hidden="true" focusable="false"><polygon class="roof" points="0,38 30,10 140,10 170,38"/><rect class="body" x="8" y="34" width="154" height="56"/><rect class="win" x="24" y="48" width="30" height="16"/><rect class="win" x="116" y="48" width="30" height="16"/><rect class="door" x="76" y="56" width="18" height="34"/></svg>
+            <p class="kerb"><b>T. Brooks</b><span>Consult, Feb '25</span><span class="state">asleep</span></p>
+          </li>
+          <li class="house t-d is-booked" style="--d:1">
+            <svg viewBox="0 0 90 150" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 45,6 90,52"/><rect class="body" x="6" y="48" width="78" height="102"/><rect class="win on" x="18" y="62" width="20" height="20"/><rect class="win" x="52" y="62" width="20" height="20"/><rect class="win" x="18" y="100" width="20" height="20"/><rect class="door" x="52" y="112" width="18" height="38"/><circle class="porch" cx="44" cy="120" r="4"/></svg>
+            <p class="kerb"><b>Marcus T.</b><span>Consult, Oct '24</span><span class="state booked">Booked Fri 2:00</span></p>
+          </li>
+          <li class="house t-a">
+            <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 60,8 120,52"/><rect class="body" x="10" y="48" width="100" height="72"/><rect class="win" x="24" y="64" width="22" height="18"/><rect class="win" x="74" y="64" width="22" height="18"/><rect class="door" x="52" y="90" width="16" height="30"/></svg>
+            <p class="kerb"><b>K. Patel</b><span>Web form, Nov '23</span><span class="state">asleep</span></p>
+          </li>
+          <li class="house t-c">
+            <svg viewBox="0 0 170 90" aria-hidden="true" focusable="false"><polygon class="roof" points="0,38 30,10 140,10 170,38"/><rect class="body" x="8" y="34" width="154" height="56"/><rect class="win" x="24" y="48" width="30" height="16"/><rect class="win" x="116" y="48" width="30" height="16"/><rect class="door" x="76" y="56" width="18" height="34"/></svg>
+            <p class="kerb"><b>J. Owens</b><span>Estimate, Aug '24</span><span class="state">asleep</span></p>
+          </li>
+          <li class="house t-b is-talking keep" style="--d:2">
+            <p class="say" aria-hidden="true"><time>11:40 PM</time> “What would it cost now?”</p>
+            <svg viewBox="0 0 110 150" aria-hidden="true" focusable="false"><rect class="body" x="5" y="18" width="100" height="132"/><rect class="roof" x="0" y="12" width="110" height="8"/><rect class="win" x="20" y="38" width="24" height="22"/><rect class="win" x="66" y="38" width="24" height="22"/><rect class="win on" x="20" y="80" width="24" height="22"/><rect class="win" x="66" y="80" width="24" height="22"/><rect class="door" x="45" y="116" width="20" height="34"/></svg>
+            <p class="kerb"><b>Priya S.</b><span>Estimate, Jan '25</span><span class="state talking">Talking</span></p>
+          </li>
+          <li class="house t-d keep">
+            <svg viewBox="0 0 90 150" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 45,6 90,52"/><rect class="body" x="6" y="48" width="78" height="102"/><rect class="win" x="18" y="62" width="20" height="20"/><rect class="win" x="52" y="62" width="20" height="20"/><rect class="win" x="18" y="100" width="20" height="20"/><rect class="door" x="52" y="112" width="18" height="38"/></svg>
+            <p class="kerb"><b>R. Kim</b><span>Quote, Jan '24</span><span class="state">asleep</span></p>
+          </li>
+          <li class="house t-a">
+            <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 60,8 120,52"/><rect class="body" x="10" y="48" width="100" height="72"/><rect class="win" x="24" y="64" width="22" height="18"/><rect class="win" x="74" y="64" width="22" height="18"/><rect class="door" x="52" y="90" width="16" height="30"/></svg>
+            <p class="kerb"><b>L. Grant</b><span>Consult, May '24</span><span class="state">asleep</span></p>
+          </li>
+        </ol>
+        <p class="wrap illustrative">Illustrative example. Every lead, business and time shown on this page is made up.</p>
+      </figure>
+    </section>
 
-      <!-- One lead, coming back -->
-      <section class="comeback" id="example" aria-labelledby="comeback-h">
-        <div class="section-head">
+    <!-- One lead, coming back -->
+    <section class="comeback" id="example" aria-labelledby="comeback-h">
+      <div class="wrap comeback-grid">
+        <div class="comeback-copy">
           <h2 id="comeback-h">Here's one coming back.</h2>
-          <p>Dana asked for a quote, never booked, and stopped picking up. More than a year later, one text restarts the conversation.</p>
+          <p>Dana asked for a roof quote, never booked, and stopped picking up. More than a year later, one text on a Tuesday evening restarts the conversation.</p>
+          <dl class="record" aria-label="Dana's old lead record">
+            <div><dt>In CRM since</dt><dd>March 2025</dd></div>
+            <div><dt>Asked for</dt><dd>Roof replacement quote</dd></div>
+            <div><dt>Attempts</dt><dd>4 calls, 2 voicemails</dd></div>
+            <div><dt>Marked</dt><dd><s>Dead lead</s></dd></div>
+          </dl>
+          <ol class="track" aria-label="Lead status">
+            <li data-stage="0">Asleep</li>
+            <li data-stage="1">Replied</li>
+            <li data-stage="2">Qualified</li>
+            <li data-stage="3" class="track-booked">Booked</li>
+          </ol>
         </div>
 
-        <div class="pose-answer">
-          <div class="pose card" aria-label="Dana's old lead record">
-            <p class="pose-name">Dana Reyes</p>
-            <dl class="pose-facts">
-              <div><dt>In CRM since</dt><dd>March 2025</dd></div>
-              <div><dt>Asked for</dt><dd>Roof replacement quote</dd></div>
-              <div><dt>Attempts</dt><dd>4 calls, 2 voicemails</dd></div>
-              <div><dt>Marked</dt><dd><s>Dead lead</s></dd></div>
-            </dl>
-            <ol class="track" aria-label="Lead status">
-              <li data-stage="0" class="is-on">Dormant</li>
-              <li data-stage="1">Replied</li>
-              <li data-stage="2">Qualified</li>
-              <li data-stage="3">Booked</li>
-            </ol>
+        <div class="answer">
+          <div class="thread" aria-label="Illustrative text conversation between Ridgeline Roofing and Dana" data-thread>
+            <p class="msg out" data-stage="0"><time>Tue 6:12 PM</time><span>Hi Dana, it's Sam with Ridgeline Roofing. Is this the same Dana who got a roof replacement quote from us a while back? Reply STOP to opt out.</span></p>
+            <p class="msg in" data-stage="1"><time>Tue 11:40 PM</time><span>Yes that's me. We put it off but the leak is back</span></p>
+            <p class="msg out" data-stage="1"><time>Tue 11:41 PM</time><span>Sorry to hear that. Same spot over the back bedroom, or somewhere new?</span></p>
+            <p class="msg in" data-stage="2"><time>Wed 2:07 AM</time><span>Same spot. Probably needs doing this time</span></p>
+            <p class="msg out" data-stage="2"><time>Wed 2:08 AM</time><span>Makes sense. Want someone to come re-measure and update the quote? I have Thursday at 10:30 or Friday at 2:00.</span></p>
+            <p class="msg in" data-stage="3"><time>Wed 2:10 AM</time><span>Thursday works</span></p>
+            <p class="msg out msg-booked" data-stage="3"><time>Wed 2:10 AM</time><span>You're booked for Thursday at 10:30. Mike from our team will text when he's on the way.</span></p>
           </div>
-
-          <div class="answer">
-            <div class="thread" aria-label="Illustrative text conversation" data-thread>
-              <p class="msg out" data-stage="0"><time>Tue 6:12 PM</time><span>Hi Dana, it's Sam with Ridgeline Roofing. Is this the same Dana who got a roof replacement quote from us a while back? Reply STOP to opt out.</span></p>
-              <p class="msg in" data-stage="1"><time>Tue 8:47 PM</time><span>Yes that's me. We put it off but the leak is back</span></p>
-              <p class="msg out" data-stage="1"><time>Tue 8:48 PM</time><span>Sorry to hear that. Same spot over the back bedroom, or somewhere new?</span></p>
-              <p class="msg in" data-stage="2"><time>Tue 8:52 PM</time><span>Same spot. Probably needs doing this time</span></p>
-              <p class="msg out" data-stage="2"><time>Tue 8:53 PM</time><span>Makes sense. Want someone to come re-measure and update the quote? I have Thursday at 10:30 or Friday at 2:00.</span></p>
-              <p class="msg in" data-stage="3"><time>Tue 8:55 PM</time><span>Thursday works</span></p>
-              <p class="msg out" data-stage="3"><time>Tue 8:55 PM</time><span>You're booked for Thursday at 10:30. Mike from our team will text when he's on the way.</span></p>
-            </div>
-            <div class="thread-foot">
-              <button class="btn-quiet" type="button" data-replay hidden>
-                <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>
-                <span>Replay the conversation</span>
-              </button>
-              <p class="note">Illustrative conversation, not a real customer. Ridgeline Roofing is a made-up business.</p>
-            </div>
+          <div class="thread-foot">
+            <p class="handoff"><span class="booked-chip">Booked Thu 10:30</span> Handed to your sales team with the whole conversation attached.</p>
+            <button class="btn-quiet" type="button" data-replay hidden>
+              <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>
+              <span>Replay</span>
+            </button>
           </div>
         </div>
+      </div>
+    </section>
 
-        <p class="handoff"><span class="lit booked">Booked Thu 10:30</span> Handed to your sales team with the whole conversation attached.</p>
-      </section>
-
-      <!-- How it works -->
-      <section class="how" id="how" aria-labelledby="how-h">
-        <div class="section-head">
-          <h2 id="how-h">How it works</h2>
-          <p>Four stations, in order. Nothing moves to the next one until the last one is done.</p>
+    <!-- How a night runs -->
+    <section class="night" id="night" aria-labelledby="night-h">
+      <div class="wrap">
+        <h2 id="night-h">What happens after you lock up.</h2>
+        <div class="shift" aria-hidden="true">
+          <span class="shift-mark shift-start" style="--at:0">Before</span>
+          <span class="shift-mark" style="--at:.25">6 PM</span>
+          <span class="shift-mark" style="--at:.5">Midnight</span>
+          <span class="shift-mark" style="--at:.75">6 AM</span>
+          <span class="shift-mark shift-dawn" style="--at:1">Morning</span>
         </div>
-        <ol class="stations">
+        <ol class="steps">
           <li>
-            <span class="st-n" aria-hidden="true">1</span>
-            <h3>Free reactivation audit</h3>
+            <h3>A free audit of your list</h3>
             <p>Send us an export of your CRM. We look at lead age, source, volume and how each contact opted in, then tell you straight whether there's enough here to work.</p>
           </li>
           <li>
-            <span class="st-n" aria-hidden="true">2</span>
             <h3>Messages in your voice</h3>
             <p>We write the conversation for your business: your offer, your qualifying questions, your booking rules. Nothing goes out until you approve it.</p>
           </li>
           <li>
-            <span class="st-n" aria-hidden="true">3</span>
-            <h3>One conversation at a time</h3>
-            <p>Texts go out in measured batches. Our AI holds each conversation, answers questions and asks yours, and we step in when something needs a person. STOP ends messages immediately.</p>
+            <h3>Real conversations, one at a time</h3>
+            <p>Texts go out in measured batches at reasonable hours. Our AI holds each conversation inside the rules we set with you, and a person steps in when something needs one. STOP ends messages immediately.</p>
           </li>
           <li>
-            <span class="st-n" aria-hidden="true">4</span>
             <h3>Appointments on your calendar</h3>
-            <p>Qualified leads are booked straight onto your team's calendar with the conversation attached, so your rep walks in knowing the story.</p>
+            <p>Ready leads are booked straight onto your team's calendar with the conversation attached, so your rep walks in knowing the story.</p>
           </li>
         </ol>
-      </section>
+      </div>
+    </section>
 
-      <!-- Pricing -->
-      <section class="pricing" id="pricing" aria-labelledby="pricing-h">
-        <div class="section-head">
-          <h2 id="pricing-h">You pay <span class="moonline">when it works.</span></h2>
-          <p>No retainer. Terms are set per partner after the free audit, in writing, before a single text goes out.</p>
+    <!-- Pricing: one full-width statement -->
+    <section class="pricing" id="pricing" aria-labelledby="pricing-h">
+      <div class="wrap pricing-inner">
+        <h2 id="pricing-h">Pay per booked appointment. <span>Nothing books, nothing owed.</span></h2>
+        <div class="pricing-body">
+          <p>No retainer. Before launch we agree, in writing, what counts as a booked appointment for your business. You pay for each one. If the campaign books none, you owe nothing.</p>
+          <p class="pricing-alt"><strong>Revenue share</strong> is an option for long sales cycles and high-value jobs: an agreed share of closed sales from reactivated leads instead of a per-appointment fee.</p>
         </div>
-        <div class="deals">
-          <article class="deal deal-main card">
-            <h3>Pay per booked appointment</h3>
-            <p>Before launch we agree, in writing, what counts as a booked appointment for your business. You pay for each one. If the campaign books none, you owe nothing.</p>
-          </article>
-          <article class="deal card">
-            <h3>Revenue share</h3>
-            <p>For the right partner: instead of a per-appointment fee, we take an agreed share of closed sales that come from reactivated leads. It suits businesses with long sales cycles and high-value jobs.</p>
-          </article>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Fit -->
-      <section class="fit" id="fit" aria-labelledby="fit-h">
-        <div class="section-head">
-          <h2 id="fit-h">Who it's for</h2>
-          <p>Established businesses with a real sales process and a database full of people who once raised their hand.</p>
-        </div>
+    <!-- Fit -->
+    <section class="fit" id="fit" aria-labelledby="fit-h">
+      <div class="wrap">
+        <h2 id="fit-h">Is your list worth working?</h2>
+        <p class="section-lede">Industry doesn't matter much. What matters is the list, and whether you have permission to text it.</p>
         <div class="fit-cols">
           <div>
-            <h3 class="tag">Good fit</h3>
+            <h3>It probably is if</h3>
             <ul class="checks">
-              <li>You sell something worth thousands, not tens: solar, roofing, remodeling, insurance, legal, financial or B2B services.</li>
-              <li>You have a sales team, or at least someone who runs appointments.</li>
               <li>Your CRM holds past inquiries, quotes or consults that never closed.</li>
+              <li>A booked appointment is worth real money to you.</li>
+              <li>Someone on your team runs appointments.</li>
               <li>You can show how those contacts agreed to hear from you.</li>
             </ul>
           </div>
           <div>
-            <h3 class="tag tag-dim">Not a fit</h3>
+            <h3>It isn't if</h3>
             <ul class="crosses">
-              <li>Purchased, scraped or rented lists.</li>
-              <li>Contacts who never gave your business permission to text them.</li>
-              <li>Low-price products that sell without a conversation.</li>
+              <li>The list was purchased, scraped or rented.</li>
+              <li>Contacts never gave your business permission to text them.</li>
               <li>You need brand-new leads. We work the ones you already have.</li>
             </ul>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- After hours -->
-      <section class="after" id="after-hours" aria-labelledby="after-h">
-        <div class="section-head">
-          <h2 id="after-h">Then we take the <span class="moonline">night shift.</span></h2>
-          <p>Once your old leads are moving, we keep new ones from going cold. Both are added after a reactivation campaign is live.</p>
-        </div>
-        <div class="clock card">
-          <div class="clock-rule" aria-hidden="true">
-            <span style="--at:0">6 PM</span><span style="--at:.25">9 PM</span><span style="--at:.5">12 AM</span><span style="--at:.75">3 AM</span><span style="--at:1">6 AM</span>
-          </div>
-          <ol class="clock-marks">
-            <li style="--at:.267"><b>9:12 PM</b> Web form comes in. Texted back in a minute.</li>
-            <li style="--at:.472"><b>11:40 PM</b> An old lead replies. The conversation picks up.</li>
-            <li class="hot" style="--at:.694"><b>2:20 AM</b> Asks for a time. Booked Thursday 9:00.</li>
-          </ol>
-          <p class="clock-cap">Every overnight entry starts with the lead writing in. New outreach waits for reasonable hours.</p>
-        </div>
-        <div class="after-cols">
-          <article>
-            <h3>Speed to lead</h3>
-            <p>A new inquiry gets a personal text the moment the form comes in, while they're still thinking about you. The same conversation qualifies them and books the appointment.</p>
-          </article>
-          <article>
-            <h3>After-hours follow-up</h3>
-            <p>Leads that come in at 9 PM or on a Sunday don't wait for Monday. Conversations keep going and book into your team's next open slot.</p>
-          </article>
-        </div>
-      </section>
-
-      <!-- Consent -->
-      <section class="consent" id="consent" aria-labelledby="consent-h">
-        <div class="section-head">
+    <!-- Consent -->
+    <section class="consent" id="consent" aria-labelledby="consent-h">
+      <div class="wrap consent-grid">
+        <div>
           <h2 id="consent-h">How we text your leads</h2>
-          <p>Your customers' trust is the asset. These rules hold on every campaign.</p>
+          <p class="section-lede">Your customers' trust is the asset. These rules hold on every campaign.</p>
         </div>
-        <ul class="rules">
-          <li><strong>Permission first.</strong> We only text contacts who gave your business permission to contact them by text. We review consent and opt-out records with you before launch, and anyone we can't verify stays off the list.</li>
-          <li><strong>Every first message says who's texting.</strong> It names your business and explains how to stop: reply STOP.</li>
-          <li><strong>Opt-outs are final.</strong> STOP, UNSUBSCRIBE, CANCEL, END or QUIT ends messages right away. We record the opt-out and give it back to you so your team doesn't text that person again.</li>
-          <li><strong>Reasonable hours.</strong> Outreach goes out during reasonable hours in the lead's own time zone. Replies are answered when the lead writes in.</li>
-          <li><strong>Your do-not-contact list wins.</strong> Anyone on it is removed before launch.</li>
-        </ul>
-        <p class="fine">Message frequency varies. Message and data rates may apply. Texting rules vary by state and change over time; the messaging rules for your campaign are agreed with you before launch. This page is not legal advice.</p>
-      </section>
+        <div>
+          <ul class="rules">
+            <li><strong>Permission first.</strong> We only text contacts who gave your business permission to contact them by text. We review consent and opt-out records with you before launch, and anyone we can't verify stays off the list.</li>
+            <li><strong>Every first message says who's texting.</strong> It names your business and explains how to stop: reply STOP.</li>
+            <li><strong>Opt-outs are final.</strong> STOP, UNSUBSCRIBE, CANCEL, END or QUIT ends messages right away. We record the opt-out and give it back to you so your team doesn't text that person again.</li>
+            <li><strong>Reasonable hours.</strong> Outreach goes out during reasonable hours in the lead's own time zone. Replies are answered when the lead writes in.</li>
+            <li><strong>Your do-not-contact list wins.</strong> Anyone on it is removed before launch.</li>
+          </ul>
+          <p class="fine">Message frequency varies. Message and data rates may apply. Texting rules vary by state and change over time; the messaging rules for your campaign are agreed with you before launch. This page is not legal advice.</p>
+        </div>
+      </div>
+    </section>
 
-      <!-- FAQ -->
-      <section class="faq" aria-labelledby="faq-h">
-        <div class="section-head">
-          <h2 id="faq-h">Questions owners ask</h2>
+    <!-- Founder (placeholders until the owner supplies real details) -->
+    <section class="founder" id="founder" aria-labelledby="founder-h">
+      <div class="wrap founder-grid">
+        <div class="founder-photo" role="img" aria-label="[PHOTO] Founder photo goes here">[PHOTO]</div>
+        <div class="founder-copy">
+          <h2 id="founder-h">Who's on the night shift</h2>
+          <p class="founder-name">[FOUNDER NAME] <span>· [CITY]</span></p>
+          <p class="founder-why">[WHY I DO THIS: two or three sentences in your own words about why you started Night Shift Revenue and who you work with.]</p>
+          <p class="founder-note">You talk to [FOUNDER NAME] on the audit call, and the same person watches your campaign.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq" aria-labelledby="faq-h">
+      <div class="wrap faq-grid">
+        <h2 id="faq-h">Questions owners ask</h2>
         <div class="faq-list">
           <details>
             <summary>Is this a chatbot?</summary>
@@ -314,47 +285,42 @@
             <summary>What counts as a booked appointment?</summary>
             <p>We define it with you in writing before launch, for example a qualified lead confirmed on your calendar for a specific time. You only pay for appointments that meet that definition.</p>
           </details>
+          <details id="after-hours">
+            <summary>Can you answer our new leads too?</summary>
+            <p>Yes, once a reactivation campaign is live. <strong>Speed to lead:</strong> a new inquiry gets a personal text the moment the form comes in. <strong>After-hours follow-up:</strong> leads that come in at 9 PM or on a Sunday don't wait for Monday; the conversation books them into your team's next open slot.</p>
+          </details>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Demo -->
-      <section class="demo" id="demo" aria-labelledby="demo-h">
-        <div class="demo-copy">
-          <h2 id="demo-h">Book a demo</h2>
-          <p>Fifteen minutes. We'll run a live conversation on your own phone, then look at whether your database is a fit. No obligation.</p>
-          <div class="contact-card">
-            <p class="cc-name">Night Shift Revenue</p>
-            <p class="cc-role">Main line</p>
-            <p class="cc-line">Call or text <a href="tel:+14042766462" data-phone>404-276-6462</a></p>
-            <p class="cc-line" data-email-line hidden>Email <a href="#" data-email></a></p>
-          </div>
-          <p class="calendar-line" data-calendar-line hidden>Rather pick a time yourself? <a href="#" data-calendar>Open the calendar</a></p>
+    <!-- Morning: the calendar, and the audit form -->
+    <section class="dawn" id="audit" aria-labelledby="audit-h">
+      <div class="wrap dawn-grid">
+        <div class="dawn-copy">
+          <h2 class="dawn-h"><time>7:02 AM.</time> You open the office to a booked calendar.</h2>
+          <ol class="cal" aria-label="Illustrative calendar the next morning">
+            <li><time>Thu 9:00</time><span>Ana P. <em>Kitchen remodel estimate · booked 2:20 AM</em></span></li>
+            <li><time>Thu 10:30</time><span>Dana R. <em>Roof re-measure · booked 2:10 AM</em></span></li>
+            <li><time>Fri 2:00</time><span>Marcus T. <em>Consult · booked 7:31 PM</em></span></li>
+          </ol>
+          <p class="dawn-contact">Rather talk first? Call or text <a href="tel:+14042766462" data-phone>404-276-6462</a>.</p>
+          <p class="dawn-contact" data-email-line hidden>Email <a href="#" data-email></a></p>
+          <p class="dawn-contact" data-calendar-line hidden>Or <a href="#" data-calendar>pick a time on the calendar</a>.</p>
         </div>
 
-        <form class="demo-form" name="demo" method="POST" data-netlify="true" netlify-honeypot="company_website" data-form>
+        <form class="audit-form" name="demo" method="POST" data-netlify="true" netlify-honeypot="company_website" data-form>
           <input type="hidden" name="form-name" value="demo">
-          <input type="hidden" name="source" value="demo-section">
+          <input type="hidden" name="source" value="audit-section">
           <p class="hp" aria-hidden="true"><label>Leave this empty <input name="company_website" tabindex="-1" autocomplete="off"></label></p>
+          <h2 id="audit-h">Get my free lead audit</h2>
+          <p class="form-intro">15 minutes. Tell us roughly what's in your list and we'll tell you straight whether it's worth working. No obligation.</p>
 
           <div class="grid2">
             <label class="field"><span>Your name</span><input name="name" autocomplete="name" required></label>
             <label class="field"><span>Business name</span><input name="business" autocomplete="organization" required></label>
             <label class="field"><span>Work email</span><input name="email" type="email" autocomplete="email" required></label>
             <label class="field"><span>Mobile phone <em>(optional)</em></span><input name="phone" type="tel" autocomplete="tel" inputmode="tel"></label>
-            <label class="field">
-              <span>Industry</span>
-              <select name="industry" required>
-                <option value="">Choose one</option>
-                <option>Solar</option>
-                <option>Roofing or exteriors</option>
-                <option>Remodeling or home improvement</option>
-                <option>Insurance</option>
-                <option>Legal</option>
-                <option>Financial services</option>
-                <option>B2B services</option>
-                <option>Other</option>
-              </select>
-            </label>
+            <label class="field"><span>What you sell</span><input name="industry" placeholder="e.g. roofing, legal, solar" required></label>
             <label class="field">
               <span>Old leads in your CRM, roughly</span>
               <select name="database_size" required>
@@ -371,24 +337,37 @@
 
           <label class="consent-box">
             <input type="checkbox" name="sms_consent" value="yes">
-            <span>Text me about my demo request. By checking this box, you agree to receive calls and text messages from Night Shift Revenue at the number above about your demo. Consent is not a condition of purchase. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. See our <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms</a>.</span>
+            <span>Text me about my audit request. By checking this box, you agree to receive calls and text messages from Night Shift Revenue at the number above about your request. Consent is not a condition of purchase. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. See our <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms</a>.</span>
           </label>
 
-          <button class="btn btn-lg" type="submit">Book my demo</button>
+          <button class="btn btn-lg" type="submit">Get my free lead audit</button>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
-      </section>
-    </main>
-
-    <footer class="site-foot">
-      <div class="foot-body">
-        <img class="foot-logo" src="/assets/brand/lockup-horizontal-dark.svg" alt="Night Shift Revenue" width="240" height="48" loading="lazy">
-        <p>Main line: call or text <a href="tel:+14042766462" data-phone>404-276-6462</a>.</p>
-        <p>Examples on this site are illustrative and use made-up names and businesses. We don't publish client results.</p>
-        <p class="foot-links"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms</a><span>© <span data-year>2026</span> Night Shift Revenue</span></p>
       </div>
-    </footer>
-  </div>
+      <div class="street street-dawn" aria-hidden="true">
+        <ol class="houses">
+          <li class="house t-a"><svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 60,8 120,52"/><rect class="body" x="10" y="48" width="100" height="72"/><rect class="win" x="24" y="64" width="22" height="18"/><rect class="win" x="74" y="64" width="22" height="18"/><rect class="door" x="52" y="90" width="16" height="30"/></svg></li>
+          <li class="house t-b keep"><svg viewBox="0 0 110 150" aria-hidden="true" focusable="false"><rect class="body" x="5" y="18" width="100" height="132"/><rect class="roof" x="0" y="12" width="110" height="8"/><rect class="win" x="20" y="38" width="24" height="22"/><rect class="win" x="66" y="38" width="24" height="22"/><rect class="win" x="20" y="80" width="24" height="22"/><rect class="win" x="66" y="80" width="24" height="22"/><rect class="door" x="45" y="116" width="20" height="34"/><circle class="porch" cx="72" cy="124" r="4"/></svg></li>
+          <li class="house t-c keep"><svg viewBox="0 0 170 90" aria-hidden="true" focusable="false"><polygon class="roof" points="0,38 30,10 140,10 170,38"/><rect class="body" x="8" y="34" width="154" height="56"/><rect class="win" x="24" y="48" width="30" height="16"/><rect class="win" x="116" y="48" width="30" height="16"/><rect class="door" x="76" y="56" width="18" height="34"/><circle class="porch" cx="100" cy="70" r="4"/></svg></li>
+          <li class="house t-d keep"><svg viewBox="0 0 90 150" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 45,6 90,52"/><rect class="body" x="6" y="48" width="78" height="102"/><rect class="win" x="18" y="62" width="20" height="20"/><rect class="win" x="52" y="62" width="20" height="20"/><rect class="win" x="18" y="100" width="20" height="20"/><rect class="door" x="52" y="112" width="18" height="38"/><circle class="porch" cx="44" cy="120" r="4"/></svg></li>
+          <li class="house t-a"><svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 60,8 120,52"/><rect class="body" x="10" y="48" width="100" height="72"/><rect class="win" x="24" y="64" width="22" height="18"/><rect class="win" x="74" y="64" width="22" height="18"/><rect class="door" x="52" y="90" width="16" height="30"/></svg></li>
+          <li class="house t-c"><svg viewBox="0 0 170 90" aria-hidden="true" focusable="false"><polygon class="roof" points="0,38 30,10 140,10 170,38"/><rect class="body" x="8" y="34" width="154" height="56"/><rect class="win" x="24" y="48" width="30" height="16"/><rect class="win" x="116" y="48" width="30" height="16"/><rect class="door" x="76" y="56" width="18" height="34"/></svg></li>
+          <li class="house t-b keep"><svg viewBox="0 0 110 150" aria-hidden="true" focusable="false"><rect class="body" x="5" y="18" width="100" height="132"/><rect class="roof" x="0" y="12" width="110" height="8"/><rect class="win" x="20" y="38" width="24" height="22"/><rect class="win" x="66" y="38" width="24" height="22"/><rect class="win" x="20" y="80" width="24" height="22"/><rect class="win" x="66" y="80" width="24" height="22"/><rect class="door" x="45" y="116" width="20" height="34"/></svg></li>
+          <li class="house t-d"><svg viewBox="0 0 90 150" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 45,6 90,52"/><rect class="body" x="6" y="48" width="78" height="102"/><rect class="win" x="18" y="62" width="20" height="20"/><rect class="win" x="52" y="62" width="20" height="20"/><rect class="win" x="18" y="100" width="20" height="20"/><rect class="door" x="52" y="112" width="18" height="38"/></svg></li>
+          <li class="house t-a"><svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 60,8 120,52"/><rect class="body" x="10" y="48" width="100" height="72"/><rect class="win" x="24" y="64" width="22" height="18"/><rect class="win" x="74" y="64" width="22" height="18"/><rect class="door" x="52" y="90" width="16" height="30"/></svg></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-row">
+      <p class="brand brand-foot">
+        <img class="brand-logo" src="/assets/brand/lockup-horizontal-dark.svg" width="540" height="124" alt="Night Shift Revenue">
+      </p>
+      <p class="foot-links"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms</a><span>© <span data-year>2026</span> Night Shift Revenue</span></p>
+    </div>
+  </footer>
 
   <script src="/assets/app.js" defer></script>
 </body>

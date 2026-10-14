@@ -14,7 +14,7 @@ const send = (method, params = {}) => new Promise(r => { const i = ++id; p.set(i
 const ev = async expr => (await send('Runtime.evaluate', { expression: expr, awaitPromise: true, returnByValue: true })).result.result.value;
 await send('Page.navigate', { url: base }); await sleep(1500);
 const results = [];
-for (const sel of ['.quick', '.demo-form']) {
+for (const sel of ['.quick', '.audit-form']) {
   await ev(`(() => { const f = document.querySelector('${sel}');
     const set = (n, v) => { const el = f.querySelector('[name=' + n + ']'); if (el) el.value = v; };
     set('name', 'Test Owner'); set('email', 'owner@example.com'); set('business', 'Example Co'); set('industry', 'Solar'); set('database_size', 'Not sure');
@@ -23,7 +23,7 @@ for (const sel of ['.quick', '.demo-form']) {
   results.push(await ev(`(() => { const s = document.querySelector('${sel} .form-status'); return { cls: s.className, text: s.textContent, name: document.querySelector('${sel} [name=name]').value }; })()`));
 }
 // empty required fields must block submission
-const blocked = await ev(`(() => { const f = document.querySelector('.demo-form'); f.querySelector('[name=name]').value=''; return !f.checkValidity(); })()`);
+const blocked = await ev(`(() => { const f = document.querySelector('.audit-form'); f.querySelector('[name=name]').value=''; return !f.checkValidity(); })()`);
 console.log(JSON.stringify({ results, requiredBlocks: blocked }, null, 1));
 const pass = results.every(r => r.cls.includes(expect)) && blocked && results.every(r => expect === 'ok' ? r.name === '' : r.name === 'Test Owner');
 console.log(pass ? 'PASS' : 'FAIL'); ws.close(); proc.kill(); process.exit(pass ? 0 : 1);

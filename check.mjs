@@ -17,8 +17,8 @@ const warns = [];
 
 // 1. Placeholders
 for (const f of files.filter(f => f !== 'assets/app.js')) {
-  const n = (text[f].match(/\[VERIFY/g) || []).length;
-  if (n) (allowVerify ? warns : fails).push(`${f}: ${n} [VERIFY] placeholder(s)`);
+  const n = (text[f].match(/\[(VERIFY|FOUNDER NAME|PHOTO|CITY|WHY I DO THIS)/g) || []).length;
+  if (n) (allowVerify ? warns : fails).push(`${f}: ${n} placeholder(s) ([VERIFY] or founder details)`);
 }
 
 // 2. Claims we can't back up (no proof exists yet)
@@ -35,9 +35,9 @@ for (const f of [...pages, 'assets/app.js']) {
 // 3. Required copy
 const must = {
   'index.html': [
-    'Book a demo', 'id="how"', 'id="pricing"', 'id="fit"', 'id="after-hours"', 'id="demo"', 'id="consent"',
+    'Get my free lead audit', 'id="night"', 'id="pricing"', 'id="fit"', 'id="after-hours"', 'id="audit"', 'id="consent"', 'id="founder"',
     'Pay per booked appointment', 'Revenue share', 'Speed to lead', 'After-hours follow-up',
-    'Illustrative example', 'Illustrative conversation', 'Reply STOP to opt out', 'Consent is not a condition of purchase',
+    'Illustrative example', 'Reply STOP to opt out', 'Consent is not a condition of purchase',
     'Message and data rates may apply', 'HELP for help', 'href="/privacy"', 'href="/terms"', 'data-netlify="true"', 'netlify-honeypot',
   ],
   'privacy.html': ['do not sell, rent or share your mobile number', 'Reply STOP', 'Placeholder'],

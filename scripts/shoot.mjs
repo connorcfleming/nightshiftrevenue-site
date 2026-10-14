@@ -48,6 +48,6 @@ if (h === 'full') {
 }
 const shot = await send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: !!clip, ...(clip ? { clip } : {}) });
 await writeFile(out, Buffer.from(shot.result.data, 'base64'));
-const ov = await send('Runtime.evaluate', { expression: `JSON.stringify({ scrollH: document.documentElement.scrollHeight, scrollW: document.documentElement.scrollWidth, clientW: document.documentElement.clientWidth, innerW: innerWidth, frameML: getComputedStyle(document.querySelector(".frame")).marginLeft, h1: getComputedStyle(document.querySelector("h1")).fontSize, mq640: matchMedia("(max-width: 640px)").matches })`, returnByValue: true });
+const ov = await send('Runtime.evaluate', { expression: `JSON.stringify({ scrollH: document.documentElement.scrollHeight, scrollW: document.documentElement.scrollWidth, clientW: document.documentElement.clientWidth, innerW: innerWidth, frameML: (document.querySelector(".wrap")||{}).className, h1: getComputedStyle(document.querySelector("h1")).fontSize, mq640: matchMedia("(max-width: 640px)").matches })`, returnByValue: true });
 console.log(out, ov.result.result.value, logs.length ? logs.join('\n') : 'no console errors');
 ws.close(); proc.kill();

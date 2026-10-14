@@ -1,578 +1,511 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-09T15:37:12+00:00",
+  "generatedAt": "2026-10-12T18:00:00+00:00",
   "title": "Design System: Night Shift Revenue",
   "extensions": {
     "colorMeta": {
-      "wall": {
-        "role": "neutral",
-        "displayName": "Graphite Wall",
-        "canonical": "oklch(28.0% 0.010 260.7)",
+      "green": {
+        "role": "primary",
+        "displayName": "Lit-Window Green",
+        "canonical": "oklch(79.4% 0.134 160.1)",
         "tonalRamp": [
-          "#090b10",
-          "#212429",
-          "#3d4045",
-          "#5a5e63",
-          "#7d8086",
-          "#a1a5ab",
-          "#c7cbd1",
-          "#ebeff5"
+          "#000f06",
+          "#002e1b",
+          "#044f32",
+          "#05744b",
+          "#109a66",
+          "#48be88",
+          "#71e4ab",
+          "#c3ffdd"
         ]
       },
-      "wall-hi": {
-        "role": "neutral",
-        "displayName": "Graphite Wall Lift",
-        "canonical": "oklch(33.5% 0.012 258.4)",
+      "green-hi": {
+        "role": "primary",
+        "displayName": "Pale Window Green",
+        "canonical": "oklch(84.8% 0.112 161.5)",
         "tonalRamp": [
-          "#080b10",
-          "#21242a",
-          "#3c4046",
-          "#5a5e64",
-          "#7c8187",
-          "#a0a5ac",
-          "#c6cbd2",
-          "#eaeff7"
+          "#000f07",
+          "#012d1c",
+          "#004f33",
+          "#04734d",
+          "#35976d",
+          "#5dbb8f",
+          "#82e0b2",
+          "#c3ffdf"
         ]
       },
-      "board": {
-        "role": "neutral",
-        "displayName": "Enamel Board",
-        "canonical": "oklch(97.3% 0.007 97.4)",
+      "moon": {
+        "role": "secondary",
+        "displayName": "Moonlight Yellow",
+        "canonical": "oklch(86.9% 0.123 89.4)",
         "tonalRamp": [
-          "#0c0b08",
-          "#252420",
-          "#41403c",
-          "#5e5e59",
-          "#81807c",
-          "#a6a5a0",
-          "#cbcbc6",
-          "#efeeea"
+          "#100a00",
+          "#2f2301",
+          "#523f00",
+          "#785e05",
+          "#a07e04",
+          "#c4a13d",
+          "#e9c564",
+          "#ffedc0"
         ]
       },
-      "paper": {
-        "role": "neutral",
-        "displayName": "Paper White",
-        "canonical": "oklch(100.0% 0.000 89.9)",
+      "dawn-top": {
+        "role": "tertiary",
+        "displayName": "Dawn Upper Sky",
+        "canonical": "oklch(30.6% 0.086 266.2)",
         "tonalRamp": [
-          "#0b0b0b",
-          "#242424",
-          "#404040",
-          "#5d5d5d",
-          "#808080",
-          "#a4a4a4",
-          "#cacaca",
-          "#eeeeee"
+          "#01042e",
+          "#11214e",
+          "#2d3f6f",
+          "#4a5f92",
+          "#6a81b6",
+          "#8ca4db",
+          "#b1c9fe",
+          "#e7efff"
+        ]
+      },
+      "dawn-low": {
+        "role": "tertiary",
+        "displayName": "Dawn Lower Sky",
+        "canonical": "oklch(40.3% 0.092 268.0)",
+        "tonalRamp": [
+          "#020231",
+          "#122051",
+          "#2d3e73",
+          "#4b5e96",
+          "#6a80ba",
+          "#8ca3e0",
+          "#b3c8fe",
+          "#e8eefe"
+        ]
+      },
+      "dawn-glow": {
+        "role": "tertiary",
+        "displayName": "First Light",
+        "canonical": "oklch(84.7% 0.098 86.4)",
+        "tonalRamp": [
+          "#110a00",
+          "#302300",
+          "#543e00",
+          "#795c09",
+          "#9c7e36",
+          "#c0a15a",
+          "#e5c57d",
+          "#feedc6"
+        ]
+      },
+      "night-950": {
+        "role": "neutral",
+        "displayName": "Deep Night",
+        "canonical": "oklch(16.4% 0.042 265.6)",
+        "tonalRamp": [
+          "#040a1d",
+          "#1b2439",
+          "#374259",
+          "#56617a",
+          "#76829c",
+          "#99a5c0",
+          "#bcc9e5",
+          "#e8effe"
+        ]
+      },
+      "night-900": {
+        "role": "neutral",
+        "displayName": "Midnight",
+        "canonical": "oklch(20.1% 0.058 266.5)",
+        "tonalRamp": [
+          "#030823",
+          "#182341",
+          "#344161",
+          "#526183",
+          "#7282a6",
+          "#94a5ca",
+          "#b8c9f0",
+          "#e8effe"
+        ]
+      },
+      "night-850": {
+        "role": "neutral",
+        "displayName": "Alternate Night",
+        "canonical": "oklch(22.8% 0.066 266.3)",
+        "tonalRamp": [
+          "#020726",
+          "#162345",
+          "#324165",
+          "#506087",
+          "#7082ab",
+          "#92a5cf",
+          "#b5c9f5",
+          "#e8effe"
+        ]
+      },
+      "night-800": {
+        "role": "neutral",
+        "displayName": "Raised Night",
+        "canonical": "oklch(26.4% 0.077 265.9)",
+        "tonalRamp": [
+          "#01052b",
+          "#13224a",
+          "#2e406b",
+          "#4c608d",
+          "#6c81b1",
+          "#8ea4d6",
+          "#b2c9fc",
+          "#e7efff"
+        ]
+      },
+      "night-700": {
+        "role": "neutral",
+        "displayName": "Night Rule",
+        "canonical": "oklch(33.4% 0.080 265.2)",
+        "tonalRamp": [
+          "#01052c",
+          "#12224b",
+          "#2d406c",
+          "#4b608f",
+          "#6b82b3",
+          "#8da5d8",
+          "#b0c9fe",
+          "#e7efff"
+        ]
+      },
+      "win-off": {
+        "role": "neutral",
+        "displayName": "Dark Window",
+        "canonical": "oklch(27.8% 0.073 265.7)",
+        "tonalRamp": [
+          "#010629",
+          "#142248",
+          "#2f4069",
+          "#4d608b",
+          "#6d82af",
+          "#8fa5d4",
+          "#b3c9fa",
+          "#e7efff"
         ]
       },
       "ink": {
         "role": "neutral",
-        "displayName": "Graphite Ink",
-        "canonical": "oklch(23.1% 0.010 268.2)",
-        "tonalRamp": [
-          "#090b10",
-          "#222429",
-          "#3d4045",
-          "#5b5d64",
-          "#7d8086",
-          "#a2a4ab",
-          "#c8cad1",
-          "#ebeef6"
-        ]
-      },
-      "ink-2": {
-        "role": "neutral",
-        "displayName": "Graphite Ink 2",
-        "canonical": "oklch(42.6% 0.015 259.8)",
+        "displayName": "Ink",
+        "canonical": "oklch(94.1% 0.014 258.3)",
         "tonalRamp": [
           "#080b11",
-          "#20242b",
-          "#3b4048",
-          "#595e66",
-          "#7b8189",
-          "#9fa5ae",
-          "#c5cbd4",
-          "#e9eff9"
-        ]
-      },
-      "ink-3": {
-        "role": "neutral",
-        "displayName": "Graphite Ink 3",
-        "canonical": "oklch(53.3% 0.014 259.8)",
-        "tonalRamp": [
-          "#080b11",
-          "#20242b",
-          "#3b4047",
-          "#595e66",
-          "#7b8189",
+          "#21252c",
+          "#3e4249",
+          "#5c6269",
+          "#7d838b",
           "#a0a5ae",
-          "#c5cbd4",
+          "#c4cad2",
           "#e9eff8"
         ]
       },
-      "ghost": {
+      "ink-dim": {
         "role": "neutral",
-        "displayName": "Ghost Gray",
-        "canonical": "oklch(78.1% 0.010 258.3)",
+        "displayName": "Dim Ink",
+        "canonical": "oklch(73.9% 0.042 263.6)",
         "tonalRamp": [
-          "#090b0f",
-          "#212429",
-          "#3d4045",
-          "#5a5e63",
-          "#7d8086",
-          "#a1a5ab",
-          "#c7cbd1",
-          "#ebeff5"
+          "#030a1d",
+          "#1a253a",
+          "#364259",
+          "#55617a",
+          "#75839c",
+          "#98a5c0",
+          "#bbcae5",
+          "#e7effe"
         ]
       },
-      "tape": {
+      "ink-faint": {
         "role": "neutral",
-        "displayName": "Tape Graphite",
-        "canonical": "oklch(31.6% 0.010 260.7)",
+        "displayName": "Faint Ink",
+        "canonical": "oklch(64.6% 0.050 264.7)",
         "tonalRamp": [
-          "#090b0f",
-          "#212429",
-          "#3d4045",
-          "#5a5e63",
-          "#7d8086",
-          "#a1a5ab",
-          "#c7cbd1",
-          "#ebeff5"
+          "#030920",
+          "#19243d",
+          "#35425d",
+          "#53617e",
+          "#7482a1",
+          "#96a5c5",
+          "#b9c9eb",
+          "#e7effe"
         ]
       },
-      "strip": {
+      "ink-dawn": {
         "role": "neutral",
-        "displayName": "Magnet Strip",
-        "canonical": "oklch(29.3% 0.010 268.3)",
+        "displayName": "Dawn Ink",
+        "canonical": "oklch(84.4% 0.026 263.3)",
         "tonalRamp": [
-          "#090b0f",
-          "#222429",
-          "#3d4045",
-          "#5b5d63",
-          "#7e8086",
-          "#a2a4ab",
-          "#c8cad1",
-          "#eceef5"
+          "#060b16",
+          "#1f2532",
+          "#3b4250",
+          "#5a6170",
+          "#7a8392",
+          "#9da5b6",
+          "#c1c9da",
+          "#e6efff"
         ]
       },
-      "strip-quiet": {
+      "err": {
         "role": "neutral",
-        "displayName": "Quiet Strip",
-        "canonical": "oklch(48.7% 0.014 259.8)",
+        "displayName": "Soft Coral",
+        "canonical": "oklch(83.8% 0.090 29.2)",
         "tonalRamp": [
-          "#080b11",
-          "#20242b",
-          "#3b4047",
-          "#595e66",
-          "#7b8189",
-          "#9fa5ae",
-          "#c5cbd4",
-          "#e9eff8"
-        ]
-      },
-      "marker-blue": {
-        "role": "secondary",
-        "displayName": "Marker Blue",
-        "canonical": "oklch(46.0% 0.170 262.7)",
-        "tonalRamp": [
-          "#000039",
-          "#001864",
-          "#0a3592",
-          "#2555bc",
-          "#467ae4",
-          "#6ca1ff",
-          "#9bcaff",
-          "#c6efff"
-        ]
-      },
-      "marker-red": {
-        "role": "primary",
-        "displayName": "Booking Red",
-        "canonical": "oklch(54.9% 0.189 30.8)",
-        "tonalRamp": [
-          "#2b0000",
-          "#540000",
-          "#800000",
-          "#ae1804",
-          "#da4531",
-          "#f97863",
-          "#ffa794",
-          "#ffd3c1"
-        ]
-      },
-      "marker-red-dk": {
-        "role": "primary",
-        "displayName": "Deep Booking Red",
-        "canonical": "oklch(46.1% 0.159 30.8)",
-        "tonalRamp": [
-          "#2b0000",
-          "#540000",
-          "#7f0000",
-          "#a42c1c",
-          "#ce5341",
-          "#f87965",
-          "#ffa794",
-          "#ffd3c1"
-        ]
-      },
-      "alu-1": {
-        "role": "neutral",
-        "displayName": "Aluminum Highlight",
-        "canonical": "oklch(94.8% 0.005 258.3)",
-        "tonalRamp": [
-          "#0a0b0d",
-          "#232426",
-          "#3e4042",
-          "#5c5e60",
-          "#7e8083",
-          "#a3a5a7",
-          "#c9cbcd",
-          "#edeff2"
-        ]
-      },
-      "alu-2": {
-        "role": "neutral",
-        "displayName": "Aluminum",
-        "canonical": "oklch(86.5% 0.008 253.9)",
-        "tonalRamp": [
-          "#090b0f",
-          "#212428",
-          "#3d4044",
-          "#5a5e62",
-          "#7d8185",
-          "#a1a5aa",
-          "#c7cbd0",
-          "#ebeff4"
-        ]
-      },
-      "alu-3": {
-        "role": "neutral",
-        "displayName": "Aluminum Shade",
-        "canonical": "oklch(78.1% 0.011 256.7)",
-        "tonalRamp": [
-          "#080b10",
-          "#21242a",
-          "#3c4046",
-          "#5a5e64",
-          "#7c8187",
-          "#a0a5ac",
-          "#c6cbd2",
-          "#eaeff6"
-        ]
-      },
-      "alu-edge": {
-        "role": "neutral",
-        "displayName": "Machined Edge",
-        "canonical": "oklch(66.4% 0.012 252.1)",
-        "tonalRamp": [
-          "#080c10",
-          "#20252a",
-          "#3b4046",
-          "#595e65",
-          "#7b8188",
-          "#9fa5ac",
-          "#c5cbd3",
-          "#e9eff7"
-        ]
-      },
-      "rule-line": {
-        "role": "neutral",
-        "displayName": "Rule Line",
-        "canonical": "rgba(47, 50, 55, 0.82)",
-        "tonalRamp": [
-          "#090b0f",
-          "#212429",
-          "#3d4045",
-          "#5a5e63",
-          "#7d8086",
-          "#a1a5ab",
-          "#c7cbd1",
-          "#ebeff5"
+          "#1f0000",
+          "#470c07",
+          "#6a2c25",
+          "#8d4c43",
+          "#b26d63",
+          "#d89084",
+          "#feb3a7",
+          "#fee9e5"
         ]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Hero headline (max 15ch); the demo heading and policy titles use the same weight and tracking at their own clamps."
+        "purpose": "Hero headline only; Josefin Sans Light, sentence case."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Section headings, paired with a body-lg lede in ink-2."
+        "purpose": "Section headings, balanced wrap."
+      },
+      "headline-statement": {
+        "displayName": "Statement",
+        "purpose": "The pricing statement; second clause in Dim Ink."
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "Brand name beside the crescent; founder name at 400 / 1.5rem."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Pricing deals and after-hours articles."
+        "purpose": "Step titles, fit-column headings, policy subheads."
       },
-      "title-sm": {
-        "displayName": "Title Small",
-        "purpose": "Station steps and policy page subheads."
-      },
-      "body-lg": {
-        "displayName": "Body Large",
-        "purpose": "Section ledes and the demo intro."
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Hero and section ledes in Dim Ink, 40-46ch."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Running text; 1rem below 640px; measures held between 40ch and 68ch."
+        "purpose": "Running text; 1rem under 640px; proportional figures for times."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Field labels, fact terms, captions."
+        "purpose": "Field labels, quiet buttons."
       },
-      "strip": {
-        "displayName": "Strip",
-        "purpose": "Uppercase magnet-strip headers and stage chips only."
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Kerb labels, reply captions, timestamps, chips."
       },
-      "marker": {
-        "displayName": "Marker",
-        "purpose": "Entries written on the board only: ledger cells, the faded lead name, the booked handoff."
+      "button": {
+        "displayName": "Button",
+        "purpose": "Primary button label."
       }
     },
     "shadows": [
       {
-        "name": "frame-on-wall",
-        "value": "0 40px 80px -20px rgba(0,0,0,.6), 0 8px 18px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.35)",
-        "purpose": "The outer aluminum frame only."
+        "name": "form-lift",
+        "value": "0 30px 60px -30px rgba(3, 7, 20, .7)",
+        "purpose": "The audit form only, lifting it off the dawn sky."
       },
       {
-        "name": "board-inset",
-        "value": "inset 0 0 0 1px #c3c7cc, inset 0 3px 8px rgba(0,0,0,.12), inset 0 -2px 6px rgba(0,0,0,.06)",
-        "purpose": "Board surface recessed in the frame."
+        "name": "focus-well",
+        "value": "0 0 0 3px color-mix(in srgb, var(--green) 25%, transparent)",
+        "purpose": "Focused fields, with a green border."
       },
       {
-        "name": "magnet",
-        "value": "inset 0 1px 0 rgba(255,255,255,.28), 0 2px 3px rgba(60,10,0,.3), 0 6px 14px -4px rgba(120,20,5,.45)",
-        "purpose": "Primary buttons at rest."
+        "name": "booked-ring",
+        "value": "inset 0 0 0 1px var(--moon)",
+        "purpose": "The confirming message in the thread."
       },
       {
-        "name": "magnet-hover",
-        "value": "inset 0 1px 0 rgba(255,255,255,.28), 0 3px 4px rgba(60,10,0,.3), 0 10px 20px -6px rgba(120,20,5,.5)",
-        "purpose": "Primary button lifted 1px on hover."
-      },
-      {
-        "name": "strip",
-        "value": "0 1px 2px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.12)",
-        "purpose": "Magnet strips and active stage chips."
-      },
-      {
-        "name": "puck",
-        "value": "0 2px 4px rgba(0,0,0,.35), 0 0 0 6px #f7f6f1",
-        "purpose": "Station number pucks, ringed in board color where they cross the arrow."
-      },
-      {
-        "name": "pinned-card",
-        "value": "0 1px 2px rgba(0,0,0,.18), 0 10px 22px -10px rgba(0,0,0,.3)",
-        "purpose": "Contact card pinned to the board, rotated -1deg."
-      },
-      {
-        "name": "tray",
-        "value": "inset 0 1px 0 rgba(255,255,255,.7), 0 6px 12px -4px rgba(0,0,0,.28), 0 1px 2px rgba(0,0,0,.25)",
-        "purpose": "Hero marker tray holding the quick form."
-      },
-      {
-        "name": "focus-halo",
-        "value": "0 0 0 3px rgba(31,79,181,.22)",
-        "purpose": "Focused input halo alongside a marker-blue border."
+        "name": "focus-ring",
+        "value": "outline: 2px solid var(--green); outline-offset: 3px; border-radius: 4px",
+        "purpose": "Global :focus-visible on every interactive element."
       }
     ],
     "motion": [
       {
         "name": "ease-out",
         "value": "cubic-bezier(.16, 1, .3, 1)",
-        "purpose": "Default curve for every state transition and reveal."
+        "purpose": "The single easing for every animation and state transition."
       },
       {
-        "name": "marker-write",
-        "value": "clip-path .7s ease-out; delay 350ms + 520ms per row + 170ms per column",
-        "purpose": "Hero live entries written left to right on load; visible by default, skipped under reduced motion."
+        "name": "window-on",
+        "value": "fill win-off -> green, 0.7s, delay 400ms + 450ms per house",
+        "purpose": "Windows light once when the street first comes into view (on load in the hero)."
       },
       {
-        "name": "message-in",
-        "value": ".5s ease-out from translateY(10px), blur(3px), opacity 0",
-        "purpose": "Each SMS bubble arriving during playback."
+        "name": "porch-on",
+        "value": "fill night-950 -> moon, 0.6s, delay 1500ms + 250ms per booked house",
+        "purpose": "Porch lights turn yellow after the windows."
       },
       {
-        "name": "typing-dots",
-        "value": "1s infinite ease-in-out, 150ms stagger",
-        "purpose": "Typing indicator before each message."
+        "name": "caption-rise",
+        "value": "opacity 0 -> 1, translateY 6px -> 0, 0.6s, delay 700ms + 450ms per house",
+        "purpose": "Reply captions above houses (booked caption fades only under 900px)."
       },
       {
-        "name": "magnet-press",
-        "value": "transform and box-shadow .18s ease-out",
-        "purpose": "Button hover lift and press."
+        "name": "state-fade",
+        "value": "opacity 0 -> 1, 0.5s, delay 900ms + 450ms per house",
+        "purpose": "Talking / Booked kerb states."
       },
       {
-        "name": "stage-advance",
-        "value": ".35s ease-out",
-        "purpose": "Stage chips filling and lifting."
+        "name": "thread-play",
+        "value": "a message every 540ms from 250ms; each 0.45s opacity + 8px rise",
+        "purpose": "Plays once when the thread is 30% visible and was not on screen at load; Replay reruns it."
       },
       {
-        "name": "faq-toggle",
-        "value": "transform .25s ease-out, rotate 45deg",
-        "purpose": "FAQ plus turning into a cross."
+        "name": "control-transition",
+        "value": "0.2s buttons and fields; 0.25s FAQ chevron; 0.3s track steps and header border",
+        "purpose": "State changes."
       },
       {
         "name": "reduced-motion",
-        "value": "all durations .01ms",
-        "purpose": "prefers-reduced-motion collapses every animation and transition."
+        "value": "animations and transitions 1ms; script skips street wake and thread play",
+        "purpose": "Final state shown immediately; content complete without script."
       }
     ],
     "breakpoints": [
       {
-        "name": "xs",
-        "value": "380px"
-      },
-      {
-        "name": "sm",
-        "value": "640px"
+        "name": "lg",
+        "value": "1100px"
       },
       {
         "name": "md",
         "value": "900px"
       },
       {
-        "name": "lg",
-        "value": "1080px"
-      },
-      {
-        "name": "short",
-        "value": "min-width 901px with max-height 1000px or 780px"
+        "name": "sm",
+        "value": "640px"
       }
     ]
   },
   "components": [
     {
-      "name": "Magnet Button",
+      "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The primary action: booking red, raised like a magnet. Small in the rail, default in the hero tray, large in the demo form.",
-      "html": "<button class=\"ds-magnet\" type=\"button\">Book a demo</button>",
-      "css": ".ds-magnet{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border:0;border-radius:7px;background:linear-gradient(180deg,#d53b27,var(--marker-red,#c8321f) 55%,#b82c1a);color:#fff;font:700 1rem/1 \"Schibsted Grotesk\", system-ui, -apple-system, \"Segoe UI\", sans-serif;letter-spacing:.01em;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.28), 0 2px 3px rgba(60,10,0,.3), 0 6px 14px -4px rgba(120,20,5,.45);transition:transform .18s cubic-bezier(.16,1,.3,1),box-shadow .18s cubic-bezier(.16,1,.3,1)}.ds-magnet:hover{transform:translateY(-1px);box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 3px 4px rgba(60,10,0,.3),0 10px 20px -6px rgba(120,20,5,.5)}.ds-magnet:active{transform:translateY(1px);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 1px 2px rgba(60,10,0,.35)}.ds-magnet:focus-visible{outline:3px solid var(--marker-blue,#1f4fb5);outline-offset:3px}"
+      "description": "The one green action: audit requests in the hero, header and closing form.",
+      "html": "<button class=\"ds-btn\" type=\"button\">Get my free lead audit</button>",
+      "css": ":host{--night-950:#060D20;--night-900:#0A1430;--night-800:#13224A;--night-700:#22345F;--win-off:#17264C;--ink:#E6ECF5;--ink-dim:#9DABC6;--green:#62D69E;--green-hi:#86E4B6;--moon:#F4D06F;--ease-out:cubic-bezier(.16,1,.3,1);--set:\"Schibsted Grotesk\",system-ui,-apple-system,\"Segoe UI\",sans-serif;--display:\"Josefin Sans\",\"Schibsted Grotesk\",system-ui,sans-serif;}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border:0;border-radius:10px;background:var(--green);color:var(--night-950);font:650 1rem/1 var(--set);cursor:pointer;transition:background-color .2s var(--ease-out),transform .2s var(--ease-out);}.ds-btn:hover{background:var(--green-hi);}.ds-btn:active{transform:translateY(1px);}.ds-btn:focus-visible{outline:2px solid var(--green);outline-offset:3px;}.ds-btn:disabled{opacity:.6;cursor:progress;}"
     },
     {
-      "name": "Ghost Button",
+      "name": "Quiet Button",
       "kind": "button",
-      "refersTo": "button-ghost",
-      "description": "Secondary in-place control with a graphite outline, such as replaying the example conversation.",
-      "html": "<button class=\"ds-ghost-btn\" type=\"button\"><svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M4 2.5v11l9-5.5z\" fill=\"currentColor\"/></svg><span>Replay the conversation</span></button>",
-      "css": ".ds-ghost-btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border:1.5px solid var(--tape,#2f3237);border-radius:7px;background:transparent;color:var(--ink,#1b1d22);font:650 .9375rem/1 \"Schibsted Grotesk\", system-ui, -apple-system, \"Segoe UI\", sans-serif;cursor:pointer;transition:background-color .15s}.ds-ghost-btn:hover{background:rgba(47,50,55,.06)}.ds-ghost-btn:focus-visible{outline:3px solid var(--marker-blue,#1f4fb5);outline-offset:3px}"
+      "refersTo": "button-quiet",
+      "description": "Outlined pill for secondary controls such as Replay.",
+      "html": "<button class=\"ds-btn-quiet\" type=\"button\"><svg viewBox=\"0 0 16 16\" width=\"14\" height=\"14\" aria-hidden=\"true\"><path d=\"M4 2.5v11l9-5.5z\" fill=\"currentColor\"/></svg><span>Replay</span></button>",
+      "css": ":host{--night-950:#060D20;--night-900:#0A1430;--night-800:#13224A;--night-700:#22345F;--win-off:#17264C;--ink:#E6ECF5;--ink-dim:#9DABC6;--green:#62D69E;--green-hi:#86E4B6;--moon:#F4D06F;--ease-out:cubic-bezier(.16,1,.3,1);--set:\"Schibsted Grotesk\",system-ui,-apple-system,\"Segoe UI\",sans-serif;--display:\"Josefin Sans\",\"Schibsted Grotesk\",system-ui,sans-serif;}.ds-btn-quiet{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 12px;background:transparent;color:var(--ink-dim);border:1px solid var(--night-700);border-radius:999px;font:550 .875rem/1 var(--set);cursor:pointer;}.ds-btn-quiet:hover{color:var(--ink);border-color:var(--ink-dim);}.ds-btn-quiet:focus-visible{outline:2px solid var(--green);outline-offset:3px;}"
     },
     {
-      "name": "Magnet Strip",
-      "kind": "chip",
-      "refersTo": "strip-label",
-      "description": "Uppercase magnetic label strip for column headers and group labels; the quiet variant marks the negative group.",
-      "html": "<span class=\"ds-strip\">Lead</span> <span class=\"ds-strip ds-strip-quiet\">Not a fit</span>",
-      "css": ".ds-strip{display:inline-block;background:var(--strip,#2a2c31);color:#fff;font:700 .72rem/1 \"Schibsted Grotesk\", system-ui, -apple-system, \"Segoe UI\", sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:7px 10px 6px;border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.12)}.ds-strip-quiet{background:#5b6068}"
-    },
-    {
-      "name": "Stage Track",
-      "kind": "chip",
-      "refersTo": "strip-label",
-      "description": "Lead status chips: outlined at rest, graphite when reached, red at Booked, current stage lifted 2px.",
-      "html": "<ol class=\"ds-track\"><li class=\"on\">Dormant</li><li class=\"on\">Replied</li><li class=\"on now\">Qualified</li><li>Booked</li></ol><ol class=\"ds-track\"><li class=\"on\">Dormant</li><li class=\"on\">Replied</li><li class=\"on\">Qualified</li><li class=\"on booked now\">Booked</li></ol>",
-      "css": ".ds-track{list-style:none;margin:0 0 10px;padding:0;display:flex;flex-wrap:wrap;gap:8px}.ds-track li{font:700 .72rem/1 \"Schibsted Grotesk\", system-ui, -apple-system, \"Segoe UI\", sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:8px 10px 7px;border-radius:3px;border:1.5px solid #9a9fa6;color:var(--ink-3,#686d75);transition:background-color .35s,color .35s,border-color .35s,transform .35s cubic-bezier(.16,1,.3,1)}.ds-track li.on{background:var(--strip,#2a2c31);border-color:var(--strip,#2a2c31);color:#fff;box-shadow:0 1px 2px rgba(0,0,0,.3)}.ds-track li.on.booked{background:var(--marker-red,#c8321f);border-color:var(--marker-red,#c8321f)}.ds-track li.now{transform:translateY(-2px)}"
-    },
-    {
-      "name": "Field",
+      "name": "Text Field",
       "kind": "input",
       "refersTo": "input-field",
-      "description": "Labeled text field on paper white with a graphite stroke; marker-blue focus halo, booking-red invalid border.",
-      "html": "<label class=\"ds-field\"><span>Work email</span><input type=\"email\" placeholder=\"you@company.com\"></label>",
-      "css": ".ds-field{display:grid;gap:6px;max-width:22rem}.ds-field>span{font:650 .8125rem/1.4 \"Schibsted Grotesk\", system-ui, -apple-system, \"Segoe UI\", sans-serif;color:var(--ink-2,#4a4f57);letter-spacing:.01em}.ds-field input{min-height:48px;padding:0 14px;border:1.5px solid #3a3d43;border-radius:6px;background:#fff;color:var(--ink,#1b1d22);font:400 1rem/1.3 \"Schibsted Grotesk\", system-ui, -apple-system, \"Segoe UI\", sans-serif;caret-color:var(--marker-blue,#1f4fb5);transition:border-color .15s,box-shadow .15s}.ds-field input::placeholder{color:var(--ink-3,#686d75)}.ds-field input:focus{outline:none;border-color:var(--marker-blue,#1f4fb5);box-shadow:0 0 0 3px rgba(31,79,181,.22)}.ds-field input:user-invalid{border-color:var(--marker-red,#c8321f)}"
+      "description": "Deep Night well with a label above; green border and well on focus.",
+      "html": "<label class=\"ds-field\"><span>Work email</span><input type=\"email\" placeholder=\"you@business.com\"></label>",
+      "css": ":host{--night-950:#060D20;--night-900:#0A1430;--night-800:#13224A;--night-700:#22345F;--win-off:#17264C;--ink:#E6ECF5;--ink-dim:#9DABC6;--green:#62D69E;--green-hi:#86E4B6;--moon:#F4D06F;--ease-out:cubic-bezier(.16,1,.3,1);--set:\"Schibsted Grotesk\",system-ui,-apple-system,\"Segoe UI\",sans-serif;--display:\"Josefin Sans\",\"Schibsted Grotesk\",system-ui,sans-serif;}.ds-field{display:grid;gap:6px;font-family:var(--set);}.ds-field>span{font-size:.875rem;font-weight:550;color:var(--ink);}.ds-field input{width:100%;min-height:48px;padding:11px 14px;background:var(--night-950);color:var(--ink);border:1px solid var(--night-700);border-radius:10px;font:inherit;font-size:1rem;caret-color:var(--green);transition:border-color .2s,box-shadow .2s;}.ds-field input::placeholder{color:#7F8EAD;}.ds-field input:hover{border-color:#33497C;}.ds-field input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px color-mix(in srgb,var(--green) 25%,transparent);}"
     },
     {
-      "name": "Top Rail",
+      "name": "Header Navigation",
       "kind": "nav",
-      "refersTo": "nav-link",
-      "description": "Brushed aluminum top rail with the two-weight wordmark, nav links and the small magnet.",
-      "html": "<header class=\"ds-rail\"><a class=\"ds-wm\" href=\"#\"><b>Night Shift</b><span>Revenue</span></a><nav><a href=\"#\">How it works</a><a href=\"#\">Pricing</a></nav><a class=\"ds-rail-magnet\" href=\"#\">Book a demo</a></header>",
-      "css": ".ds-rail{display:flex;align-items:center;gap:28px;padding:14px 22px 12px;background:repeating-linear-gradient(180deg,rgba(255,255,255,.12) 0 1px,rgba(0,0,0,.025) 1px 3px),linear-gradient(180deg,#eceef1,#cfd3d8 60%,#b3b8bf);border-radius:8px 8px 0 0;border-bottom:1px solid #8e949b;font-family:\"Schibsted Grotesk\", system-ui, -apple-system, \"Segoe UI\", sans-serif}.ds-wm{display:inline-flex;align-items:baseline;gap:.45em;color:#1b1d22;text-decoration:none;text-transform:uppercase;line-height:1;white-space:nowrap}.ds-wm b{font-weight:850;font-size:1.12rem}.ds-wm span{font-weight:500;font-size:.86rem;letter-spacing:.2em;color:#4a4f57}.ds-rail nav{display:flex;gap:24px;margin-left:auto}.ds-rail nav a{color:#1b1d22;font-weight:600;font-size:.95rem;text-decoration:none;padding:10px 2px}.ds-rail nav a:hover{text-decoration:underline;text-decoration-color:#1f4fb5;text-decoration-thickness:2px}.ds-rail a:focus-visible{outline:3px solid #1f4fb5;outline-offset:3px;border-radius:3px}.ds-rail-magnet{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:7px;background:linear-gradient(180deg,#d53b27,#c8321f 55%,#b82c1a);color:#fff;font:700 .92rem/1 \"Schibsted Grotesk\", system-ui, -apple-system, \"Segoe UI\", sans-serif;text-decoration:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.28), 0 2px 3px rgba(60,10,0,.3), 0 6px 14px -4px rgba(120,20,5,.45);transition:transform .18s cubic-bezier(.16,1,.3,1)}.ds-rail-magnet:hover{transform:translateY(-1px)}"
+      "refersTo": "navigation",
+      "description": "Crescent wordmark, Dim Ink links, small primary button.",
+      "html": "<header class=\"ds-head\"><a class=\"ds-brand\" href=\"#\"><svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M12.6 1.6A8.4 8.4 0 1 0 18.4 14 7 7 0 0 1 12.6 1.6Z\"/></svg><span>Night Shift Revenue</span></a><nav class=\"ds-nav\"><a href=\"#\">How it works</a><a href=\"#\">Pricing</a><a href=\"#\">Questions</a><a class=\"ds-nav-btn\" href=\"#\">Free lead audit</a></nav></header>",
+      "css": ":host{--night-950:#060D20;--night-900:#0A1430;--night-800:#13224A;--night-700:#22345F;--win-off:#17264C;--ink:#E6ECF5;--ink-dim:#9DABC6;--green:#62D69E;--green-hi:#86E4B6;--moon:#F4D06F;--ease-out:cubic-bezier(.16,1,.3,1);--set:\"Schibsted Grotesk\",system-ui,-apple-system,\"Segoe UI\",sans-serif;--display:\"Josefin Sans\",\"Schibsted Grotesk\",system-ui,sans-serif;}.ds-head{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:68px;padding:0 24px;background:var(--night-900);border-bottom:1px solid var(--night-700);font-family:var(--set);}.ds-brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font:500 1.125rem/1 var(--display);letter-spacing:.02em;}.ds-brand svg{width:18px;height:18px;fill:var(--moon);}.ds-nav{display:flex;align-items:center;gap:24px;}.ds-nav a{color:var(--ink-dim);text-decoration:none;font-size:.9375rem;}.ds-nav a:hover{color:var(--ink);}.ds-nav a:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:4px;}.ds-nav .ds-nav-btn{display:inline-flex;align-items:center;min-height:38px;padding:0 14px;border-radius:10px;background:var(--green);color:var(--night-950);font-weight:650;}.ds-nav .ds-nav-btn:hover{background:var(--green-hi);color:var(--night-950);}"
     },
     {
-      "name": "Deal Panel",
-      "kind": "card",
-      "refersTo": "deal-panel",
-      "description": "A ruled offer panel drawn on the board: no fill of its own, graphite border, heavier border for the lead offer.",
-      "html": "<article class=\"ds-deal ds-deal-main\"><h3>Pay per booked appointment</h3><p>You pay for each one. If the campaign books none, you owe nothing.</p></article>",
-      "css": ".ds-deal{display:grid;gap:12px;padding:clamp(22px,3vw,34px);border:2px solid var(--tape,#2f3237);border-radius:4px;background:#f7f6f1;font-family:\"Schibsted Grotesk\", system-ui, -apple-system, \"Segoe UI\", sans-serif;max-width:34rem}.ds-deal h3{margin:0;font-size:clamp(1.5rem,2.4vw,2rem);font-weight:820;letter-spacing:-.02em;line-height:1.05;color:#1b1d22}.ds-deal p{margin:0;color:#4a4f57;font-size:1.0625rem;line-height:1.55}.ds-deal-main{border-width:3px}"
+      "name": "Lead Status Track",
+      "kind": "chip",
+      "refersTo": "track-step-live",
+      "description": "Pill steps: dashed when unreached, green when live, yellow fill when booked.",
+      "html": "<ol class=\"ds-track\"><li class=\"on\">Asleep</li><li class=\"on\">Replied</li><li class=\"on\">Qualified</li><li class=\"on booked\">Booked</li></ol>",
+      "css": ":host{--night-950:#060D20;--night-900:#0A1430;--night-800:#13224A;--night-700:#22345F;--win-off:#17264C;--ink:#E6ECF5;--ink-dim:#9DABC6;--green:#62D69E;--green-hi:#86E4B6;--moon:#F4D06F;--ease-out:cubic-bezier(.16,1,.3,1);--set:\"Schibsted Grotesk\",system-ui,-apple-system,\"Segoe UI\",sans-serif;--display:\"Josefin Sans\",\"Schibsted Grotesk\",system-ui,sans-serif;}.ds-track{list-style:none;margin:0;padding:0;display:flex;gap:8px;flex-wrap:wrap;font-family:var(--set);}.ds-track li{padding:6px 12px;border-radius:999px;border:1px dashed var(--night-700);color:#7F8EAD;font-size:.8125rem;font-weight:550;transition:color .3s,border-color .3s,background-color .3s;}.ds-track li.on{border-style:solid;border-color:color-mix(in srgb,var(--green) 55%,transparent);color:var(--green);}.ds-track li.on.booked{background:var(--moon);border-color:var(--moon);color:var(--night-950);}"
     },
     {
-      "name": "Ledger Rows",
-      "kind": "custom",
-      "refersTo": "",
-      "description": "Signature board table: magnet-strip headers, ruled cells in the marker hand, ghost rows erased, live rows in blue, BOOKED ringed in red.",
-      "html": "<table class=\"ds-ledger\"><thead><tr><th><span class=\"s\">Lead</span></th><th><span class=\"s\">Now</span></th></tr></thead><tbody><tr class=\"g\"><td>M. Alvarez</td><td>dead</td></tr><tr><td><span class=\"i\">Dana R.</span></td><td><span class=\"i b\">Booked Thu 10:30</span></td></tr><tr class=\"g\"><td>T. Brooks</td><td>lost</td></tr></tbody></table>",
-      "css": ".ds-ledger{width:100%;max-width:36rem;border-collapse:collapse;background:#f7f6f1}.ds-ledger th{text-align:left;padding:0 10px 12px 0;font-weight:400}.ds-ledger .s{display:inline-block;background:#2a2c31;color:#fff;font:700 .72rem/1 \"Schibsted Grotesk\", system-ui, -apple-system, \"Segoe UI\", sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:7px 10px 6px;border-radius:3px}.ds-ledger td{padding:9px 10px 8px 12px;border-bottom:1.5px solid rgba(47,50,55,.82);font-family:\"Permanent Marker\", \"Schibsted Grotesk\", cursive;font-size:1.05rem;line-height:1.3;white-space:nowrap}.ds-ledger tbody tr:first-child td{border-top:1.5px solid rgba(47,50,55,.82)}.ds-ledger td+td{border-left:1.5px solid rgba(47,50,55,.82)}.ds-ledger .g td{color:#b4b8be;filter:blur(.45px)}.ds-ledger .i{color:#1f4fb5}.ds-ledger .i.b{color:#c8321f;position:relative}.ds-ledger .i.b::after{content:'';position:absolute;inset:-6px -10px -5px -9px;border:2px solid #c8321f;border-radius:48% 52% 44% 56%/62% 44% 56% 38%;transform:rotate(-1.5deg);opacity:.9}"
+      "name": "Booked Chip",
+      "kind": "chip",
+      "refersTo": "booked-chip",
+      "description": "A booked appointment, in moonlight yellow.",
+      "html": "<span class=\"ds-booked\">Booked Thu 10:30</span>",
+      "css": ":host{--night-950:#060D20;--night-900:#0A1430;--night-800:#13224A;--night-700:#22345F;--win-off:#17264C;--ink:#E6ECF5;--ink-dim:#9DABC6;--green:#62D69E;--green-hi:#86E4B6;--moon:#F4D06F;--ease-out:cubic-bezier(.16,1,.3,1);--set:\"Schibsted Grotesk\",system-ui,-apple-system,\"Segoe UI\",sans-serif;--display:\"Josefin Sans\",\"Schibsted Grotesk\",system-ui,sans-serif;}.ds-booked{display:inline-block;padding:5px 11px;border-radius:999px;background:var(--moon);color:var(--night-950);font:650 .8125rem/1.3 var(--set);white-space:nowrap;}"
     },
     {
       "name": "Text Thread",
       "kind": "custom",
-      "refersTo": "message-out",
-      "description": "Illustrative SMS exchange: outgoing graphite bubbles on the right, incoming paper bubbles on the left, tabular timestamps.",
-      "html": "<div class=\"ds-thread\"><p class=\"m o\"><time>Tue 8:53 PM</time><span>Want someone to come re-measure? I have Thursday at 10:30.</span></p><p class=\"m\"><time>Tue 8:55 PM</time><span>Thursday works</span></p></div>",
-      "css": ".ds-thread{display:grid;gap:12px;max-width:30rem;font-family:\"Schibsted Grotesk\", system-ui, -apple-system, \"Segoe UI\", sans-serif}.ds-thread .m{display:grid;gap:4px;margin:0;max-width:88%;justify-self:start}.ds-thread .m.o{justify-self:end}.ds-thread time{font-size:.75rem;font-weight:600;color:#686d75;font-variant-numeric:tabular-nums}.ds-thread .m.o time{justify-self:end}.ds-thread span{width:fit-content;padding:11px 15px;border-radius:16px 16px 16px 5px;font-size:1rem;line-height:1.42;background:#fff;border:1.5px solid #3a3d43;color:#1b1d22}.ds-thread .m.o span{justify-self:end;background:#2a2c31;color:#fff;border:0;border-radius:16px 16px 5px 16px}"
+      "refersTo": "thread-bubble-out",
+      "description": "Illustrative conversation: outgoing Raised Night, incoming outlined, the booking message ringed in yellow.",
+      "html": "<div class=\"ds-thread\"><p class=\"ds-msg in\"><time>Tue 8:52 PM</time><span>Same spot. Probably needs doing this time</span></p><p class=\"ds-msg out ds-booked-msg\"><time>Tue 8:55 PM</time><span>You're booked for Thursday at 10:30.</span></p></div>",
+      "css": ":host{--night-950:#060D20;--night-900:#0A1430;--night-800:#13224A;--night-700:#22345F;--win-off:#17264C;--ink:#E6ECF5;--ink-dim:#9DABC6;--green:#62D69E;--green-hi:#86E4B6;--moon:#F4D06F;--ease-out:cubic-bezier(.16,1,.3,1);--set:\"Schibsted Grotesk\",system-ui,-apple-system,\"Segoe UI\",sans-serif;--display:\"Josefin Sans\",\"Schibsted Grotesk\",system-ui,sans-serif;}.ds-thread{display:grid;gap:10px;max-width:420px;font-family:var(--set);color:var(--ink);}.ds-msg{margin:0;max-width:82%;display:grid;gap:3px;}.ds-msg time{font-size:.75rem;color:#7F8EAD;}.ds-msg span{padding:11px 15px;border-radius:16px;line-height:1.45;}.ds-msg.out{justify-self:end;}.ds-msg.out time{justify-self:end;}.ds-msg.out span{background:var(--night-800);border-bottom-right-radius:5px;}.ds-msg.in span{border:1px solid var(--night-700);border-bottom-left-radius:5px;}.ds-booked-msg span{box-shadow:inset 0 0 0 1px var(--moon);}"
+    },
+    {
+      "name": "House",
+      "kind": "custom",
+      "refersTo": "street-house",
+      "description": "One flat silhouette house on the kerb: lit windows green, booked porch light yellow, lead log below. Lights once; static under reduced motion.",
+      "html": "<figure class=\"ds-house\"><svg viewBox=\"0 0 110 150\" aria-hidden=\"true\"><rect class=\"b\" x=\"5\" y=\"18\" width=\"100\" height=\"132\"/><rect class=\"b\" x=\"0\" y=\"12\" width=\"110\" height=\"8\"/><rect class=\"w\" x=\"20\" y=\"38\" width=\"24\" height=\"22\"/><rect class=\"w on\" x=\"66\" y=\"38\" width=\"24\" height=\"22\"/><rect class=\"w\" x=\"20\" y=\"80\" width=\"24\" height=\"22\"/><rect class=\"w on\" x=\"66\" y=\"80\" width=\"24\" height=\"22\"/><rect class=\"d\" x=\"45\" y=\"116\" width=\"20\" height=\"34\"/><circle class=\"p\" cx=\"72\" cy=\"124\" r=\"4\"/></svg><figcaption><b>Dana R.</b><span>Quote, Mar '25</span><span class=\"st\">Booked Thu 10:30</span></figcaption></figure>",
+      "css": ":host{--night-950:#060D20;--night-900:#0A1430;--night-800:#13224A;--night-700:#22345F;--win-off:#17264C;--ink:#E6ECF5;--ink-dim:#9DABC6;--green:#62D69E;--green-hi:#86E4B6;--moon:#F4D06F;--ease-out:cubic-bezier(.16,1,.3,1);--set:\"Schibsted Grotesk\",system-ui,-apple-system,\"Segoe UI\",sans-serif;--display:\"Josefin Sans\",\"Schibsted Grotesk\",system-ui,sans-serif;}.ds-house{margin:0;display:inline-flex;flex-direction:column;align-items:center;padding:24px;background:var(--night-900);font-family:var(--set);}.ds-house svg{height:150px;width:auto;border-bottom:1px solid var(--night-700);}.ds-house .b{fill:var(--night-950);}.ds-house .d{fill:#0B1532;}.ds-house .w{fill:var(--win-off);}.ds-house .w.on{fill:var(--green);animation:ds-win .7s var(--ease-out) .4s both;}.ds-house .p{fill:var(--moon);animation:ds-porch .6s var(--ease-out) 1.5s both;}@keyframes ds-win{from{fill:var(--win-off);}to{fill:var(--green);}}@keyframes ds-porch{from{fill:var(--night-950);}to{fill:var(--moon);}}@media (prefers-reduced-motion:reduce){.ds-house .w.on,.ds-house .p{animation:none;}}.ds-house figcaption{display:grid;justify-items:center;gap:1px;padding-top:12px;font-size:.8125rem;line-height:1.35;color:var(--ink-dim);}.ds-house b{color:var(--ink);font-weight:600;}.ds-house .st{color:var(--moon);font-weight:600;font-size:.75rem;}"
     }
   ],
   "narrative": {
-    "northStar": "The Sales Board",
-    "overview": "Every page is one physical object: an enamel-white whiteboard held in a brushed aluminum frame, hung on a dark graphite wall. The top rail carries the wordmark, navigation and the primary magnet; the board carries the content; the tray at the bottom carries the fine print, the way a marker ledge collects pens. Nothing floats off the board as an app-like card. Content is organized by ruled lines, magnet-strip headers and hand-marked entries, exactly as a sales manager would organize a real board.\n\nThe type is set, not drawn: a heavy grotesk in graphite does all the talking, at very high scale contrast between the display headline and the body. A marker hand appears only where something has just been written onto the board: a lead coming back, a booking, a name. Gray ghosting carries the memory of what was erased. Red is the one loud color and it belongs to the booked appointment and the action that produces one.\n\nDensity is moderate and editorial: generous section padding, long ruled lists, two-column splits that collapse to one. The world rejects the dark-gradient AI-agency look: no glowing phone mockups, no rows of identical feature cards, no gradient text.",
+    "northStar": "Lit Windows",
+    "overview": "Your old leads are a street of dark houses at night. While the office is shut, a few windows light flat green as conversations start, and a porch light turns moonlight yellow for every booked appointment. The page walks that one night from dusk to morning: the sleeping street in the hero, one lead coming back in a real text thread, how a night runs, the consent rules, and at the end the same street at dawn with the lights out, the booked porches still on, and a calendar of bookings beside the audit form.\n\nThe world is calm, dark and generous with space. Houses are crisp flat geometry (rectangles, triangles, one small circle for a porch light) in near-black silhouette against a midnight-blue page. Light is flat colour, never a bloom: a window is either off or on. A light, wide, mid-century display face carries the headlines like painted house numbers; a sturdy grotesk does all the reading. Sections are full-width bands separated by tone or a single hairline, not cards in a row.\n\nThis world replaces the earlier \"Night Shift\" neon robot-crew system entirely. No robot characters, no neon glow, no phone-mockup split hero; the AI stays in the background and the visible outcome is an appointment.",
     "keyCharacteristics": [
-      "One object per page: frame, top rail, board, tray.",
-      "Graphite set type at extreme weight (850 to 880) for headlines; quiet 400 body.",
-      "Marker hand for live entries only; ghost gray for erased history.",
-      "Ruled lines (1.5px and 2px graphite) instead of boxes or background bands.",
-      "Red reserved for BOOKED and the primary action.",
-      "Brushed aluminum with a fine vertical grain on every metal part."
+      "Midnight-blue tonal bands (four night steps) with hairline rules; no cards-in-a-row.",
+      "Flat silhouette houses as the recurring motif: street in the hero, same street at dawn at the close.",
+      "Green means a lit window: a live conversation, and the one primary action.",
+      "Moonlight yellow means a booked appointment, and the moon. Nothing else.",
+      "Josefin Sans Light display over Schibsted Grotesk body.",
+      "Motion happens once: windows light on load, the thread plays once if unseen; reduced motion shows the final state."
     ],
     "rules": [
       {
-        "name": "The Red Means Booked Rule",
-        "body": "Marker red marks an appointment won, the action that wins one, or a decision that overrules a status. It never decorates, never fills a section, and never appears as a second accent.",
+        "name": "The Two Lights Rule",
+        "body": "Green is a lit window: a live conversation, or the one thing to press. Moonlight yellow is a booking or the moon. If something is neither, it stays ink on night.",
         "section": "colors"
       },
       {
-        "name": "The Ghost Is Residue Rule",
-        "body": "Ghost gray carries no information. Ghost rows are hidden from assistive technology, and nothing a reader needs is ever set in ghost gray.",
+        "name": "The Flat Light Rule",
+        "body": "Windows, porch lights and buttons are flat fills. No glow, bloom, neon text-shadow or outer halo on any light. The only soft light in the system is the dawn horizon.",
         "section": "colors"
       },
       {
-        "name": "The Live Ink Rule",
-        "body": "The marker hand is reserved for entries written on the board: lead names, statuses, times, BOOKED. Headings, body, buttons, navigation and labels are always set in the grotesk.",
+        "name": "The Same Street Rule",
+        "body": "The palette never adds a third accent. New states are expressed with the existing lights (on/off, green/yellow) or with ink weight.",
+        "section": "colors"
+      },
+      {
+        "name": "The Light Display Rule",
+        "body": "Display and headline type is Josefin Sans at weight 300 and sentence case. Never bold it, never uppercase it, never track it out.",
         "section": "typography"
       },
       {
-        "name": "The Tabular Clock Rule",
-        "body": "Times and timestamps use tabular figures so a column of times aligns like a schedule.",
+        "name": "The Proportional Time Rule",
+        "body": "Times (\"8:55 PM\", \"Thu 10:30\") stay in proportional figures; Schibsted's tabular set spaces the colon awkwardly.",
         "section": "typography"
       },
       {
-        "name": "The Lit Object Rule",
-        "body": "A shadow means \"this is a separate physical thing on or around the board.\" Text blocks, lists, deals and forms never get a shadow; they get a rule or a border.",
+        "name": "The Tone-Not-Shadow Rule",
+        "body": "Surfaces separate by night step and hairline. A drop shadow appears once, on the closing form against the dawn.",
         "section": "elevation"
-      },
-      {
-        "name": "The Small Corner Rule",
-        "body": "Nothing rectangular rounds past 8px; softness comes from the marker, not from pill shapes.",
-        "section": "shapes"
       }
     ],
     "dos": [
-      "**Do** build every page as frame, top rail, board and tray, with the primary magnet in the rail.",
-      "**Do** separate sections with a 2px tape rule and rows with 1.5px rule lines.",
-      "**Do** set headings in Schibsted Grotesk at 820 to 880 with tight negative tracking, and body at 400 in ink-2.",
-      "**Do** use the marker hand only for entries written onto the board, in marker blue, and red only when the entry is a booking.",
-      "**Do** label columns and groups with magnet strips (uppercase 0.72rem, 0.1em tracking, graphite fill).",
-      "**Do** keep times in tabular figures.",
-      "**Do** give every animation a visible-by-default fallback and honor reduced motion."
+      "**Do** keep green for lit windows, live conversations and the primary action, and Moonlight Yellow for bookings and the moon only.",
+      "**Do** draw new illustration as flat silhouette geometry in Deep Night with flat lit or unlit windows.",
+      "**Do** set headlines in Josefin Sans 300, sentence case, and everything else in Schibsted Grotesk.",
+      "**Do** separate sections with night tone steps and Night Rule hairlines.",
+      "**Do** play any motion once and make sure the final state is the default HTML, visible without script and under reduced motion.",
+      "**Do** label example names, times and conversations as illustrative, once and quietly.",
+      "**Do** use the green 2px outline, offset 3px, for every focus state."
     ],
     "donts": [
-      "**Don't** use booking red for decoration, section fills, icons or a second CTA color.",
-      "**Don't** put information in ghost gray or let ghost rows be read by assistive technology.",
-      "**Don't** set headings, body, buttons or navigation in the marker hand.",
-      "**Don't** shadow text blocks or lists; shadows are for physical objects on the board.",
-      "**Don't** round rectangular elements past 8px or use pill shapes.",
-      "**Don't** introduce dark-gradient heroes, phone mockups or rows of identical feature cards."
+      "**Don't** add glow, bloom, neon or text-shadow halos to green or yellow; light is flat.",
+      "**Don't** use Moonlight Yellow for warnings, highlights, decoration or general emphasis.",
+      "**Don't** bring back the robot crew, cartoon characters or the Oxanium display face from the old system.",
+      "**Don't** build rows of cards or a split hero with a phone mockup.",
+      "**Don't** loop animations or replay them on scroll.",
+      "**Don't** introduce a third accent colour."
     ]
   }
 }

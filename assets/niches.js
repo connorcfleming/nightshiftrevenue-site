@@ -96,7 +96,8 @@ NSR.niches = [
     phone: "(555) 014-7742",
     apptType: "In-home system estimate",
     apptLength: "45 min",
-    defaults: { leads: 4000, value: 9000, close: 35 },
+    defaults: { leads: 4000, value: 11500, close: 45 },
+    source: "Starting numbers are 2026 industry averages: about $11,500 for a full system replacement and about 45% of residential install appointments closing. Change them to yours.",
     valueLabel: "Average install ticket",
     closeLabel: "Estimates that close",
     q1: {
@@ -131,7 +132,8 @@ NSR.niches = [
     phone: "(555) 014-5561",
     apptType: "Free roof inspection",
     apptLength: "30 min",
-    defaults: { leads: 2000, value: 14000, close: 30 },
+    defaults: { leads: 2000, value: 11000, close: 30 },
+    source: "Starting numbers are 2026 industry averages: about $9,600 to $11,500 for an asphalt roof replacement and about 25% to 35% of appointments signing. Change them to yours.",
     valueLabel: "Average roof job",
     closeLabel: "Inspections that sign",
     q1: {
@@ -166,7 +168,8 @@ NSR.niches = [
     phone: "(555) 014-9020",
     apptType: "Rate review call",
     apptLength: "15 min",
-    defaults: { leads: 5000, value: 3500, close: 40 },
+    defaults: { leads: 5000, value: 4000, close: 30 },
+    source: "Starting numbers: about 1% (100 basis points) on an average loan of roughly $400,000, and an estimated 30% of booked calls funding. Change them to yours.",
     valueLabel: "Average revenue per closed loan",
     closeLabel: "Calls that become loans",
     q1: {
@@ -201,8 +204,9 @@ NSR.niches = [
     phone: "(555) 014-6604",
     apptType: "Home value walkthrough",
     apptLength: "30 min",
-    defaults: { leads: 6000, value: 9000, close: 25 },
-    valueLabel: "Average commission per deal",
+    defaults: { leads: 6000, value: 12000, close: 35 },
+    source: "Starting numbers are 2026 averages: about 2.8% commission per side on the $434,100 national median home, before your brokerage split, and about 35% of appointments signing. Change them to yours.",
+    valueLabel: "Average commission per side",
     closeLabel: "Appointments that list or buy",
     q1: {
       ai: "good to hear. are you thinking about selling in the next 12 months, or just keeping an eye on value?",
@@ -236,7 +240,8 @@ NSR.niches = [
     phone: "(555) 014-8873",
     apptType: "On-site quote visit",
     apptLength: "30 min",
-    defaults: { leads: 3500, value: 2800, close: 50 },
+    defaults: { leads: 3500, value: 1800, close: 45 },
+    source: "Starting numbers are 2026 averages: about $1,350 for a tank water heater and $1,400 to $3,900 for tankless, installed, with 35% to 55% of replacement quotes closing. Change them to yours.",
     valueLabel: "Average job ticket",
     closeLabel: "Visits that become jobs",
     q1: {

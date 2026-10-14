@@ -757,6 +757,7 @@
   $("sub1").textContent = N.sub + " First, a quick look at what's sitting in your list.";
   $("valueLabel").textContent = N.valueLabel;
   $("closeLabel").textContent = N.closeLabel;
+  if (N.source) { $("srcNote").textContent = N.source; $("srcNote").hidden = false; }
   inLeads.value = N.defaults.leads;
   inValue.value = N.defaults.value;
   inClose.value = N.defaults.close;

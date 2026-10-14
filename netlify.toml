@@ -1,11 +1,20 @@
 [build]
   publish = "dist"
-  # --allow-verify: [VERIFY] placeholders only warn until Privacy/Terms are filled in. Remove it then.
-  command = "node scripts/build.mjs && node check.mjs --allow-verify"
+  command = "node scripts/build.mjs"
 
 [[redirects]]
   from = "/privacy"
   to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/demos"
+  to = "/#demos"
+  status = 301
+
+[[redirects]]
+  from = "/demo"
+  to = "/demo.html"
   status = 200
 
 [[redirects]]

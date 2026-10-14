@@ -1,374 +1,130 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Night Shift Revenue · Booked appointments from the leads you already paid for</title>
-  <meta name="description" content="While your office is closed, Night Shift Revenue texts the leads your team stopped chasing, holds the conversation, and books the ready ones onto your calendar. You pay per booked appointment.">
-  <meta name="theme-color" content="#111210">
-  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/assets/brand/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
-  <link rel="preload" href="/assets/fonts/oxanium.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/schibsted-grotesk.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/styles.css">
-  <script>document.documentElement.classList.add('js');</script>
-  <meta property="og:title" content="Night Shift Revenue">
-  <meta property="og:description" content="Booked appointments from the leads you already paid for. Pay per booked appointment.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://nightshiftrevenue.com/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Night Shift Revenue</title>
+<meta name="description" content="Night Shift Revenue texts the leads you already paid for and books them onto your calendar. Pay per booked appointment. If nobody books, you pay nothing.">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+<link rel="canonical" href="https://nightshiftrevenue.com/">
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-  <!-- Netlify Forms registers fields from the first "demo" form it finds; this lists every field both forms send. -->
-  <form name="demo" netlify netlify-honeypot="company_website" hidden aria-hidden="true">
-    <input type="hidden" name="form-name" value="demo"><input name="source"><input name="company_website">
-    <input name="name"><input name="business"><input name="email"><input name="phone"><input name="industry">
-    <input name="database_size"><textarea name="notes"></textarea><input type="checkbox" name="sms_consent">
-  </form>
-  <a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main">Skip to content</a>
 
-  <header class="site-head">
-    <div class="wrap head-row">
-      <a class="brand" href="/" aria-label="Night Shift Revenue, home">
-        <img class="brand-logo" src="/assets/brand/lockup-horizontal-dark.svg" width="540" height="124" alt="Night Shift Revenue">
-      </a>
-      <a class="btn btn-sm head-cta" href="#audit">Free audit</a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
-        <span class="nav-toggle-bars" aria-hidden="true"></span><span class="sr">Menu</span>
-      </button>
-      <nav class="nav" id="site-nav" aria-label="Main">
-        <a href="#night">How it works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#fit">Who it's for</a>
-        <a href="#faq">Questions</a>
-        <a class="btn btn-sm" href="#audit">Free lead audit</a>
-      </nav>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Night Shift Revenue home"><img src="assets/brand/lockup-horizontal-dark.svg" alt="Night Shift Revenue" width="540" height="124"></a>
+    <nav aria-label="Main">
+      <a href="#demos">Demos</a>
+      <a href="#overnight">How it works</a>
+      <a href="#deal">The deal</a>
+      <a class="btn btn-lime" href="#fit">Is my list worth it?</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="demos">
+    <div class="wrap">
+      <h1>Your old leads aren't dead. They're <em>asleep.</em></h1>
+      <p class="hero-sub">You already paid to get those inquiries. We text them back, restart the conversation, and book the ones who are ready onto your calendar. <strong>You pay per booked appointment. If nobody books, you pay nothing.</strong></p>
+
+      <div class="launcher">
+        <p class="launcher-q">What kind of business do you run? <span>Pick one. You'll play your own old lead.</span></p>
+        <ul class="niche-list" id="nicheList"></ul>
+        <div class="preview" id="preview" aria-live="polite"></div>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main id="main">
-
-    <!-- Hero: the street of old leads, a few windows lit -->
-    <section class="hero" aria-labelledby="hero-h">
-      <img class="moon" src="/assets/brand/icon.svg" width="106" height="106" alt="" aria-hidden="true">
-      <div class="wrap hero-top">
-        <div class="hero-heading"><h1 id="hero-h">Your old leads aren't dead. <span>They're asleep.</span></h1><p class="brand-tagline">Turn missed opportunities<br>into revenue</p></div>
-        <div class="hero-side">
-          <p class="lede">While your office is closed, we text the leads your team stopped chasing, hold real conversations with them, and book the ready ones onto your calendar. You pay per booked appointment.</p>
-          <form class="quick" name="demo" method="POST" data-netlify="true" netlify-honeypot="company_website" data-form>
-            <input type="hidden" name="form-name" value="demo">
-            <input type="hidden" name="source" value="hero">
-            <p class="hp" aria-hidden="true"><label>Leave this empty <input name="company_website" tabindex="-1" autocomplete="off"></label></p>
-            <div class="quick-fields">
-              <label class="field"><span>Your name</span><input name="name" autocomplete="name" required></label>
-              <label class="field"><span>Work email</span><input name="email" type="email" autocomplete="email" required></label>
-            </div>
-            <button class="btn" type="submit">Get my free lead audit</button>
-            <p class="quick-note">15 min · we'll tell you if your list is worth working.</p>
-            <p class="form-status" role="status" aria-live="polite"></p>
-          </form>
-        </div>
-      </div>
-
-      <figure class="street" aria-labelledby="street-cap">
-        <figcaption id="street-cap" class="sr">An illustrative street of nine old leads. Overnight, three have replied: Dana R. and Marcus T. are booked, Priya S. is still talking. The other six are asleep.</figcaption>
-        <ol class="houses">
-          <li class="house t-a">
-            <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 60,8 120,52"/><rect class="body" x="10" y="48" width="100" height="72"/><rect class="win" x="24" y="64" width="22" height="18"/><rect class="win" x="74" y="64" width="22" height="18"/><rect class="door" x="52" y="90" width="16" height="30"/></svg>
-            <p class="kerb"><b>M. Alvarez</b><span>Quote, Jun '24</span><span class="state">asleep</span></p>
-          </li>
-          <li class="house t-b is-booked keep" style="--d:0">
-            <p class="say say-booked" aria-hidden="true"><time>2:10 AM</time> “Thursday works.”</p>
-            <svg viewBox="0 0 110 150" aria-hidden="true" focusable="false"><rect class="body" x="5" y="18" width="100" height="132"/><rect class="roof" x="0" y="12" width="110" height="8"/><rect class="win" x="20" y="38" width="24" height="22"/><rect class="win on" x="66" y="38" width="24" height="22"/><rect class="win" x="20" y="80" width="24" height="22"/><rect class="win on" x="66" y="80" width="24" height="22"/><rect class="door" x="45" y="116" width="20" height="34"/><circle class="porch" cx="72" cy="124" r="4"/></svg>
-            <p class="kerb"><b>Dana R.</b><span>Quote, Mar '25</span><span class="state booked">Booked Thu 10:30</span></p>
-          </li>
-          <li class="house t-c keep">
-            <svg viewBox="0 0 170 90" aria-hidden="true" focusable="false"><polygon class="roof" points="0,38 30,10 140,10 170,38"/><rect class="body" x="8" y="34" width="154" height="56"/><rect class="win" x="24" y="48" width="30" height="16"/><rect class="win" x="116" y="48" width="30" height="16"/><rect class="door" x="76" y="56" width="18" height="34"/></svg>
-            <p class="kerb"><b>T. Brooks</b><span>Consult, Feb '25</span><span class="state">asleep</span></p>
-          </li>
-          <li class="house t-d is-booked" style="--d:1">
-            <svg viewBox="0 0 90 150" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 45,6 90,52"/><rect class="body" x="6" y="48" width="78" height="102"/><rect class="win on" x="18" y="62" width="20" height="20"/><rect class="win" x="52" y="62" width="20" height="20"/><rect class="win" x="18" y="100" width="20" height="20"/><rect class="door" x="52" y="112" width="18" height="38"/><circle class="porch" cx="44" cy="120" r="4"/></svg>
-            <p class="kerb"><b>Marcus T.</b><span>Consult, Oct '24</span><span class="state booked">Booked Fri 2:00</span></p>
-          </li>
-          <li class="house t-a">
-            <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 60,8 120,52"/><rect class="body" x="10" y="48" width="100" height="72"/><rect class="win" x="24" y="64" width="22" height="18"/><rect class="win" x="74" y="64" width="22" height="18"/><rect class="door" x="52" y="90" width="16" height="30"/></svg>
-            <p class="kerb"><b>K. Patel</b><span>Web form, Nov '23</span><span class="state">asleep</span></p>
-          </li>
-          <li class="house t-c">
-            <svg viewBox="0 0 170 90" aria-hidden="true" focusable="false"><polygon class="roof" points="0,38 30,10 140,10 170,38"/><rect class="body" x="8" y="34" width="154" height="56"/><rect class="win" x="24" y="48" width="30" height="16"/><rect class="win" x="116" y="48" width="30" height="16"/><rect class="door" x="76" y="56" width="18" height="34"/></svg>
-            <p class="kerb"><b>J. Owens</b><span>Estimate, Aug '24</span><span class="state">asleep</span></p>
-          </li>
-          <li class="house t-b is-talking keep" style="--d:2">
-            <p class="say" aria-hidden="true"><time>11:40 PM</time> “What would it cost now?”</p>
-            <svg viewBox="0 0 110 150" aria-hidden="true" focusable="false"><rect class="body" x="5" y="18" width="100" height="132"/><rect class="roof" x="0" y="12" width="110" height="8"/><rect class="win" x="20" y="38" width="24" height="22"/><rect class="win" x="66" y="38" width="24" height="22"/><rect class="win on" x="20" y="80" width="24" height="22"/><rect class="win" x="66" y="80" width="24" height="22"/><rect class="door" x="45" y="116" width="20" height="34"/></svg>
-            <p class="kerb"><b>Priya S.</b><span>Estimate, Jan '25</span><span class="state talking">Talking</span></p>
-          </li>
-          <li class="house t-d keep">
-            <svg viewBox="0 0 90 150" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 45,6 90,52"/><rect class="body" x="6" y="48" width="78" height="102"/><rect class="win" x="18" y="62" width="20" height="20"/><rect class="win" x="52" y="62" width="20" height="20"/><rect class="win" x="18" y="100" width="20" height="20"/><rect class="door" x="52" y="112" width="18" height="38"/></svg>
-            <p class="kerb"><b>R. Kim</b><span>Quote, Jan '24</span><span class="state">asleep</span></p>
-          </li>
-          <li class="house t-a">
-            <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 60,8 120,52"/><rect class="body" x="10" y="48" width="100" height="72"/><rect class="win" x="24" y="64" width="22" height="18"/><rect class="win" x="74" y="64" width="22" height="18"/><rect class="door" x="52" y="90" width="16" height="30"/></svg>
-            <p class="kerb"><b>L. Grant</b><span>Consult, May '24</span><span class="state">asleep</span></p>
-          </li>
-        </ol>
-        <p class="wrap illustrative">Illustrative example. Every lead, business and time shown on this page is made up.</p>
-      </figure>
-    </section>
-
-    <!-- One lead, coming back -->
-    <section class="comeback" id="example" aria-labelledby="comeback-h">
-      <div class="wrap comeback-grid">
-        <div class="comeback-copy">
-          <h2 id="comeback-h">Here's one coming back.</h2>
-          <p>Dana asked for a roof quote, never booked, and stopped picking up. More than a year later, one text on a Tuesday evening restarts the conversation.</p>
-          <dl class="record" aria-label="Dana's old lead record">
-            <div><dt>In CRM since</dt><dd>March 2025</dd></div>
-            <div><dt>Asked for</dt><dd>Roof replacement quote</dd></div>
-            <div><dt>Attempts</dt><dd>4 calls, 2 voicemails</dd></div>
-            <div><dt>Marked</dt><dd><s>Dead lead</s></dd></div>
-          </dl>
-          <ol class="track" aria-label="Lead status">
-            <li data-stage="0">Asleep</li>
-            <li data-stage="1">Replied</li>
-            <li data-stage="2">Qualified</li>
-            <li data-stage="3" class="track-booked">Booked</li>
-          </ol>
-        </div>
-
-        <div class="answer">
-          <div class="thread" aria-label="Illustrative text conversation between Ridgeline Roofing and Dana" data-thread>
-            <p class="msg out" data-stage="0"><time>Tue 6:12 PM</time><span>Hi Dana, it's Sam with Ridgeline Roofing. Is this the same Dana who got a roof replacement quote from us a while back? Reply STOP to opt out.</span></p>
-            <p class="msg in" data-stage="1"><time>Tue 11:40 PM</time><span>Yes that's me. We put it off but the leak is back</span></p>
-            <p class="msg out" data-stage="1"><time>Tue 11:41 PM</time><span>Sorry to hear that. Same spot over the back bedroom, or somewhere new?</span></p>
-            <p class="msg in" data-stage="2"><time>Wed 2:07 AM</time><span>Same spot. Probably needs doing this time</span></p>
-            <p class="msg out" data-stage="2"><time>Wed 2:08 AM</time><span>Makes sense. Want someone to come re-measure and update the quote? I have Thursday at 10:30 or Friday at 2:00.</span></p>
-            <p class="msg in" data-stage="3"><time>Wed 2:10 AM</time><span>Thursday works</span></p>
-            <p class="msg out msg-booked" data-stage="3"><time>Wed 2:10 AM</time><span>You're booked for Thursday at 10:30. Mike from our team will text when he's on the way.</span></p>
-          </div>
-          <div class="thread-foot">
-            <p class="handoff"><span class="booked-chip">Booked Thu 10:30</span> Handed to your sales team with the whole conversation attached.</p>
-            <button class="btn-quiet" type="button" data-replay hidden>
-              <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>
-              <span>Replay</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- How a night runs -->
-    <section class="night" id="night" aria-labelledby="night-h">
-      <div class="wrap">
-        <h2 id="night-h">What happens after you lock up.</h2>
-        <div class="shift" aria-hidden="true">
-          <span class="shift-mark shift-start" style="--at:0">Before</span>
-          <span class="shift-mark" style="--at:.25">6 PM</span>
-          <span class="shift-mark" style="--at:.5">Midnight</span>
-          <span class="shift-mark" style="--at:.75">6 AM</span>
-          <span class="shift-mark shift-dawn" style="--at:1">Morning</span>
-        </div>
-        <ol class="steps">
-          <li>
-            <h3>A free audit of your list</h3>
-            <p>Send us an export of your CRM. We look at lead age, source, volume and how each contact opted in, then tell you straight whether there's enough here to work.</p>
-          </li>
-          <li>
-            <h3>Messages in your voice</h3>
-            <p>We write the conversation for your business: your offer, your qualifying questions, your booking rules. Nothing goes out until you approve it.</p>
-          </li>
-          <li>
-            <h3>Real conversations, one at a time</h3>
-            <p>Texts go out in measured batches at reasonable hours. Our AI holds each conversation inside the rules we set with you, and a person steps in when something needs one. STOP ends messages immediately.</p>
-          </li>
-          <li>
-            <h3>Appointments on your calendar</h3>
-            <p>Ready leads are booked straight onto your team's calendar with the conversation attached, so your rep walks in knowing the story.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- Pricing: one full-width statement -->
-    <section class="pricing" id="pricing" aria-labelledby="pricing-h">
-      <div class="wrap pricing-inner">
-        <h2 id="pricing-h">Pay per booked appointment. <span>Nothing books, nothing owed.</span></h2>
-        <div class="pricing-body">
-          <p>No retainer. Before launch we agree, in writing, what counts as a booked appointment for your business. You pay for each one. If the campaign books none, you owe nothing.</p>
-          <p class="pricing-alt"><strong>Revenue share</strong> is an option for long sales cycles and high-value jobs: an agreed share of closed sales from reactivated leads instead of a per-appointment fee.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Fit -->
-    <section class="fit" id="fit" aria-labelledby="fit-h">
-      <div class="wrap">
-        <h2 id="fit-h">Is your list worth working?</h2>
-        <p class="section-lede">Industry doesn't matter much. What matters is the list, and whether you have permission to text it.</p>
-        <div class="fit-cols">
-          <div>
-            <h3>It probably is if</h3>
-            <ul class="checks">
-              <li>Your CRM holds past inquiries, quotes or consults that never closed.</li>
-              <li>A booked appointment is worth real money to you.</li>
-              <li>Someone on your team runs appointments.</li>
-              <li>You can show how those contacts agreed to hear from you.</li>
-            </ul>
-          </div>
-          <div>
-            <h3>It isn't if</h3>
-            <ul class="crosses">
-              <li>The list was purchased, scraped or rented.</li>
-              <li>Contacts never gave your business permission to text them.</li>
-              <li>You need brand-new leads. We work the ones you already have.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Consent -->
-    <section class="consent" id="consent" aria-labelledby="consent-h">
-      <div class="wrap consent-grid">
-        <div>
-          <h2 id="consent-h">How we text your leads</h2>
-          <p class="section-lede">Your customers' trust is the asset. These rules hold on every campaign.</p>
-        </div>
-        <div>
-          <ul class="rules">
-            <li><strong>Permission first.</strong> We only text contacts who gave your business permission to contact them by text. We review consent and opt-out records with you before launch, and anyone we can't verify stays off the list.</li>
-            <li><strong>Every first message says who's texting.</strong> It names your business and explains how to stop: reply STOP.</li>
-            <li><strong>Opt-outs are final.</strong> STOP, UNSUBSCRIBE, CANCEL, END or QUIT ends messages right away. We record the opt-out and give it back to you so your team doesn't text that person again.</li>
-            <li><strong>Reasonable hours.</strong> Outreach goes out during reasonable hours in the lead's own time zone. Replies are answered when the lead writes in.</li>
-            <li><strong>Your do-not-contact list wins.</strong> Anyone on it is removed before launch.</li>
-          </ul>
-          <p class="fine">Message frequency varies. Message and data rates may apply. Texting rules vary by state and change over time; the messaging rules for your campaign are agreed with you before launch. This page is not legal advice.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Founder (placeholders until the owner supplies real details) -->
-    <section class="founder" id="founder" aria-labelledby="founder-h">
-      <div class="wrap founder-grid">
-        <div class="founder-photo" role="img" aria-label="[PHOTO] Founder photo goes here">[PHOTO]</div>
-        <div class="founder-copy">
-          <h2 id="founder-h">Who's on the night shift</h2>
-          <p class="founder-name">[FOUNDER NAME] <span>· [CITY]</span></p>
-          <p class="founder-why">[WHY I DO THIS: two or three sentences in your own words about why you started Night Shift Revenue and who you work with.]</p>
-          <p class="founder-note">You talk to [FOUNDER NAME] on the audit call, and the same person watches your campaign.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq" id="faq" aria-labelledby="faq-h">
-      <div class="wrap faq-grid">
-        <h2 id="faq-h">Questions owners ask</h2>
-        <div class="faq-list">
-          <details>
-            <summary>Is this a chatbot?</summary>
-            <p>Not the kind on a website. It's a texting campaign run on your old leads, with AI writing replies inside rules we set with you: what to say, what to ask, when to book and when to hand off. We watch the conversations and step in when something needs a person.</p>
-          </details>
-          <details>
-            <summary>These leads have been called to death. Why would they answer now?</summary>
-            <p>Timing changes. Someone who wasn't ready last year may be ready now, and a short text is easier to answer than a sales call. The free audit tells you whether your list is worth working before you commit to anything.</p>
-          </details>
-          <details>
-            <summary>Will it sound like us?</summary>
-            <p>It should. We write the messages from how your team already talks to customers, and you approve them before launch.</p>
-          </details>
-          <details>
-            <summary>Which CRM do you work with?</summary>
-            <p>We start from an export of your contacts (a CSV file), so most CRMs work. Appointments go onto your team's calendar.</p>
-          </details>
-          <details>
-            <summary>What counts as a booked appointment?</summary>
-            <p>We define it with you in writing before launch, for example a qualified lead confirmed on your calendar for a specific time. You only pay for appointments that meet that definition.</p>
-          </details>
-          <details id="after-hours">
-            <summary>Can you answer our new leads too?</summary>
-            <p>Yes, once a reactivation campaign is live. <strong>Speed to lead:</strong> a new inquiry gets a personal text the moment the form comes in. <strong>After-hours follow-up:</strong> leads that come in at 9 PM or on a Sunday don't wait for Monday; the conversation books them into your team's next open slot.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Morning: the calendar, and the audit form -->
-    <section class="dawn" id="audit" aria-labelledby="audit-h">
-      <div class="wrap dawn-grid">
-        <div class="dawn-copy">
-          <h2 class="dawn-h"><time>7:02 AM.</time> You open the office to a booked calendar.</h2>
-          <ol class="cal" aria-label="Illustrative calendar the next morning">
-            <li><time>Thu 9:00</time><span>Ana P. <em>Kitchen remodel estimate · booked 2:20 AM</em></span></li>
-            <li><time>Thu 10:30</time><span>Dana R. <em>Roof re-measure · booked 2:10 AM</em></span></li>
-            <li><time>Fri 2:00</time><span>Marcus T. <em>Consult · booked 7:31 PM</em></span></li>
-          </ol>
-          <p class="dawn-contact">Rather talk first? Call or text <a href="tel:+14042766462" data-phone>404-276-6462</a>.</p>
-          <p class="dawn-contact" data-email-line hidden>Email <a href="#" data-email></a></p>
-          <p class="dawn-contact" data-calendar-line hidden>Or <a href="#" data-calendar>pick a time on the calendar</a>.</p>
-        </div>
-
-        <form class="audit-form" name="demo" method="POST" data-netlify="true" netlify-honeypot="company_website" data-form>
-          <input type="hidden" name="form-name" value="demo">
-          <input type="hidden" name="source" value="audit-section">
-          <p class="hp" aria-hidden="true"><label>Leave this empty <input name="company_website" tabindex="-1" autocomplete="off"></label></p>
-          <h2 id="audit-h">Get my free lead audit</h2>
-          <p class="form-intro">15 minutes. Tell us roughly what's in your list and we'll tell you straight whether it's worth working. No obligation.</p>
-
-          <div class="grid2">
-            <label class="field"><span>Your name</span><input name="name" autocomplete="name" required></label>
-            <label class="field"><span>Business name</span><input name="business" autocomplete="organization" required></label>
-            <label class="field"><span>Work email</span><input name="email" type="email" autocomplete="email" required></label>
-            <label class="field"><span>Mobile phone <em>(optional)</em></span><input name="phone" type="tel" autocomplete="tel" inputmode="tel"></label>
-            <label class="field"><span>What you sell</span><input name="industry" placeholder="e.g. roofing, legal, solar" required></label>
-            <label class="field">
-              <span>Old leads in your CRM, roughly</span>
-              <select name="database_size" required>
-                <option value="">Choose one</option>
-                <option>Under 1,000</option>
-                <option>1,000 to 5,000</option>
-                <option>5,000 to 20,000</option>
-                <option>Over 20,000</option>
-                <option>Not sure</option>
-              </select>
-            </label>
-          </div>
-          <label class="field"><span>Anything we should know? <em>(optional)</em></span><textarea name="notes" rows="3"></textarea></label>
-
-          <label class="consent-box">
-            <input type="checkbox" name="sms_consent" value="yes">
-            <span>Text me about my audit request. By checking this box, you agree to receive calls and text messages from Night Shift Revenue at the number above about your request. Consent is not a condition of purchase. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. See our <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms</a>.</span>
-          </label>
-
-          <button class="btn btn-lg" type="submit">Get my free lead audit</button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-      <div class="street street-dawn" aria-hidden="true">
-        <ol class="houses">
-          <li class="house t-a"><svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 60,8 120,52"/><rect class="body" x="10" y="48" width="100" height="72"/><rect class="win" x="24" y="64" width="22" height="18"/><rect class="win" x="74" y="64" width="22" height="18"/><rect class="door" x="52" y="90" width="16" height="30"/></svg></li>
-          <li class="house t-b keep"><svg viewBox="0 0 110 150" aria-hidden="true" focusable="false"><rect class="body" x="5" y="18" width="100" height="132"/><rect class="roof" x="0" y="12" width="110" height="8"/><rect class="win" x="20" y="38" width="24" height="22"/><rect class="win" x="66" y="38" width="24" height="22"/><rect class="win" x="20" y="80" width="24" height="22"/><rect class="win" x="66" y="80" width="24" height="22"/><rect class="door" x="45" y="116" width="20" height="34"/><circle class="porch" cx="72" cy="124" r="4"/></svg></li>
-          <li class="house t-c keep"><svg viewBox="0 0 170 90" aria-hidden="true" focusable="false"><polygon class="roof" points="0,38 30,10 140,10 170,38"/><rect class="body" x="8" y="34" width="154" height="56"/><rect class="win" x="24" y="48" width="30" height="16"/><rect class="win" x="116" y="48" width="30" height="16"/><rect class="door" x="76" y="56" width="18" height="34"/><circle class="porch" cx="100" cy="70" r="4"/></svg></li>
-          <li class="house t-d keep"><svg viewBox="0 0 90 150" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 45,6 90,52"/><rect class="body" x="6" y="48" width="78" height="102"/><rect class="win" x="18" y="62" width="20" height="20"/><rect class="win" x="52" y="62" width="20" height="20"/><rect class="win" x="18" y="100" width="20" height="20"/><rect class="door" x="52" y="112" width="18" height="38"/><circle class="porch" cx="44" cy="120" r="4"/></svg></li>
-          <li class="house t-a"><svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 60,8 120,52"/><rect class="body" x="10" y="48" width="100" height="72"/><rect class="win" x="24" y="64" width="22" height="18"/><rect class="win" x="74" y="64" width="22" height="18"/><rect class="door" x="52" y="90" width="16" height="30"/></svg></li>
-          <li class="house t-c"><svg viewBox="0 0 170 90" aria-hidden="true" focusable="false"><polygon class="roof" points="0,38 30,10 140,10 170,38"/><rect class="body" x="8" y="34" width="154" height="56"/><rect class="win" x="24" y="48" width="30" height="16"/><rect class="win" x="116" y="48" width="30" height="16"/><rect class="door" x="76" y="56" width="18" height="34"/></svg></li>
-          <li class="house t-b keep"><svg viewBox="0 0 110 150" aria-hidden="true" focusable="false"><rect class="body" x="5" y="18" width="100" height="132"/><rect class="roof" x="0" y="12" width="110" height="8"/><rect class="win" x="20" y="38" width="24" height="22"/><rect class="win" x="66" y="38" width="24" height="22"/><rect class="win" x="20" y="80" width="24" height="22"/><rect class="win" x="66" y="80" width="24" height="22"/><rect class="door" x="45" y="116" width="20" height="34"/></svg></li>
-          <li class="house t-d"><svg viewBox="0 0 90 150" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 45,6 90,52"/><rect class="body" x="6" y="48" width="78" height="102"/><rect class="win" x="18" y="62" width="20" height="20"/><rect class="win" x="52" y="62" width="20" height="20"/><rect class="win" x="18" y="100" width="20" height="20"/><rect class="door" x="52" y="112" width="18" height="38"/></svg></li>
-          <li class="house t-a"><svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><polygon class="roof" points="0,52 60,8 120,52"/><rect class="body" x="10" y="48" width="100" height="72"/><rect class="win" x="24" y="64" width="22" height="18"/><rect class="win" x="74" y="64" width="22" height="18"/><rect class="door" x="52" y="90" width="16" height="30"/></svg></li>
-        </ol>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-foot">
-    <div class="wrap foot-row">
-      <p class="brand brand-foot">
-        <img class="brand-logo" src="/assets/brand/lockup-horizontal-dark.svg" width="540" height="124" alt="Night Shift Revenue">
-      </p>
-      <p class="foot-links"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms</a><span>© <span data-year>2026</span> Night Shift Revenue</span></p>
+  <section class="section" id="overnight">
+    <div class="wrap">
+      <h2>One text starts it. The calendar finishes it.</h2>
+      <p class="lede">The first message doesn't sell anything. It asks one question, the way a person would, so your old lead writes back. From there we answer every reply until they're ready to book.</p>
+      <ol class="night">
+        <li>
+          <time>Day 1, evening</time>
+          <h3>Your list goes out in small batches</h3>
+          <p>We start with a test of your freshest 2,000 leads, sent during reasonable hours in each lead's time zone.</p>
+        </li>
+        <li>
+          <time>Two short lines</time>
+          <h3>"Is this the same Chris?"</h3>
+          <p>A casual, lowercase text with their first name and the service they asked about. It reads like a person checking in, not like an ad.</p>
+        </li>
+        <li>
+          <time>Whenever they reply</time>
+          <h3>Every reply gets an answer</h3>
+          <p>Questions about price, timing and trust get handled. No reply? Up to three friendly bumps over the following days.</p>
+        </li>
+        <li>
+          <time>Next morning</time>
+          <h3>Booked, with the conversation attached</h3>
+          <p>Appointments land on your calendar. Your team walks in knowing what the lead wants and when.</p>
+        </li>
+      </ol>
     </div>
-  </footer>
+  </section>
 
-  <script src="/assets/app.js" defer></script>
+  <section class="section" id="deal">
+    <div class="wrap deal">
+      <div>
+        <h2>You only pay when someone books.</h2>
+        <p class="lede">We don't charge a retainer, and you don't buy new ads. The leads are already yours, so the only thing you pay for is a booked appointment.</p>
+        <div class="guarantee">
+          <h3>No bookings, no bill.</h3>
+          <p>If the test campaign doesn't book a single appointment, you owe us nothing.</p>
+        </div>
+      </div>
+      <dl class="terms">
+        <div><dt>Start</dt><dd>A test with 2,000 of your freshest old leads, uploaded from a CSV export.</dd></div>
+        <div><dt>Price</dt><dd>A per-appointment rate below what you pay ads for one today, agreed in writing before launch.</dd></div>
+        <div><dt>After the test</dt><dd>If it works, we match your current cost per appointment and keep going through the rest of the list.</dd></div>
+        <div><dt>Timeline</dt><dd>About two weeks from signed agreement to the first texts going out.</dd></div>
+        <div><dt>Your data</dt><dd>A data processing agreement for both sides to sign. Opt-outs are honored immediately.</dd></div>
+        <div><dt>Your part</dt><dd>Put your best salesperson on the appointments we book.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="fit">
+    <div class="wrap">
+      <h2>Is your list worth working?</h2>
+      <p class="lede">Check what's true for you. Each one makes a reactivation campaign more likely to pay off.</p>
+      <div class="fit" id="fitList">
+        <label><input class="check" type="checkbox"> <span>You've run Google or Facebook ads in the last few years<small>Paid leads are warm leads. They raised their hand once.</small></span></label>
+        <label><input class="check" type="checkbox"> <span>You have 1,000 or more old leads in a CRM or spreadsheet<small>Quotes, consults and inquiries that never booked or bought.</small></span></label>
+        <label><input class="check" type="checkbox"> <span>Your forms asked for permission to follow up<small>A consent box or opt-in on the form they filled out.</small></span></label>
+        <label><input class="check" type="checkbox"> <span>Nobody on your team calls the old leads anymore<small>If they've gone untouched, they're the easiest wins.</small></span></label>
+        <label><input class="check" type="checkbox"> <span>One booked appointment is worth $500 or more to you<small>High-ticket services get the most out of each booking.</small></span></label>
+        <label><input class="check" type="checkbox"> <span>Someone can take the appointments we book<small>A salesperson, advisor or you, with room on the calendar.</small></span></label>
+      </div>
+      <div class="fit-out" aria-live="polite"><p id="fitMsg">Check the boxes that apply.</p></div>
+    </div>
+  </section>
+
+  <section class="section close">
+    <div class="wrap">
+      <h2>See it with your own business name on it.</h2>
+      <p class="lede">Pick your industry above and play the lead yourself, or call and we'll walk you through it.</p>
+      <div class="row">
+        <a class="btn btn-lime" href="#demos">Try a demo</a>
+        <a class="btn btn-ghost" id="callBtn" href="tel:+14042766462">Call 404-276-6462</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>© 2026 Night Shift Revenue. Turn missed opportunities into revenue.</span>
+    <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · Businesses, names and conversations in the demos are samples.</span>
+  </div>
+</footer>
+
+<script src="assets/niches.js"></script>
+<script src="assets/home.js"></script>
 </body>
 </html>

@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Live Demo · Night Shift Revenue</title>
+<meta name="description" content="A live database reactivation demo: play your own old lead and watch the conversation book an appointment.">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="demo-body">
+<a class="skip" href="#stage">Skip to demo</a>
+
+<header class="top demo-top">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Night Shift Revenue home"><img src="assets/brand/lockup-horizontal-dark.svg" alt="Night Shift Revenue" width="540" height="124"></a>
+    <div class="crumbs">
+      <a href="index.html#demos">All demos</a><span class="sep" aria-hidden="true">/</span>
+      <b id="crumbNiche">Demo</b>
+      <button class="btn btn-ghost" id="personalizeBtn" type="button" style="min-height:40px;padding:0 14px;font-size:14px">Personalize</button>
+    </div>
+  </div>
+</header>
+
+<nav class="steps" aria-label="Demo steps">
+  <button class="step-tab" type="button" data-step="1"><span class="s-n">Step 1</span><span class="s-t">Your list</span></button>
+  <button class="step-tab" type="button" data-step="2"><span class="s-n">Step 2</span><span class="s-t">Be the lead</span></button>
+  <button class="step-tab" type="button" data-step="3"><span class="s-n">Step 3</span><span class="s-t">Next morning</span></button>
+  <button class="step-tab" type="button" data-step="4"><span class="s-n">Step 4</span><span class="s-t">The deal</span></button>
+</nav>
+
+<main class="stage" id="stage">
+  <div class="wrap">
+
+    <!-- STEP 1 -->
+    <section class="panel" data-panel="1" aria-labelledby="h1">
+      <div class="panel-head">
+        <h1 id="h1"></h1>
+        <p id="sub1"></p>
+      </div>
+      <div class="calc">
+        <div>
+          <div class="field">
+            <label for="inLeads">Old leads in your CRM <output id="outLeads" class="num"></output></label>
+            <input id="inLeads" type="range" min="500" max="20000" step="500">
+            <small>Inquiries, quotes and consults from past years that never booked or bought.</small>
+          </div>
+          <div class="field">
+            <label for="inValue"><span id="valueLabel"></span> <output id="outValue" class="num"></output></label>
+            <input id="inValue" type="range" min="300" max="30000" step="100">
+          </div>
+          <div class="field">
+            <label for="inClose"><span id="closeLabel"></span> <output id="outClose" class="num"></output></label>
+            <input id="inClose" type="range" min="10" max="90" step="5">
+          </div>
+          <div class="field">
+            <span class="lbl" id="lastLbl">When did someone last call those old leads?</span>
+            <div class="seg" role="group" aria-labelledby="lastLbl" id="segLast">
+              <button type="button" aria-pressed="false" data-v="never">Never</button>
+              <button type="button" aria-pressed="false" data-v="year">Over a year ago</button>
+              <button type="button" aria-pressed="false" data-v="recent">This year</button>
+            </div>
+          </div>
+          <div class="field">
+            <span class="lbl" id="adsLbl">Are you paying for new leads right now?</span>
+            <div class="seg" role="group" aria-labelledby="adsLbl" id="segAds">
+              <button type="button" aria-pressed="false" data-v="yes">Yes, every month</button>
+              <button type="button" aria-pressed="false" data-v="some">Sometimes</button>
+              <button type="button" aria-pressed="false" data-v="no">No</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="ledger" aria-live="polite">
+          <h2>Revenue sleeping in your list</h2>
+          <p class="ledger-big num" id="bigNum">$0</p>
+          <p class="ledger-cap">Estimated from your numbers if we worked the whole list.</p>
+          <dl class="ledger-rows">
+            <div><dt>Leads who text back</dt><dd class="num" id="rReplies"></dd></div>
+            <div><dt>Booked appointments</dt><dd class="num" id="rBooked"></dd></div>
+            <div><dt>New customers</dt><dd class="num" id="rClosed"></dd></div>
+            <div><dt>From the first 2,000-lead test</dt><dd class="num" id="rTest"></dd></div>
+          </dl>
+          <p class="pain-line" id="painLine" hidden></p>
+          <details>
+            <summary>Change the assumptions</summary>
+            <div class="field">
+              <label for="inReply">Leads who reply <output id="outReply" class="num"></output></label>
+              <input id="inReply" type="range" min="5" max="40" step="1" value="30">
+              <small>Warm lists usually land between 20% and 40%. We plan on 30%.</small>
+            </div>
+            <div class="field">
+              <label for="inBook">Replies that book <output id="outBook" class="num"></output></label>
+              <input id="inBook" type="range" min="2" max="30" step="1" value="10">
+              <small>We plan on 10% of replies booking. It's an estimate, not a promise.</small>
+            </div>
+          </details>
+        </aside>
+      </div>
+      <div class="panel-foot">
+        <span class="hint">Now pretend you're one of those old leads.</span>
+        <button class="btn btn-lime" type="button" data-go="2">Be the lead →</button>
+      </div>
+    </section>
+
+    <!-- STEP 2 -->
+    <section class="panel" data-panel="2" hidden aria-labelledby="h2">
+      <div class="panel-head">
+        <h1 id="h2">You're the lead now. Your phone just buzzed.</h1>
+        <p id="sub2"></p>
+      </div>
+      <div class="live">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="phone-bar">
+              <span class="avatar" id="avatar">S</span>
+              <span><b id="phoneName"></b><small id="phoneNum"></small></span>
+              <span class="mode" id="modePill">Script</span>
+            </div>
+            <div class="phone-feed" id="feed"><div class="thread" id="thread" aria-live="polite"></div></div>
+            <div class="replies" id="replies"></div>
+            <form class="composer" id="composer" autocomplete="off">
+              <label class="sr" for="msgIn">Reply as the lead</label>
+              <input id="msgIn" placeholder="Type a reply as the lead" enterkeyhint="send">
+              <button type="submit" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+            </form>
+          </div>
+        </div>
+        <div class="coach">
+          <h2>What's happening</h2>
+          <p>The first two texts are written in advance and go to every lead. Once someone replies, the AI takes over and works toward a booking.</p>
+          <ol class="beats" id="beats">
+            <li class="beat" data-beat="1"><i class="dot"></i><div><b>The opener</b><span>Two short lines with their first name and the service they asked about. It doesn't sell.</span></div></li>
+            <li class="beat" data-beat="2"><i class="dot"></i><div><b>The follow-up</b><span>"My calendar just pinged me…" It sounds like a real person picking the thread back up.</span></div></li>
+            <li class="beat" data-beat="3"><i class="dot"></i><div><b>AI takes over</b><span>It asks the same questions your best salesperson would ask.</span></div></li>
+            <li class="beat" data-beat="4"><i class="dot"></i><div><b>Handles the hard question</b><span>Price and rate questions go to your expert, and the booking stays on track.</span></div></li>
+            <li class="beat" data-beat="5"><i class="dot"></i><div><b>Booked</b><span>A real time on your calendar, confirmed with your phone number.</span></div></li>
+          </ol>
+          <p class="coach-tip">Tap a reply or type your own, the way you'd really text back. Try "how much?", "who is this?", "are you a bot?" or "no". <button class="btn btn-ghost" id="restart" type="button" style="min-height:36px;padding:0 12px;font-size:14px;margin-left:6px">Start over</button></p>
+        </div>
+      </div>
+      <div class="panel-foot">
+        <button class="btn btn-ghost" type="button" data-go="1">← Your list</button>
+        <button class="btn btn-lime" type="button" data-go="3" id="toMorning">See what your team gets →</button>
+      </div>
+    </section>
+
+    <!-- STEP 3 -->
+    <section class="panel" data-panel="3" hidden aria-labelledby="h3">
+      <div class="panel-head">
+        <h1 id="h3">The next morning, it's already on your calendar.</h1>
+        <p>Your team doesn't dig through old files. Each booking arrives with what the lead wants, what they asked, and the whole conversation.</p>
+      </div>
+      <div class="morning">
+        <div>
+          <article class="appt">
+            <div class="appt-top"><span class="badge">Booked</span><span class="sample" style="color:#4a4f43">Sample booking</span></div>
+            <h2 id="apptName"></h2>
+            <p class="appt-when" id="apptWhen"></p>
+            <dl id="apptFacts"></dl>
+            <p class="appt-quote" id="apptQuote"></p>
+          </article>
+          <div class="bumps">
+            <h3>And if they hadn't replied?</h3>
+            <p>Leads who stay quiet get up to three short bumps a day or two apart. No reply after that, and we leave them alone.</p>
+            <ul class="bump-list" id="bumpList"></ul>
+          </div>
+        </div>
+        <div class="calendar">
+          <div class="cal-head"><b id="calTitle"></b><small>Sample calendar</small></div>
+          <div id="calRows"></div>
+        </div>
+      </div>
+      <div class="panel-foot">
+        <button class="btn btn-ghost" type="button" data-go="2">← Back to the text</button>
+        <button class="btn btn-lime" type="button" data-go="4">How we'd start →</button>
+      </div>
+    </section>
+
+    <!-- STEP 4 -->
+    <section class="panel" data-panel="4" hidden aria-labelledby="h4">
+      <div class="panel-head">
+        <h1 id="h4"></h1>
+        <p>We work on performance: we bring back your old leads, book them with your team, and only get paid when they book. Here's how we start.</p>
+      </div>
+      <div class="offer">
+        <div class="test-card">
+          <h2>The 2,000-lead test</h2>
+          <ol>
+            <li><div><b>Free lead audit</b><span>Send a CSV export. We check lead age, source and opt-in records, then tell you plainly whether the list is worth working.</span></div></li>
+            <li><div><b>Test with your freshest 2,000</b><span id="testEst"></span></div></li>
+            <li><div><b>A per-appointment rate, in writing</b><span>Set below what you pay ads for an appointment today. If the test works, we match your current cost and keep going.</span></div></li>
+            <li><div><b>Live in about two weeks</b><span>We write the texts in your business's voice and you approve them. You also get a data processing agreement for both sides to sign.</span></div></li>
+            <li><div><b>No bookings, no bill</b><span>If the test books nothing, you owe nothing.</span></div></li>
+          </ol>
+        </div>
+        <div>
+          <form class="form" id="auditForm" novalidate>
+            <div class="two">
+              <label>Your name<input name="name" autocomplete="name" required></label>
+              <label>Business<input name="biz" id="fBiz" autocomplete="organization" required></label>
+            </div>
+            <div class="two">
+              <label>Mobile<input name="phone" type="tel" autocomplete="tel" required></label>
+              <label>Email<input name="email" type="email" autocomplete="email"></label>
+            </div>
+            <label>About how many old leads?<input name="leads" id="fLeads" inputmode="numeric"></label>
+            <button class="btn btn-lime" type="submit">Start my free lead audit</button>
+            <p class="form-note" id="formNote">Nothing is sent from this page. On the next screen you choose to text it to Connor.</p>
+          </form>
+          <div class="form-done" id="formDone" hidden>
+            <h3>You're on the list.</h3>
+            <p id="doneText"></p>
+            <div class="row">
+              <a class="btn" id="smsLink" href="#">Text it to Connor</a>
+              <button class="btn ghosty" type="button" id="copyBtn">Copy details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel-foot">
+        <button class="btn btn-ghost" type="button" data-go="3">← Next morning</button>
+        <a class="btn btn-ghost" href="index.html#demos">Try another industry</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="dTitle">
+    <button class="drawer-x" type="button" id="drawerX" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <h2 id="dTitle">Personalize this demo</h2>
+    <p>Fill this in before the visit so the owner sees their own business in the texts. It's saved on this device only.</p>
+    <form class="form" id="pForm">
+      <label>Business name<input name="biz"></label>
+      <label>Assistant name<input name="ai"></label>
+      <label>Sample lead's first name<input name="lead"></label>
+      <label>Service they asked about<input name="service"></label>
+      <label>Who takes the appointment<input name="advisorShort"></label>
+      <label>Business phone<input name="phone" type="tel"></label>
+      <div class="ai-box">
+        <h3>Live AI replies (optional)</h3>
+        <p>Without a key, the phone runs a built-in script that understands typed replies and works offline. Add an OpenAI or Anthropic API key and the AI writes every reply live from this industry's playbook. Live mode needs internet and is billed to that account. The key is saved on this device only and never goes into the link.</p>
+        <label>OpenAI or Anthropic API key<input name="aiKey" type="password" autocomplete="off" spellcheck="false" placeholder="sk-… or sk-ant-…"></label>
+        <label>OpenAI model<input name="aiModel" autocomplete="off" spellcheck="false" placeholder="gpt-4o-mini"></label>
+      </div>
+      <div class="two">
+        <button class="btn btn-lime" type="submit">Save</button>
+        <button class="btn btn-ghost" type="button" id="pReset">Reset to sample</button>
+      </div>
+    </form>
+    <div class="drawer-link">Link with these details (open it on your tablet before the visit):<code id="pLink"></code></div>
+  </div>
+</div>
+
+<script src="assets/niches.js"></script>
+<script src="assets/demo.js"></script>
+</body>
+</html>

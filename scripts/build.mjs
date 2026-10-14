@@ -5,7 +5,7 @@ import path from 'node:path';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
-const ship = ['index.html', 'privacy.html', 'terms.html', 'site.config.json', 'robots.txt', 'assets'];
+const ship = ['index.html', 'demo.html', 'privacy.html', 'terms.html', 'robots.txt', 'sitemap.xml', 'assets'];
 
 await rm(dist, { recursive: true, force: true });
 await mkdir(dist, { recursive: true });

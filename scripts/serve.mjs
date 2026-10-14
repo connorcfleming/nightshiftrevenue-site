@@ -10,7 +10,7 @@ const args = process.argv.slice(2);
 const mockForms = args.includes('--mock-forms');
 const port = Number(args[args.indexOf('--port') + 1]) || 4180;
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.png': 'image/png', '.txt': 'text/plain' };
-const routes = { '/': '/index.html', '/privacy': '/privacy.html', '/terms': '/terms.html' };
+const routes = { '/': '/index.html', '/demo': '/demo.html', '/privacy': '/privacy.html', '/terms': '/terms.html' };
 
 http.createServer(async (req, res) => {
   const url = new URL(req.url, 'http://localhost');

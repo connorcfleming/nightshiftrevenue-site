@@ -17,34 +17,12 @@
     list.appendChild(li);
   });
 
-  /* Tomorrow's day page: the hovered industry's old lead lands in a lime slot. */
-  var dayTitle = document.getElementById("dayTitle");
-  var dayRows = document.getElementById("dayRows");
-  function renderDay(n, p) {
-    var rows = [
-      ["8:00 am", "Existing appointment", false],
-      ["9:30 am", p.lead + " · " + n.apptType, true],
-      ["11:00 am", "Existing appointment", false],
-      ["1:00 pm", "Reactivated lead · Sam R.", true],
-      ["3:30 pm", "Reactivated lead · Maria G.", true],
-      ["5:00 pm", "", false]
-    ];
-    dayTitle.textContent = "Tomorrow at " + p.biz;
-    dayRows.innerHTML = rows.map(function (r) {
-      var ev = r[1]
-        ? '<div class="cal-ev' + (r[2] ? " new" : "") + '"><span>' + esc(r[1]) + "</span>" + (r[2] ? "<small>booked overnight</small>" : "") + "</div>"
-        : "";
-      return '<div class="cal-row"><time>' + r[0] + '</time><div class="cal-slot">' + ev + "</div></div>";
-    }).join("");
-  }
-
   var current = null;
   function show(id) {
     if (id === current) return;
     current = id;
     var n = NSR.byId(id);
     var p = NSR.personal(n);
-    if (dayRows) renderDay(n, p);
     list.querySelectorAll(".niche-row").forEach(function (a) { a.classList.toggle("is-on", a.dataset.id === id); });
     preview.innerHTML =
       '<div class="preview-head"><h2>' + esc(n.headline) + '</h2><p>' + esc(n.sub) + '</p></div>' +

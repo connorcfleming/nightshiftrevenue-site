@@ -30,8 +30,6 @@ rounded:
 
 # Night Shift Revenue brand system
 
-Home hero (2026-10-15, Front-Desk Appointment Book direction): the headline sits beside a "Tomorrow at {business}" day page built from the step-3 calendar component (.calendar, .cal-row, .cal-ev). Existing appointments are night-800 fills; reactivated bookings are the only lime fills, labeled "booked overnight". Hovering or focusing an industry in the launcher swaps the business name and the 9:30 booking to that industry's sample lead. On phones the first and last hour rows hide.
-
 Polish pass (2026-10-15): lime fills are reserved for primary actions and booked states; the homepage pilot box is a dark card with a lime heading. Secondary text uses ink-2 (#D9DCCF) and muted labels ink-3 (#A9AD9F); muted text on the cream booking card uses moon-ink-2. Elevation is declared once: the demo phone uses an offset shadow, no hairline border.
 
 The owner-supplied Night Shift Revenue Brand Board.png governs the brand. Charcoal surfaces, electric lime (#C6FF00), off-white (#F5F5E9), olive (#3A442E), and muted gray (#9CA3AF) replace the former blue palette. The existing street-of-leads narrative, page content and lead-audit flow are retained.

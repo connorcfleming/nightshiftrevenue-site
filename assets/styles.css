@@ -97,10 +97,12 @@ p { margin: 0; }
 
 /* ---------- Home: hero ---------- */
 .hero { padding: clamp(40px, 7vw, 88px) 0 clamp(48px, 6vw, 80px); }
-.hero h1 { font-size: clamp(44px, 7.4vw, 104px); max-width: 13ch; }
+.hero h1 { font-size: clamp(42px, 8.6vw, 112px); line-height: 0.98; }
+.hero h1 span, .hero h1 em { display: block; }
 .hero h1 em { font-style: normal; color: var(--lime); }
-.hero-sub { margin-top: 26px; max-width: 58ch; font-size: clamp(18px, 1.6vw, 21px); color: var(--ink-2); }
-.hero-sub strong { color: var(--ink); }
+.hero-row { margin-top: clamp(24px, 3vw, 44px); display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 72px); align-items: end; }
+.hero-sub { max-width: 52ch; font-size: clamp(18px, 1.75vw, 24px); line-height: 1.5; color: var(--ink-2); }
+.hero-promise { padding-left: 20px; border-left: 3px solid var(--lime); font: 700 clamp(20px, 1.9vw, 28px)/1.25 var(--display); color: var(--ink); }
 
 /* Niche launcher: the first viewport's working control */
 .launcher {
@@ -432,7 +434,7 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
   .niche-list { border-right: 0; }
   .preview { display: none; }
   .night { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 40px; }
-  .deal, .calc, .live, .morning, .offer { grid-template-columns: 1fr; }
+  .deal, .calc, .live, .morning, .offer, .hero-row { grid-template-columns: 1fr; }
   .ledger { position: static; }
   .live .phone { max-width: 440px; width: 100%; margin: 0 auto; }
   .coach { margin-top: 8px; }

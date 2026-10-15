@@ -27,8 +27,8 @@
     preview.innerHTML =
       '<div class="preview-head"><h2>' + esc(n.headline) + '</h2><p>' + esc(n.sub) + '</p></div>' +
       '<div class="thread">' +
-      '<div class="msg in msg-enter">hey, it\'s ' + esc(p.ai.toLowerCase()) + ' from ' + esc(p.biz) + '.</div>' +
-      '<div class="msg in msg-enter" style="animation-delay:.12s">is this the same ' + esc(p.lead) + ' that was interested in ' + esc(p.service) + ' recently?</div>' +
+      '<div class="msg in msg-enter">Hey, it\'s ' + esc(p.ai) + ' from ' + esc(p.biz) + '.</div>' +
+      '<div class="msg in msg-enter" style="animation-delay:.12s">Is this the same ' + esc(p.lead) + ' that was interested in ' + esc(p.service) + ' recently?</div>' +
       '<div class="msg out msg-enter" style="animation-delay:.5s">yes that\'s me</div>' +
       '<span class="stamp r">Sample conversation</span>' +
       '</div>' +

@@ -12,6 +12,7 @@ NSR.contact = {
 NSR.niches = [
   {
     id: "medspa",
+    agent: "Sarah",
     label: "Med spas",
     owner: "med spa",
     pain: "Consults who asked about Botox, then went quiet.",
@@ -36,18 +37,19 @@ NSR.niches = [
       field: "Area"
     },
     q2: {
-      ai: "got it. have you had botox before, or would this be your first time?",
+      ai: "got it. have you had Botox before, or would this be your first time?",
       chips: ["Had it before", "First time"],
       field: "History"
     },
     price: {
       ask: "How much is it?",
-      ai: "it depends on how many units you need, so nina confirms the exact price at your consult. the consult is free and takes about 20 minutes."
+      ai: "it depends on how many units you need, so Nina confirms the exact price at your consult. the consult is free and takes about 20 minutes."
     },
     slots: ["Thu 4:30 pm", "Sat 10:00 am"]
   },
   {
     id: "dental",
+    agent: "Emily",
     label: "Dentists",
     owner: "dental practice",
     pain: "Invisalign and implant inquiries that never sat in the chair.",
@@ -78,12 +80,13 @@ NSR.niches = [
     },
     price: {
       ask: "What does it cost?",
-      ai: "every smile is different, so dr. patel gives you an exact price at the free 3d scan. there are monthly payment options too."
+      ai: "every smile is different, so Dr. Patel gives you an exact price at the free 3D scan. there are monthly payment options too."
     },
     slots: ["Tue 8:00 am", "Wed 5:15 pm"]
   },
   {
     id: "hvac",
+    agent: "Jake",
     label: "HVAC",
     owner: "HVAC company",
     pain: "Replacement estimates from last season that never got a yes.",
@@ -115,12 +118,13 @@ NSR.niches = [
     },
     price: {
       ask: "How much is a new one?",
-      ai: "it depends on the home and the system size, so ray gives you exact options at the visit, usually with financing. there's no charge for the visit."
+      ai: "it depends on the home and the system size, so Ray gives you exact options at the visit, usually with financing. there's no charge for the visit."
     },
     slots: ["Tomorrow 9:00 am", "Fri 2:30 pm"]
   },
   {
     id: "roofing",
+    agent: "Ryan",
     label: "Roofing",
     owner: "roofing company",
     pain: "Roof estimates and storm leads that went quiet.",
@@ -152,12 +156,13 @@ NSR.niches = [
     },
     price: {
       ask: "How much does a roof cost?",
-      ai: "it depends on size and materials, so mike measures and gives you exact numbers at the free inspection. it takes about 30 minutes."
+      ai: "it depends on size and materials, so Mike measures and gives you exact numbers at the free inspection. it takes about 30 minutes."
     },
     slots: ["Thu 10:00 am", "Sat 9:30 am"]
   },
   {
     id: "mortgage",
+    agent: "Scott",
     label: "Mortgages",
     owner: "mortgage company",
     pain: "Rate shoppers who filled out a form and never picked up.",
@@ -189,12 +194,13 @@ NSR.niches = [
     },
     price: {
       ask: "What's your rate?",
-      ai: "rates move every day and depend on your situation, so i can't quote one by text. andrea can run real numbers with you on a quick 15-minute call."
+      ai: "rates move every day and depend on your situation, so i can't quote one by text. Andrea can run real numbers with you on a quick 15-minute call."
     },
     slots: ["Tomorrow 12:15 pm", "Thu 6:00 pm"]
   },
   {
     id: "realestate",
+    agent: "Megan",
     label: "Real estate",
     owner: "real estate team",
     pain: "Home-value and buyer leads that stopped answering.",
@@ -226,12 +232,13 @@ NSR.niches = [
     },
     price: {
       ask: "What's my home worth?",
-      ai: "i'd rather not guess by text. tom can pull recent sales on your street and walk you through a real number in about 30 minutes."
+      ai: "i'd rather not guess by text. Tom can pull recent sales on your street and walk you through a real number in about 30 minutes."
     },
     slots: ["Wed 5:30 pm", "Sat 11:00 am"]
   },
   {
     id: "plumbing",
+    agent: "Danny",
     label: "Plumbing",
     owner: "plumbing company",
     pain: "Water heater and repipe quotes that never got scheduled.",
@@ -263,7 +270,7 @@ NSR.niches = [
     },
     price: {
       ask: "How much to replace it?",
-      ai: "it depends on size and type, so luis gives you an exact price on site before any work starts. the visit itself is free."
+      ai: "it depends on size and type, so Luis gives you an exact price on site before any work starts. the visit itself is free."
     },
     slots: ["Tomorrow 8:30 am", "Fri 1:00 pm"]
   }
@@ -277,7 +284,7 @@ NSR.byId = function (id) {
 NSR.fields = ["biz", "ai", "lead", "service", "advisorShort", "phone"];
 NSR.personal = function (niche) {
   var out = {
-    biz: niche.biz, ai: "Sarah", lead: niche.lead, service: niche.service,
+    biz: niche.biz, ai: niche.agent, lead: niche.lead, service: niche.service,
     advisorShort: niche.advisorShort, phone: niche.phone
   };
   try {

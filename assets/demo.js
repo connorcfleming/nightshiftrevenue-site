@@ -18,8 +18,17 @@
     return { advisorFull: advisorFull, svcShort: svcShort };
   }
   function swapAdvisor(text) {
-    return text.split(N.advisorShort.toLowerCase()).join(P.advisorShort.toLowerCase());
+    return text.split(N.advisorShort).join(P.advisorShort);
   }
+  /* Texts read casual but properly capitalized: each sentence and "I" start upper case. */
+  function tidy(text) {
+    return String(text)
+      .replace(/(^|[.!?]\s+)([a-z])/g, function (m, a, b) { return a + b.toUpperCase(); })
+      .replace(/\bi\b(?!\.\w)/g, "I");
+  }
+  /* "Tomorrow 9:00 am" reads "tomorrow 9:00 am" mid-sentence; "Thu 4:30 pm" keeps its capital. */
+  function when(slot) { return /^(Tomorrow|Today)\b/.test(slot) ? slot.charAt(0).toLowerCase() + slot.slice(1) : slot; }
+  function apptLower(t) { return t.charAt(0).toLowerCase() + t.slice(1); }
 
   /* ---------------- Steps ---------------- */
   var tabs = document.querySelectorAll(".step-tab");
@@ -168,6 +177,7 @@
       wait(Math.min(1500, 500 + line.length * 12)).then(function () {
         if (my !== token) return;
         t.remove();
+        line = tidy(line);
         add(esc(line), "in", line);
         wait(250).then(next);
       });
@@ -219,7 +229,7 @@
   function route(text) {
     var t = text.toLowerCase();
     if (!current) {
-      return say([A.slot ? "got it. see you " + A.slot.toLowerCase() + "!" : "got it, thanks!"], function () {
+      return say([A.slot ? "got it. see you " + when(A.slot) + "!" : "got it, thanks!"], function () {
         if (A.slot) nextBtn();
         else ask([{ label: "Start over", silent: true, local: true, then: startConvo }]);
       });
@@ -234,7 +244,7 @@
     }
     var again = function () { ask(c.options, c.opts); };
     if (RE.bot.test(t)) {
-      return say(["i'm " + P.ai.toLowerCase() + ", the booking assistant at " + P.biz + ". " + P.advisorShort.toLowerCase() + " is a real person and handles the detailed questions."], again);
+      return say(["i'm " + P.ai + ", the booking assistant at " + P.biz + ". " + P.advisorShort + " is a real person and handles the detailed questions."], again);
     }
     if (RE.price.test(t) && !c.opts.noPrice) {
       beat(4);
@@ -281,7 +291,7 @@
     thread.appendChild(s);
     beat(1);
     say([
-      "hey, it's " + P.ai.toLowerCase() + " from " + P.biz + ".",
+      "hey, it's " + P.ai + " from " + P.biz + ".",
       "is this the same " + P.lead + " that was interested in " + P.service + " recently?"
     ], function () {
       ask([
@@ -305,7 +315,7 @@
   function whoIsThis() {
     if (live()) return goLive(whoIsThis);
     say([
-      "sorry! it's " + P.ai.toLowerCase() + " from " + P.biz + ". you asked us about " + P.service + " a while back and i'm just following up.",
+      "sorry! it's " + P.ai + " from " + P.biz + ". you asked us about " + P.service + " a while back and i'm just following up.",
       "is that still on your mind?"
     ], function () {
       ask([
@@ -381,7 +391,7 @@
         { label: "Depends on the price", alt: true, match: RE.price, first: true, then: function () {
           beat(4); note("AI takes over", true);
           A.price = true;
-          say([swapAdvisor(N.price.ai), "mind if i ask two quick questions so " + P.advisorShort.toLowerCase() + " is ready for you?"], function () {
+          say([swapAdvisor(N.price.ai), "mind if i ask two quick questions so " + P.advisorShort + " is ready for you?"], function () {
             ask([{ label: "Go ahead", match: RE.yes, then: function (v) { beat(3); toQ1(v); } }], { free: function (v) { beat(3); toQ1(v); } });
           });
         } },
@@ -422,12 +432,12 @@
       ];
     };
     say([
-      "perfect, that helps a lot. " + P.advisorShort.toLowerCase() + " has " + slots[0].toLowerCase() + " or " + slots[1].toLowerCase() + " open for " + article(N.apptType) + " " + N.apptType.toLowerCase() + ".",
+      "perfect, that helps a lot. " + P.advisorShort + " has " + when(slots[0]) + " or " + when(slots[1]) + " open for " + article(N.apptType) + " " + apptLower(N.apptType) + ".",
       "which works better?"
     ], function () {
       ask(slotOpts().concat([
         { label: "Can someone call me instead?", alt: true, match: RE.call, first: true, then: function () {
-          say(["of course. " + P.advisorShort.toLowerCase() + " can call you at either time. which one?"], function () {
+          say(["of course. " + P.advisorShort + " can call you at either time. which one?"], function () {
             ask(slotOpts(), { free: otherTime });
           });
         } },
@@ -438,7 +448,7 @@
   var TIME = /\b(mon|tue|wed|thu|fri|sat|sun|tomorrow|today|tonight|morning|afternoon|evening|noon|next week|\d{1,2}(:\d\d)?\s*(am|pm)?)/;
   function otherTime(text) {
     if (text && TIME.test(text.toLowerCase())) return book(text.charAt(0).toUpperCase() + text.slice(1));
-    var adv = P.advisorShort.toLowerCase();
+    var adv = P.advisorShort;
     var again = function () { ask([], { free: otherTime }); };
     if (text && RE.call.test(text.toLowerCase())) return say(["sure, " + adv + " can call you. what day and time is best?"], again);
     say([text ? "no problem. what day and time works for you? even a rough time is fine." : "no problem. what day and time works best for you? i'll get it on " + adv + "'s calendar."], again);
@@ -448,7 +458,7 @@
     beat(5);
     var n = names();
     say([
-      "you're all set for " + slot.toLowerCase() + " with " + n.advisorFull.toLowerCase() + ". i'll text you a reminder the day before.",
+      "you're all set for " + when(slot) + " with " + n.advisorFull + ". i'll text you a reminder the day before.",
       "if anything comes up, call us at " + P.phone + "."
     ], booked);
   }
@@ -484,7 +494,7 @@
       "Goal: restart the conversation, qualify the lead, and book " + article(N.apptType) + " " + N.apptType.toLowerCase() + " (" + N.apptLength + ") with " + n.advisorFull + ". The opening texts are already sent and appear in the conversation.",
       "",
       "How to text:",
-      "- lowercase, casual and warm. one or two short sentences per text, and at most two texts per turn, each on its own line.",
+      "- casual and warm, with normal capitalization (capitalize the first word of each sentence, names and \"I\"). one or two short sentences per text, and at most two texts per turn, each on its own line.",
       "- no emojis, no markdown, no lists, no salesy hype. ask one question at a time.",
       "- in your own words, find out: (1) " + N.q1.ai + " (2) " + N.q2.ai,
       "- never quote prices, rates, payments or estimates. if asked, explain that " + P.advisorShort + " gives exact numbers at the appointment, then keep moving toward booking. example of the right tone: \"" + swapAdvisor(N.price.ai) + "\"",
@@ -631,12 +641,12 @@
     }).join("");
 
     var bumps = [
-      ["Day 2", "hey " + P.lead.toLowerCase() + ", just bumping this in case it got buried."],
+      ["Day 2", "hey " + P.lead + ", just bumping this in case it got buried."],
       ["Day 3", "no worries if the timing's off. should i keep your file open or close it out?"],
       ["Day 5", "last one from me. still want help with " + n.svcShort + "? a quick yes or no is perfect."]
     ];
     $("bumpList").innerHTML = bumps.map(function (b) {
-      return "<li><time>" + b[0] + '</time><div class="msg in">' + esc(b[1]) + "</div></li>";
+      return "<li><time>" + b[0] + '</time><div class="msg in">' + esc(tidy(b[1])) + "</div></li>";
     }).join("");
   }
 

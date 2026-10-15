@@ -58,6 +58,7 @@
     else if (c <= 4) text = c + " of 6. Your list is a good candidate for a 1,000-lead test.";
     else text = c + " of 6. This is exactly the kind of list we reactivate.";
     msg.textContent = text;
+    msg.classList.toggle("idle", c === 0);
     var old = out.querySelector(".btn");
     if (old) old.remove();
     if (c >= 3) {

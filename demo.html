@@ -79,7 +79,7 @@
             <div class="field">
               <label for="inBook">Replies that book <output id="outBook" class="num"></output></label>
               <input id="inBook" type="range" min="2" max="30" step="1" value="10">
-              <small>We plan on 10% of replies booking. It's an estimate, not a promise.</small>
+              <small id="bookNote">We plan on 10% of replies booking. It's an estimate, not a promise.</small>
             </div>
           </details>
         </aside>
@@ -138,7 +138,7 @@
       <div class="morning">
         <div>
           <article class="appt">
-            <div class="appt-top"><span class="badge">Booked</span><span class="sample" style="color:#4a4f43">Sample booking</span></div>
+            <div class="appt-top"><span class="badge">Booked</span><span class="sample">Sample booking</span></div>
             <h2 id="apptName"></h2>
             <p class="appt-when" id="apptWhen"></p>
             <dl id="apptFacts"></dl>
@@ -193,8 +193,20 @@
             <button class="btn btn-lime" type="submit">Start my free lead audit</button>
             <p class="form-note" id="formNote">Nothing is sent from this page. On the next screen you choose to text it to Connor.</p>
           </form>
+          <div class="who">
+            <div class="who-photo" aria-hidden="true">[PHOTO]</div>
+            <div>
+              <b>You'll be working with Connor Fleming</b>
+              <a href="tel:+14042766462">404-276-6462</a>
+              <ul>
+                <li>We only text leads who asked you to contact them.</li>
+                <li>Both sides sign a data agreement before you send a list.</li>
+                <li>Anyone who replies STOP is never texted again.</li>
+              </ul>
+            </div>
+          </div>
           <div class="form-done" id="formDone" hidden>
-            <h3>You're on the list.</h3>
+            <h3>Almost done. Send it to Connor.</h3>
             <p id="doneText"></p>
             <div class="row">
               <a class="btn" id="smsLink" href="#">Text it to Connor</a>

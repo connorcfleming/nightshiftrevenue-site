@@ -746,6 +746,8 @@
   inLeads.value = N.defaults.leads;
   inValue.value = N.defaults.value;
   inClose.value = N.defaults.close;
+  inBook.value = N.defaults.book || 10;
+  $("bookNote").textContent = "We plan on " + inBook.value + "% of replies booking for this industry. It's an estimate, not a promise.";
   applyPersonal(false);
   calc();
   var start = Number((location.hash.match(/step(\d)/) || [])[1]) || 1;

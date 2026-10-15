@@ -10,6 +10,11 @@ colors:
   win-off: "#303629"
   ink: "#FFFFFF"
   ink-dim: "#FFFFFF"
+  ink-2: "#D9DCCF"
+  ink-3: "#A9AD9F"
+  olive: "#3A442E"
+  line: "#34382F"
+  moon-ink-2: "#4A4F43"
   accent: "#C6FF00"
   accent-hover: "#D7FF59"
   moon: "#F5F5E9"
@@ -24,6 +29,8 @@ rounded:
 ---
 
 # Night Shift Revenue brand system
+
+Polish pass (2026-10-15): lime fills are reserved for primary actions and booked states; the homepage pilot box is a dark card with a lime heading. Secondary text uses ink-2 (#D9DCCF) and muted labels ink-3 (#A9AD9F); muted text on the cream booking card uses moon-ink-2. Elevation is declared once: the demo phone uses an offset shadow, no hairline border.
 
 The owner-supplied Night Shift Revenue Brand Board.png governs the brand. Charcoal surfaces, electric lime (#C6FF00), off-white (#F5F5E9), olive (#3A442E), and muted gray (#9CA3AF) replace the former blue palette. The existing street-of-leads narrative, page content and lead-audit flow are retained.
 

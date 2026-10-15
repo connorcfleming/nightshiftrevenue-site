@@ -20,7 +20,7 @@ Tagline: "Turn missed opportunities into revenue."
 
 ## Positioning
 
-Pay per booked appointment, defined in writing before launch. If a campaign books nothing, the owner owes nothing. No retainer. The work starts from the owner's existing list rather than new lead generation. The AI is a tool the agency runs inside agreed rules, with people watching and stepping in; it is not the product's identity.
+Pay per booked appointment, defined in writing before launch. The pilot has no implementation fee unless the owner is happy with the results. No booking-count guarantee. No retainer. The work starts from the owner's existing list rather than new lead generation. The AI is a tool the agency runs inside agreed rules, with people watching and stepping in; it is not the product's identity.
 
 ## Operating Context
 
@@ -36,7 +36,7 @@ Pay per booked appointment, defined in writing before launch. If a campaign book
 - Both forms post to Netlify Forms under the name `demo`, with a hidden `source` field, honeypot `company_website`, and a phone fallback in the error state.
 - Contact details come from `site.config.json`; the main line is a personal number for now (404-276-6462) until an A2P 10DLC number is issued.
 - Primary call to action: "Get my free lead audit" (confirmed 2026-10-12).
-- Pricing is stated as a model (pay per booked appointment, nothing owed if nothing books, no retainer) with no number on the page (confirmed 2026-10-12). Revenue share exists as an alternative for some partners.
+- Pricing is stated as a model (pay per booked appointment, no implementation fee unless happy with the pilot, no booking-count guarantee, no retainer) with no number on the page (confirmed 2026-10-12). Revenue share exists as an alternative for some partners.
 - Undecided: founder name, photo, city and story (owner will supply); contact email; operator legal name and address.
 
 ## Brand Commitments

@@ -631,7 +631,6 @@
     $("h4").textContent = "Let's start with " + count(Math.max(1, Math.round(c.testClosed))) + " customers you already paid for.";
     $("testEst").textContent = "From your numbers, that's about " + count(c.testBooked) + " booked appointments and " +
       count(c.testClosed) + " new customers, worth roughly " + NSR.money(c.testClosed * c.value) + ". That's an estimate, not a promise.";
-    if (N.floor) $("testFloor").textContent = "At least " + N.floor + " booked appointments from your first 2,000 leads, or you pay nothing.";
     if (!$("fBiz").value && P.custom) $("fBiz").value = P.biz;
     if (!$("fLeads").value) $("fLeads").value = count(c.leads);
   }

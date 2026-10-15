@@ -55,7 +55,6 @@
 
   /* ---------------- Step 1: the owner's numbers ---------------- */
   var inLeads = $("inLeads"), inValue = $("inValue"), inClose = $("inClose"), inReply = $("inReply"), inBook = $("inBook");
-  var state = { last: null, ads: null };
 
   function fill(r) {
     var p = (r.value - r.min) / (r.max - r.min) * 100;
@@ -78,31 +77,7 @@
     $("rTest").textContent = "≈ " + count(testBooked) + " booked";
     [inLeads, inValue, inClose, inReply, inBook].forEach(fill);
     calc.out = { leads: leads, value: value, close: close, reply: reply, book: book, testBooked: testBooked, testClosed: testBooked * close };
-    pain();
   }
-  function pain() {
-    var line = $("painLine");
-    var bits = [];
-    if (state.last === "never") bits.push("<b>Nobody has called them.</b> Every one of those leads is untouched.");
-    if (state.last === "year") bits.push("<b>Over a year of silence.</b> Most of them assume you forgot about them.");
-    if (state.last === "recent") bits.push("<b>Your team already calls them.</b> Texts reach the ones who never pick up.");
-    if (state.ads === "yes") bits.push("You're paying for new leads every month while " + count(calc.out.leads) + " paid-for leads sit untouched.");
-    if (state.ads === "some") bits.push("Every ad push adds to a list nobody works.");
-    line.hidden = !bits.length;
-    line.innerHTML = bits.join(" ");
-  }
-  function seg(id, key) {
-    var group = $(id);
-    group.addEventListener("click", function (e) {
-      var b = e.target.closest("button");
-      if (!b) return;
-      group.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
-      state[key] = b.dataset.v;
-      pain();
-    });
-  }
-  seg("segLast", "last");
-  seg("segAds", "ads");
   [inLeads, inValue, inClose, inReply, inBook].forEach(function (r) { r.addEventListener("input", calc); });
 
   /* ---------------- Step 2: the conversation ----------------

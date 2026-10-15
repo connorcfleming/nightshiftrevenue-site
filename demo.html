@@ -53,21 +53,9 @@
             <label for="inClose"><span id="closeLabel"></span> <output id="outClose" class="num"></output></label>
             <input id="inClose" type="range" min="10" max="90" step="5">
           </div>
-          <div class="field">
-            <span class="lbl" id="lastLbl">When did someone last call those old leads?</span>
-            <div class="seg" role="group" aria-labelledby="lastLbl" id="segLast">
-              <button type="button" aria-pressed="false" data-v="never">Never</button>
-              <button type="button" aria-pressed="false" data-v="year">Over a year ago</button>
-              <button type="button" aria-pressed="false" data-v="recent">This year</button>
-            </div>
-          </div>
-          <div class="field">
-            <span class="lbl" id="adsLbl">Are you paying for new leads right now?</span>
-            <div class="seg" role="group" aria-labelledby="adsLbl" id="segAds">
-              <button type="button" aria-pressed="false" data-v="yes">Yes, every month</button>
-              <button type="button" aria-pressed="false" data-v="some">Sometimes</button>
-              <button type="button" aria-pressed="false" data-v="no">No</button>
-            </div>
+          <div class="lead-cta">
+            <span class="hint">Now pretend you're one of those old leads.</span>
+            <button class="btn btn-lime btn-lg" type="button" data-go="2">Be the lead →</button>
           </div>
           <p class="src-note" id="srcNote" hidden></p>
         </div>
@@ -82,7 +70,6 @@
             <div><dt>New customers</dt><dd class="num" id="rClosed"></dd></div>
             <div><dt>From the first 2,000-lead test</dt><dd class="num" id="rTest"></dd></div>
           </dl>
-          <p class="pain-line" id="painLine" hidden></p>
           <details>
             <summary>Change the assumptions</summary>
             <div class="field">
@@ -97,10 +84,6 @@
             </div>
           </details>
         </aside>
-      </div>
-      <div class="panel-foot">
-        <span class="hint">Now pretend you're one of those old leads.</span>
-        <button class="btn btn-lime" type="button" data-go="2">Be the lead →</button>
       </div>
     </section>
 

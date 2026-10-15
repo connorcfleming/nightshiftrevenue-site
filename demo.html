@@ -39,7 +39,7 @@
         <p id="sub1"></p>
       </div>
       <div class="calc">
-        <div>
+        <div class="calc-main">
           <div class="field">
             <label for="inLeads">Old leads in your CRM <output id="outLeads" class="num"></output></label>
             <input id="inLeads" type="range" min="500" max="20000" step="500">
@@ -57,7 +57,6 @@
             <span class="hint">Now pretend you're one of those old leads.</span>
             <button class="btn btn-lime btn-lg" type="button" data-go="2">Be the lead →</button>
           </div>
-          <p class="src-note" id="srcNote" hidden></p>
         </div>
 
         <aside class="ledger" aria-live="polite">
@@ -85,6 +84,7 @@
           </details>
         </aside>
       </div>
+      <p class="src-note" id="srcNote" hidden></p>
     </section>
 
     <!-- STEP 2 -->

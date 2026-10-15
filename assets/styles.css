@@ -270,12 +270,15 @@ p { margin: 0; }
 .panel-head p { margin-top: 18px; max-width: 62ch; color: var(--ink-2); font-size: 19px; }
 .panel-foot { margin-top: 48px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 24px; }
 .panel-foot .hint { color: var(--ink-3); font-size: 15px; }
-.lead-cta { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 14px 20px; align-items: center; justify-content: space-between; }
+.lead-cta { display: flex; flex-wrap: wrap; gap: 14px 20px; align-items: center; justify-content: space-between; }
 .lead-cta .hint { color: var(--ink-2); font-size: 16px; }
 .btn-lg { min-height: 60px; padding: 0 30px; font-size: 19px; }
 
 /* Step 1: the owner's numbers */
-.calc { margin-top: 44px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
+.calc { margin-top: 44px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: stretch; }
+/* Left column runs level with the ledger box: first label at its heading, button at its bottom edge. */
+.calc-main { display: flex; flex-direction: column; padding: calc(clamp(22px, 3vw, 36px) + 1px) 0; }
+.calc-main .lead-cta { margin-top: auto; padding-top: 32px; }
 .field + .field { margin-top: 30px; }
 .field label, .field .lbl { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-weight: 700; font-size: 17px; }
 .field output { font: 700 24px/1 var(--display); color: var(--lime); }
@@ -439,6 +442,8 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
   .night { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 40px; }
   .deal, .calc, .live, .morning, .offer, .hero-row { grid-template-columns: 1fr; }
   .ledger { position: static; }
+  .calc-main { padding: 0; }
+  .calc { align-items: start; }
   .live .phone { max-width: 440px; width: 100%; margin: 0 auto; }
   .coach { margin-top: 8px; }
   .fit { grid-template-columns: 1fr; }

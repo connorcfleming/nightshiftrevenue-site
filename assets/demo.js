@@ -64,7 +64,7 @@
     var leads = +inLeads.value, value = +inValue.value, close = +inClose.value / 100;
     var reply = +inReply.value / 100, book = +inBook.value / 100;
     var replies = leads * reply, booked = replies * book, closed = booked * close;
-    var testBooked = 2000 * reply * book;
+    var testBooked = 1000 * reply * book;
     $("outLeads").textContent = count(leads);
     $("outValue").textContent = NSR.money(value);
     $("outClose").textContent = pct(close * 100);

@@ -17,6 +17,7 @@
     list.appendChild(li);
   });
 
+  var floorEl = document.getElementById("heroFloor");
   var current = null;
   function show(id) {
     if (id === current) return;
@@ -24,6 +25,7 @@
     var n = NSR.byId(id);
     var p = NSR.personal(n);
     list.querySelectorAll(".niche-row").forEach(function (a) { a.classList.toggle("is-on", a.dataset.id === id); });
+    if (floorEl) floorEl.textContent = n.label + ": at least " + n.floor + " booked.";
     preview.innerHTML =
       '<div class="preview-head"><h2>' + esc(n.headline) + '</h2><p>' + esc(n.sub) + '</p></div>' +
       '<div class="thread">' +

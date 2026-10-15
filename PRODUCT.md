@@ -49,7 +49,7 @@ Pay per booked appointment, defined in writing before launch. If a campaign book
 ## Evidence on Hand
 
 - No client results, testimonials, case studies, statistics or prices exist yet. Do not invent any. `check.mjs` blocks common claim patterns (testimonial, guarantee, %, ROI, "proven", the owner's name, and so on).
-- All example names, businesses (Ridgeline Roofing), times and conversations are illustrative and must be labeled as such once, clearly.
+- All example names, businesses (Crown Hill Roofing), times and conversations are illustrative and must be labeled as such once, clearly.
 - Founder block: every fact is a marked placeholder (`[FOUNDER NAME]`, `[PHOTO]`, `[CITY]`) until the owner supplies it.
 - The consent and texting rules are real operating commitments and are the strongest trust content available.
 

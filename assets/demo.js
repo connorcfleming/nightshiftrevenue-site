@@ -739,7 +739,7 @@
   }
 
   $("h1").textContent = N.headline;
-  $("sub1").textContent = N.sub + " First, a quick look at what's sitting in your list.";
+  $("sub1").textContent = N.sub + " " + NSR.pilotLine + " First, a quick look at what's sitting in your list.";
   $("valueLabel").textContent = N.valueLabel;
   $("closeLabel").textContent = N.closeLabel;
   if (N.source) { $("srcNote").textContent = N.source; $("srcNote").hidden = false; }

@@ -3,6 +3,9 @@
    in-person demo. Use "Personalize" on any demo to swap in the prospect's details. */
 window.NSR = window.NSR || {};
 
+/* Shown after each industry's sub on the demo pages only (not the home page). */
+NSR.pilotLine = "No implementation fee unless you're happy with the pilot. You just pay per appointment.";
+
 NSR.contact = {
   name: "Connor Fleming",
   phoneDisplay: "404-276-6462",
@@ -17,7 +20,7 @@ NSR.niches = [
     owner: "med spa",
     pain: "Consults who asked about Botox, then went quiet.",
     headline: "25–40 past clients back in your treatment chairs.",
-    sub: "Each returning client is worth about $1,200 in the first year. We text people who already asked about treatments, book them onto your schedule, and remind them to show. No implementation fee unless you're happy with the pilot. You just pay per appointment.",
+    sub: "Each returning client is worth about $1,200 in the first year. We text people who already asked about treatments, book them onto your schedule, and remind them to show.",
     biz: "Madrona Aesthetics",
     service: "Botox",
     serviceShort: "Botox",
@@ -53,7 +56,7 @@ NSR.niches = [
     owner: "dental practice",
     pain: "Invisalign and implant inquiries that never sat in the chair.",
     headline: "15–25 Invisalign and implant scans from patients who already asked.",
-    sub: "Each case is worth about $4,500. We text past Invisalign and implant inquiries, answer their questions, book the scan, and remind them to show. No implementation fee unless you're happy with the pilot. You just pay per appointment.",
+    sub: "Each case is worth about $4,500. We text past Invisalign and implant inquiries, answer their questions, book the scan, and remind them to show.",
     biz: "Eastlake Smile Studio",
     service: "Invisalign",
     serviceShort: "Invisalign",
@@ -89,7 +92,7 @@ NSR.niches = [
     owner: "HVAC company",
     pain: "Replacement estimates from last season that never got a yes.",
     headline: "15–25 install estimates back on your calendar.",
-    sub: "Each unsold estimate is a system worth about $11,500. We text those homeowners, book them with your comfort advisor, and remind them to show. No implementation fee unless you're happy with the pilot. You just pay per appointment.",
+    sub: "Each unsold estimate is a system worth about $11,500. We text those homeowners, book them with your comfort advisor, and remind them to show.",
     biz: "Sand Point Heating & Air",
     service: "a new AC system",
     serviceShort: "a new system",
@@ -126,7 +129,7 @@ NSR.niches = [
     owner: "roofing company",
     pain: "Roof estimates and storm leads that went quiet.",
     headline: "10–15 roof inspections from estimates that went quiet.",
-    sub: "Every estimate that went quiet is a roof worth about $11,000. We text those homeowners, book inspections onto your calendar, and remind them to show. No implementation fee unless you're happy with the pilot. You just pay per appointment.",
+    sub: "Every estimate that went quiet is a roof worth about $11,000. We text those homeowners, book inspections onto your calendar, and remind them to show.",
     biz: "Crown Hill Roofing",
     service: "a roof replacement",
     serviceShort: "your roof",
@@ -163,7 +166,7 @@ NSR.niches = [
     owner: "mortgage company",
     pain: "Rate shoppers who filled out a form and never picked up.",
     headline: "10–20 rate-review calls with past applicants.",
-    sub: "Each funded loan earns you about $4,000. We text past applicants and inquiries, find who's back in the market, and book them with your loan officers. No implementation fee unless you're happy with the pilot. You just pay per appointment.",
+    sub: "Each funded loan earns you about $4,000. We text past applicants and inquiries, find who's back in the market, and book them with your loan officers.",
     biz: "Laurelhurst Home Loans",
     service: "refinancing",
     serviceShort: "refinancing",
@@ -200,7 +203,7 @@ NSR.niches = [
     owner: "real estate team",
     pain: "Home-value and buyer leads that stopped answering.",
     headline: "6–12 listing appointments from old home-value leads.",
-    sub: "Each listing is worth about $12,000 in commission. We text past buyer and seller leads, find who's moving this year, and book them with your agents. No implementation fee unless you're happy with the pilot. You just pay per appointment.",
+    sub: "Each listing is worth about $12,000 in commission. We text past buyer and seller leads, find who's moving this year, and book them with your agents.",
     biz: "Interbay Home Group",
     service: "selling your home",
     serviceShort: "selling",
@@ -237,7 +240,7 @@ NSR.niches = [
     owner: "plumbing company",
     pain: "Water heater and repipe quotes that never got scheduled.",
     headline: "15–25 water heater visits from quotes that never got a yes.",
-    sub: "Each unsold quote is a job worth about $1,800. We text those homeowners, book the visit, and remind them to show. No implementation fee unless you're happy with the pilot. You just pay per appointment.",
+    sub: "Each unsold quote is a job worth about $1,800. We text those homeowners, book the visit, and remind them to show.",
     biz: "Ravenna Plumbing Co.",
     service: "a water heater replacement",
     serviceShort: "the water heater",

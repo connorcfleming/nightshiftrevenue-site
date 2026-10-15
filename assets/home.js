@@ -13,7 +13,7 @@
       '<a class="niche-row" href="demo.html?n=' + n.id + '" data-id="' + n.id + '">' +
       '<span class="n-name">' + esc(n.label) + '</span>' +
       '<span class="n-pain">' + esc(n.pain) + '</span>' +
-      '<span class="n-go"><span>Open demo</span>' + arrow + '</span></a>';
+      '<span class="n-go">' + arrow + '</span></a>';
     list.appendChild(li);
   });
 
@@ -55,7 +55,7 @@
     var text, cta = "";
     if (c === 0) text = "Check the boxes that apply.";
     else if (c <= 2) text = c + " of 6. Worth a quick look at the list before deciding.";
-    else if (c <= 4) text = c + " of 6. Your list is a good candidate for a 2,000-lead test.";
+    else if (c <= 4) text = c + " of 6. Your list is a good candidate for a 1,000-lead test.";
     else text = c + " of 6. This is exactly the kind of list we reactivate.";
     msg.textContent = text;
     var old = out.querySelector(".btn");

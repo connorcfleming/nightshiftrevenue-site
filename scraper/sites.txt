@@ -1,0 +1,2 @@
+# One company homepage per line. Lines starting with # are ignored.
+# https://example-brand.co.uk

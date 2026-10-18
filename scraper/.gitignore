@@ -1,0 +1,5 @@
+venv/
+.env
+leads*.csv
+harvest.log
+__pycache__/
